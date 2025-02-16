@@ -1,0 +1,61 @@
+# Node modules and package manager logs
+/node_modules
+/.pnp
+.pnp.js
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+pnpm-error.log*
+
+# Build and output directories
+/coverage
+/build
+/.next
+/out
+/dist
+
+# Miscellaneous system and editor files
+.DS_Store
+Thumbs.db
+*.log
+*.lock
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# ESLint, Prettier, and other config files
+.eslintrc.json
+.prettierrc
+.eslintignore
+.prettierignore
+
+# VSCode settings
+.vscode/*
+!.vscode/settings.json
+
+# JSON server database files
+/db.json
+/reviews.json
+
+# SASS cache files
+.sass-cache
+
+# IDE settings
+.idea/
+*.iml
+
+# MacOS specific files
+._*
+
+# Jest cache and coverage
+/.jest
+/.eslintcache
+/.cache
+
+# Typescript build files (if using TS)
+*.tsbuildinfo
