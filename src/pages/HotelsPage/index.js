@@ -1,5 +1,5 @@
 import { useEffect, useState, useMemo } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 import BookingForm from '../../components/BookingForm';
 import api from '../../utils/api';
 import styles from './HotelsPage.module.scss';
@@ -90,14 +90,19 @@ export default function HotelsPage() {
                 {currentHotels.length > 0 ? (
                     currentHotels.map((hotel) => (
                         <div key={hotel.id} className={styles.hotelCard}>
-                            <img
-                                src={getHotelImage(hotel.image)}
-                                alt={hotel.name}
-                            />
-                            <h3>{hotel.name}</h3>
-                            <p>
-                                {hotel.address}, {hotel.city}
-                            </p>
+                            <Link
+                                to={`/hotels/${hotel.id}`}
+                                className={styles.hotelLink}
+                            >
+                                <img
+                                    src={getHotelImage(hotel.image)}
+                                    alt={hotel.name}
+                                />
+                                <h3>{hotel.name}</h3>
+                                <p>
+                                    {hotel.address}, {hotel.city}
+                                </p>
+                            </Link>
                         </div>
                     ))
                 ) : (

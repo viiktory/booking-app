@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react';
-import { Carousel, Button } from 'antd';
+import { Carousel, Button, Rate } from 'antd';
 import { LeftOutlined, RightOutlined } from '@ant-design/icons';
 import api from '../../utils/api';
 import styles from './CustomerReviewsCarousel.module.scss';
@@ -7,6 +7,14 @@ import styles from './CustomerReviewsCarousel.module.scss';
 const getImage = (fileName) => {
     try {
         return require(`../../assets/images/customers/${fileName}`);
+    } catch {
+        return '';
+    }
+};
+
+const getHotelImage = (fileName) => {
+    try {
+        return require(`../../assets/images/hotels/${fileName}`);
     } catch {
         return '';
     }
@@ -23,6 +31,7 @@ export default function CustomerReviewsCarousel() {
                     response.data.map((review) => ({
                         ...review,
                         photo: getImage(review.photo),
+                        hotelPhoto: getHotelImage(review.image),
                     }))
                 )
             )
@@ -52,17 +61,40 @@ export default function CustomerReviewsCarousel() {
                                 key={review.name}
                                 className={styles.reviewSlide}
                             >
-                                <img
-                                    src={review.photo}
-                                    alt={review.name}
-                                    className={styles.photo}
-                                />
-                                <p className={styles.reviewText}>
-                                    {review.text}
-                                </p>
-                                <h4 className={styles.reviewAuthor}>
-                                    {review.name}
-                                </h4>
+                                {/* Left Side: Review */}
+                                <div className={styles.reviewContent}>
+                                    <div className={styles.reviewInfo}>
+                                        <img
+                                            src={review.photo}
+                                            alt={review.name}
+                                            className={styles.photo}
+                                        />
+                                        <h4 className={styles.reviewAuthor}>
+                                            {review.name}
+                                        </h4>
+                                        <Rate
+                                            value={review.rating}
+                                            disabled
+                                            className={styles.rating}
+                                        />
+                                    </div>
+                                    <p className={styles.reviewText}>
+                                        {review.text}
+                                    </p>
+                                </div>
+
+                                {/* Right Side: Hotel Image */}
+                                <div className={styles.hotelImageContainer}>
+                                    {review.hotelPhoto ? (
+                                        <img
+                                            src={review.hotelPhoto}
+                                            alt="Hotel"
+                                            className={styles.hotelPhoto}
+                                        />
+                                    ) : (
+                                        <p>Hotel image not available</p>
+                                    )}
+                                </div>
                             </div>
                         ))
                     ) : (

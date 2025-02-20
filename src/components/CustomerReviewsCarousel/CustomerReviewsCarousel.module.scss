@@ -22,30 +22,45 @@
   padding: 0 40px;
 }
 
+.carousel {
+
+}
+
 .reviewSlide {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  text-align: left;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  overflow: hidden;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+// Left side: Review content (User image, rating, and text)
+.reviewContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  text-align: center;
-  padding: 10px;
+  padding: 1rem;
+}
+
+// User info
+.reviewInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 1rem;
 }
 
 .photo {
-  width: 100%;
-  max-width: 120px;
-  height: 120px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 10px;
-}
-
-.reviewText {
-  font-size: 1rem;
-  max-width: 90%;
-  color: #fff;
-  margin-bottom: 10px;
-  text-align: center;
+  border: 3px solid var(--background-color);
 }
 
 .reviewAuthor {
@@ -53,6 +68,34 @@
   color: #fff;
 }
 
+.rating {
+  margin-top: 5px;
+}
+
+// Review text
+.reviewText {
+  font-size: 1rem;
+  color: #fff;
+  max-width: 90%;
+}
+
+// Right side: Hotel Image
+.hotelImageContainer {
+  width: 40%;
+  max-width: 400px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.hotelPhoto {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+// Navigation buttons
 .prevButton,
 .nextButton {
   position: absolute;
@@ -69,6 +112,10 @@
   cursor: pointer;
   z-index: 10;
   transition: background-color 0.3s ease;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.4);
+  }
 }
 
 .prevButton {

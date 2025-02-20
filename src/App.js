@@ -7,6 +7,7 @@ import Header from './components/Header';
 import Home from './pages/HomePage';
 import About from './pages/AboutPage';
 import Hotels from './pages/HotelsPage';
+import HotelsDetailsPage from './pages/HotelsDetailsPage';
 import Blog from './pages/BlogPage';
 import Contact from './pages/ContactPage';
 import { useSelector } from 'react-redux';
@@ -37,6 +38,7 @@ const router = createBrowserRouter([
             { index: true, element: <Home /> },
             { path: '/about', element: <About /> },
             { path: '/hotels', element: <Hotels />, loader: hotelsLoader },
+            { path: '/hotels/:id', element: <HotelsDetailsPage /> },
             { path: '/blog', element: <Blog /> },
             { path: '/contact', element: <Contact /> },
             { path: '*', element: <div>404 - not found</div> },
