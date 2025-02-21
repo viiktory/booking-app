@@ -1,6 +1,8 @@
 import React from 'react';
 import styles from './AboutIntro.module.scss';
 import team from '../../assets/images/about/team.jpg';
+import handsTeam from '../../assets/images/about/hands-team.jpg';
+import colleagues from '../../assets/images/about/colleagues.jpg';
 
 export default function AboutIntro() {
     return (
@@ -17,11 +19,27 @@ export default function AboutIntro() {
                         helped thousands of travelers find their perfect stay.
                     </p>
                 </div>
-                <img
-                    className={styles.image}
-                    src={team}
-                    alt="Our team working together"
-                />
+                <div className={styles.imageGrid}>
+                    <div className={styles.topImages}>
+                        <img
+                            className={styles.image}
+                            src={team}
+                            alt="Team working together"
+                        />
+                        <img
+                            className={styles.image}
+                            src={handsTeam}
+                            alt="Team collaborating"
+                        />
+                    </div>
+                    <div className={styles.bottomImages}>
+                        <img
+                            className={styles.image}
+                            src={colleagues}
+                            alt="Colleagues brainstorming"
+                        />
+                    </div>
+                </div>
             </div>
         </section>
     );

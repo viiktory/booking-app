@@ -5,10 +5,10 @@ import api from '../../utils/api';
 import styles from './HotelsPage.module.scss';
 
 const hotelImages = [
-    require('../../assets/images/hotels/hotel1.jpeg'),
-    require('../../assets/images/hotels/hotel2.jpeg'),
-    require('../../assets/images/hotels/hotel3.jpeg'),
-    require('../../assets/images/hotels/hotel4.jpeg'),
+    '/assets/images/hotels/hotel1.jpeg',
+    '/assets/images/hotels/hotel2.jpeg',
+    '/assets/images/hotels/hotel3.jpeg',
+    '/assets/images/hotels/hotel4.jpeg',
 ];
 
 export default function HotelsPage() {

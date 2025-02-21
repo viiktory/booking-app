@@ -34,7 +34,7 @@
   margin: 0 auto;
   padding: 40px 20px;
   text-align: center;
-  color: white;
+  color: var( --button-text-color);
 }
 
 .homeContent {
@@ -52,7 +52,7 @@
   margin-bottom: 1rem;
   font-weight: bold;
   text-align: center;
-  color: white;
+  color: var( --button-text-color);
 }
 
 .homeText {
@@ -60,7 +60,7 @@
   line-height: 1.6;
   max-width: 900px;
   text-align: center;
-  color: white;
+  color: var( --button-text-color);
 }
 
 .formWrapper {

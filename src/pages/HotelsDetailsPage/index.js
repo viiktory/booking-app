@@ -4,10 +4,10 @@ import api from '../../utils/api';
 import styles from './HotelDetailsPages.module.scss';
 
 const hotelImages = [
-    require('../../assets/images/hotels/hotel1.jpeg'),
-    require('../../assets/images/hotels/hotel2.jpeg'),
-    require('../../assets/images/hotels/hotel3.jpeg'),
-    require('../../assets/images/hotels/hotel4.jpeg'),
+    '/assets/images/hotels/hotel1.jpeg',
+    '/assets/images/hotels/hotel2.jpeg',
+    '/assets/images/hotels/hotel3.jpeg',
+    '/assets/images/hotels/hotel4.jpeg',
 ];
 
 export default function HotelsDetailsPage() {
@@ -37,13 +37,7 @@ export default function HotelsDetailsPage() {
 
     const getHotelImage = (image) => {
         if (image) {
-            try {
-                return require(`../../assets/images/hotels/${image}`);
-            } catch {
-                return hotelImages[
-                    Math.floor(Math.random() * hotelImages.length)
-                ];
-            }
+            return `${window.location.origin}/assets/images/hotels/${image}`;
         }
         return hotelImages[Math.floor(Math.random() * hotelImages.length)];
     };

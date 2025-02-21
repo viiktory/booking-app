@@ -1,209 +1,183 @@
 .section {
-  padding: 40px 5vw;
-  background-color: var(--primary-color);
-  box-sizing: border-box;
-  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
 }
 
 .title {
-  font-size: clamp(1.8rem, 2.2vw, 2.5rem);
-  margin-bottom: 1.5rem;
-  color: #fff;
+  font-size: 28px;
   text-align: center;
+  margin-bottom: 20px;
 }
 
 .carouselContainer {
   position: relative;
-  display: block;
   width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  overflow: hidden;
-  padding: 0 40px;
+  height: 400px;
+  //display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .carousel {
-
+  width: 100%;
+  height: 100%;
 }
 
 .reviewSlide {
   display: flex;
+  flex-direction: row;
   align-items: center;
-  text-align: left;
-  padding: 2rem;
-  background: rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
-  overflow: hidden;
-  max-width: 1200px;
-  margin: 0 auto;
+  justify-content: space-between;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  gap: 20px;
+  height: 100%;
 }
 
-// Left side: Review content (User image, rating, and text)
 .reviewContent {
-  flex: 1;
+  width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 1rem;
+  height: 100%;
 }
 
-// User info
 .reviewInfo {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-bottom: 1rem;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 10px;
 }
 
 .photo {
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid var(--background-color);
 }
 
 .reviewAuthor {
+  font-size: 18px;
   font-weight: bold;
-  color: #fff;
+}
+
+.reviewText {
+  font-size: 16px;
+  line-height: 1.4;
+  color: #555;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .rating {
-  margin-top: 5px;
+  font-size: 16px;
+  color: #f5a623;
+  margin-top: 10px;
 }
 
-// Review text
-.reviewText {
-  font-size: 1rem;
-  color: #fff;
-  max-width: 90%;
-}
-
-// Right side: Hotel Image
 .hotelImageContainer {
-  width: 40%;
-  max-width: 400px;
-  flex-shrink: 0;
+  width: 50%;
+  height: 100%;
   display: flex;
-  justify-content: flex-end;
+  align-items: center;
+  justify-content: center;
 }
 
 .hotelPhoto {
   width: 100%;
-  height: 300px;
+  height: 100%;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 12px;
 }
 
-// Navigation buttons
+/* Кнопки */
 .prevButton,
 .nextButton {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  color: #555;
+  background: rgba(255, 255, 255, 0.8);
   border: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  padding: 10px;
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   cursor: pointer;
+  transition: background 0.3s;
   z-index: 10;
-  transition: background-color 0.3s ease;
-
-  &:hover {
-    background: rgba(255, 255, 255, 0.4);
-  }
 }
 
 .prevButton {
-  left: 20px;
+  left: 10px;
 }
 
 .nextButton {
-  right: 20px;
+  right: 10px;
 }
 
+.prevButton:hover,
+.nextButton:hover {
+  background: rgba(255, 255, 255, 1);
+}
+
+/* Точки */
+:global(.ant-carousel .slick-dots) {
+  bottom: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Адаптивность */
 @media (max-width: 1024px) {
   .carouselContainer {
-    padding: 0 40px;
+    height: 350px;
   }
-  .photo {
-    max-width: 100px;
-    height: 100px;
-  }
-  .reviewText {
-    font-size: 0.9rem;
-    max-width: 90%;
-  }
+
   .reviewSlide {
+    flex-direction: row;
+    align-items: center;
     padding: 15px;
+  }
+
+  .hotelPhoto {
+    max-height: 320px;
   }
 }
 
 @media (max-width: 768px) {
   .carouselContainer {
-    padding: 0 20px;
-    text-align: center;
+    height: auto;
   }
-  .photo {
-    max-width: 80px;
-    height: 80px;
-    margin: 0 auto;
-    display: block;
-  }
-  .reviewText {
-    font-size: 0.85rem;
-    max-width: 90%;
-    margin: 10px auto;
-  }
+
   .reviewSlide {
-    padding: 10px;
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
   }
-  .prevButton,
-  .nextButton {
-    width: 35px;
-    height: 35px;
-    top: 20%;
+
+  .reviewContent,
+  .hotelImageContainer {
+    width: 100%;
+    max-width: 100%;
   }
-  .prevButton {
-    left: 5px;
-  }
-  .nextButton {
-    right: 5px;
+
+  .hotelPhoto {
+    max-height: 280px;
   }
 }
 
 @media (max-width: 480px) {
-  .carouselContainer {
-    padding: 0 10px;
-    width: 100%;
-  }
-  .photo {
-    max-width: 70px;
-    height: 70px;
-  }
   .reviewText {
-    font-size: 0.8rem;
-    max-width: 90%;
-    margin: 10px 0;
+    font-size: 14px;
   }
-  .reviewSlide {
-    padding: 5px;
-    text-align: center;
-  }
-  .prevButton,
-  .nextButton {
-    width: 25px;
-    height: 25px;
-    top: 19%;
-  }
-  .prevButton {
-    left: 5px;
-  }
-  .nextButton {
-    right: 5px;
+
+  .hotelPhoto {
+    max-height: 200px;
   }
 }
