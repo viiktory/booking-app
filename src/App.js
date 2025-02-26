@@ -1,33 +1,17 @@
-import React, { useEffect } from 'react';
-import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom';
+import React from 'react';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { hotelsLoader } from './utils/hotelsLoader';
 import { Provider } from 'react-redux';
-import store from './store';
-import Header from './components/Header';
+import { store } from './store';
 import Home from './pages/HomePage';
 import About from './pages/AboutPage';
 import Hotels from './pages/HotelsPage';
 import HotelsDetailsPage from './pages/HotelsDetailsPage';
 import Blog from './pages/BlogPage';
 import Contact from './pages/ContactPage';
-import { useSelector } from 'react-redux';
+import Layout from './components/Layout';
 import './styles/global/reset.scss';
 import './styles/global/theme.scss';
-
-const Layout = () => {
-    const theme = useSelector((state) => state.theme.mode);
-
-    useEffect(() => {
-        document.body.className = theme;
-    }, [theme]);
-
-    return (
-        <>
-            <Header />
-            <Outlet />
-        </>
-    );
-};
 
 const router = createBrowserRouter([
     {

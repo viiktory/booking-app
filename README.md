@@ -1,10 +1,8 @@
-This is a hotel booking site built using modern web technologies. The project
-allows users to browse hotels, read reviews, and book accommodations seamlessly.
+## Tech Stack
 
-Tech Stack
 The project is built with the following technologies:
 
-Frontend:
+### Frontend:
 
 * Create React App - Bootstrapped React application
 * React Router - For navigation and routing
@@ -13,29 +11,42 @@ Frontend:
 * PropTypes - Type checking for components
 * Axios - HTTP requests for API interactions
 
-State Management:
+### State Management:
 
 * Redux - Centralized state management
 * Redux Thunk - Async middleware for Redux
 
-Backend & Environment Configuration:
+### Backend & Environment Configuration:
 
-* Json-server - Mock backend for data persistence
+* Json-server - Mock backend for data persistence (for development only)
 * ENV - Environment variables for configuration
 * Eslint - Linting and code quality enforcement
 
-Installation & Setup
+## Installation & Setup
+
 To run the project locally, follow these steps:
 
-1. Clone the repository
-   git clone https://github.com/your-username/booking-app.git
+1. Clone the repository:
+   git clone https://github.com/viiktory/booking-app.git
    cd booking-app
-2. Install dependencies
-   npm install
-3. Start the development server
-   npm start
-4. Run the mock backend
-   npm run server
+
+2. Install dependencies:
+   `npm install`
+
+3. Start the development server: In one terminal window, run:
+   ` npm start`
+
+This will start the frontend application, which will be available
+at http://localhost:3000.
+
+4. Run the mock backend: In a separate terminal window, run:
+   ` npm run server`
+
+This will start json-server, which will mock a backend API and be available
+at http://localhost:3001. Make sure the db.json file is in place in the root of
+the project (it should already be there, but ensure it has the necessary data).
+
+Now your app should be fully functional with the mock backend running!
 
 Features
 ✅ Browse and filter hotels
@@ -44,3 +55,11 @@ Features
 ✅ Booking functionality (in progress)
 ✅ Light/Dark theme toggle
 ✅ Responsive design
+
+Troubleshooting
+If you encounter issues with the json-server not starting correctly:
+
+* Make sure that db.json exists in the root of the project.
+* Ensure that no other processes are using port 3001 (you can change the port in
+  the package.json script if necessary).
+* Check for any missing dependencies or errors in the terminal logs.

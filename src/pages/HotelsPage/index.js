@@ -1,7 +1,8 @@
-import { useEffect, useState, useMemo } from 'react';
+import { useEffect, useMemo, useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import { useLocation, Link } from 'react-router-dom';
+import { fetchHotels } from '../../store/slices/hotelsSlice';
 import BookingForm from '../../components/BookingForm';
-import api from '../../utils/api';
 import styles from './HotelsPage.module.scss';
 
 const hotelImages = [
@@ -12,36 +13,30 @@ const hotelImages = [
 ];
 
 export default function HotelsPage() {
+    const dispatch = useDispatch();
     const location = useLocation();
-    const [allHotels, setAllHotels] = useState([]);
-    const [filteredHotels, setFilteredHotels] = useState([]);
+    const { hotels, status, error } = useSelector((state) => state.hotels);
+
     const hotelsPerPage = 6;
     const [currentPage, setCurrentPage] = useState(1);
 
     useEffect(() => {
-        api.get('/hotels')
-            .then((response) => {
-                setAllHotels(response.data);
-                setFilteredHotels(response.data);
-            })
-            .catch((error) => console.error('Error fetching hotels:', error));
-    }, []);
+        if (status === 'idle') {
+            dispatch(fetchHotels());
+        }
+    }, [status, dispatch]);
 
-    useEffect(() => {
+    const filteredHotels = useMemo(() => {
         const params = new URLSearchParams(location.search);
         const city = params.get('location');
 
         if (city) {
-            setFilteredHotels(
-                allHotels.filter(
-                    (hotel) => hotel.city?.toLowerCase() === city?.toLowerCase()
-                )
+            return hotels.filter(
+                (hotel) => hotel.city?.toLowerCase() === city?.toLowerCase()
             );
-        } else {
-            setFilteredHotels(allHotels);
         }
-        setCurrentPage(1);
-    }, [location.search, allHotels]);
+        return hotels;
+    }, [hotels, location.search]);
 
     const totalPages = Math.ceil(filteredHotels.length / hotelsPerPage);
     const startIndex = (currentPage - 1) * hotelsPerPage;
@@ -86,28 +81,30 @@ export default function HotelsPage() {
     return (
         <div className={styles.hotelsContainer}>
             <h1 className={styles.hotelsTitle}>Hotels</h1>
+
+            {status === 'loading' && <p>Loading hotels...</p>}
+            {status === 'failed' && <p>Error: {error}</p>}
+
             <div className={styles.hotelsList}>
-                {currentHotels.length > 0 ? (
-                    currentHotels.map((hotel) => (
-                        <div key={hotel.id} className={styles.hotelCard}>
-                            <Link
-                                to={`/hotels/${hotel.id}`}
-                                className={styles.hotelLink}
-                            >
-                                <img
-                                    src={getHotelImage(hotel.image)}
-                                    alt={hotel.name}
-                                />
-                                <h3>{hotel.name}</h3>
-                                <p>
-                                    {hotel.address}, {hotel.city}
-                                </p>
-                            </Link>
-                        </div>
-                    ))
-                ) : (
-                    <p>No hotels found.</p>
-                )}
+                {currentHotels.length > 0
+                    ? currentHotels.map((hotel) => (
+                          <div key={hotel.id} className={styles.hotelCard}>
+                              <Link
+                                  to={`/hotels/${hotel.id}`}
+                                  className={styles.hotelLink}
+                              >
+                                  <img
+                                      src={getHotelImage(hotel.image)}
+                                      alt={hotel.name}
+                                  />
+                                  <h3>{hotel.name}</h3>
+                                  <p>
+                                      {hotel.address}, {hotel.city}
+                                  </p>
+                              </Link>
+                          </div>
+                      ))
+                    : status === 'succeeded' && <p>No hotels found.</p>}
             </div>
 
             {totalPages > 1 && (
