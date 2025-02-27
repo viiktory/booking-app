@@ -8,7 +8,7 @@
 .hotelsTitle {
   font-size: 2rem;
   margin-bottom: 1.5rem;
-  color: #333;
+  color: var(--text-color);
 }
 
 .hotelsList {
@@ -21,7 +21,7 @@
 
 .hotelCard {
   width: 30%;
-  background-color: #fff;
+  background-color: var(--button-text-color);
   padding: 10px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -45,12 +45,13 @@
 
 .hotelCard h3 {
   font-size: 1.2rem;
+  color: #333;
   margin: 10px 0;
 }
 
 .hotelCard p {
   font-size: 0.9rem;
-  color: #555;
+  color: #333;
 }
 
 .pagination {

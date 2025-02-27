@@ -8,6 +8,7 @@ import About from './pages/AboutPage';
 import Hotels from './pages/HotelsPage';
 import HotelsDetailsPage from './pages/HotelsDetailsPage';
 import Blog from './pages/BlogPage';
+import BlogDetailsPage from './pages/BlogDetailsPage';
 import Contact from './pages/ContactPage';
 import Layout from './components/Layout';
 import './styles/global/reset.scss';
@@ -24,6 +25,7 @@ const router = createBrowserRouter([
             { path: '/hotels', element: <Hotels />, loader: hotelsLoader },
             { path: '/hotels/:id', element: <HotelsDetailsPage /> },
             { path: '/blog', element: <Blog /> },
+            { path: '/blog/:title', element: <BlogDetailsPage /> },
             { path: '/contact', element: <Contact /> },
             { path: '*', element: <div>404 - not found</div> },
         ],

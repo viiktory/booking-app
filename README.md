@@ -48,17 +48,17 @@ the project (it should already be there, but ensure it has the necessary data).
 
 Now your app should be fully functional with the mock backend running!
 
-Features
-✅ Browse and filter hotels
-✅ View hotel details and reviews
+Features:
+✅ Browse and filter hotels 
+✅ View hotel details and reviews 
 ✅ Sign in for personalized experience
 ✅ Booking functionality (in progress)
-✅ Light/Dark theme toggle
+✅ Light/Dark theme toggle 
 ✅ Responsive design
 
-Troubleshooting
-If you encounter issues with the json-server not starting correctly:
+Troubleshooting 
 
+If you encounter issues with the json-server not starting correctly:
 * Make sure that db.json exists in the root of the project.
 * Ensure that no other processes are using port 3001 (you can change the port in
   the package.json script if necessary).

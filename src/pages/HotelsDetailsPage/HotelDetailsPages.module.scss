@@ -16,8 +16,8 @@
   padding: 0.6rem 1rem;
   font-size: 1rem;
   border: none;
-  background-color: var(--primary);
-  color: var(--primary);
+  background-color: var(--primary-color);
+  color: var(--form-text);
   border-radius: 5px;
   cursor: pointer;
   transition: background 0.3s;
@@ -25,7 +25,7 @@
 }
 
 .backButton:hover {
-  background-color: var(--hover);
+  background-color: var(--hover-color);
 }
 
 .hotelName {

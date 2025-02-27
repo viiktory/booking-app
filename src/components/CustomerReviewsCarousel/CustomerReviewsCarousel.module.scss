@@ -9,44 +9,101 @@
 }
 
 .title {
-  font-size: 28px;
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  color: var(--text-color);
   text-align: center;
-  margin-bottom: 20px;
 }
 
 .carouselContainer {
   position: relative;
   width: 100%;
-  height: 400px;
-  //display: flex;
-  align-items: center;
-  justify-content: center;
+  max-width: 1200px;
+  height: auto;
+  overflow: hidden;
 }
 
-.carousel {
-  width: 100%;
-  height: 100%;
+.ant-carousel {
+  overflow: visible !important;
+}
+
+.ant-carousel .slick-list {
+  display: flex !important;
+  align-items: stretch !important;
+  justify-content: center !important;
+  height: 400px !important;
+  overflow: visible !important;
+}
+
+.ant-carousel .slick-track {
+  display: flex !important;
+  align-items: stretch !important;
+  height: 400px !important;
+  max-height: 400px !important;
+}
+
+.ant-carousel .slick-slide {
+  display: flex !important;
+  justify-content: center;
+  align-items: stretch !important;
+  min-width: 100% !important;
+  height: 400px !important;
+  max-height: 400px !important;
 }
 
 .reviewSlide {
-  display: flex;
+  display: flex !important;
   flex-direction: row;
-  align-items: center;
+  align-items: stretch !important;
   justify-content: space-between;
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: var(--form-text);
+  border-radius: 8px;
   padding: 20px;
   gap: 20px;
-  height: 100%;
+  width: 100%;
+  min-height: 400px !important;
+  height: 400px !important;
+  max-height: 400px !important;
+  flex-grow: 1;
+  position: relative;
+  z-index: 2;
 }
 
 .reviewContent {
-  width: 50%;
+  flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
+  align-items: flex-start;
   height: 100%;
+  flex-grow: 1;
+}
+
+.reviewText {
+  font-size: 1rem;
+  line-height: 1.4;
+  color: var(--link-color);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+}
+
+.hotelImageContainer {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-grow: 1;
+}
+
+.hotelPhoto {
+  width: 100%;
+  height: 100%;
+  max-height: 400px !important;
+  object-fit: cover;
+  border-radius: 12px;
 }
 
 .reviewInfo {
@@ -64,45 +121,37 @@
 }
 
 .reviewAuthor {
-  font-size: 18px;
-  font-weight: bold;
+  font-size: 1.3rem;
+  color: var(--text-color);
 }
 
-.reviewText {
-  font-size: 16px;
-  line-height: 1.4;
-  color: #555;
-  overflow: hidden;
-  text-overflow: ellipsis;
+.ant-carousel .slick-dots {
+  bottom: 10px !important;
+  display: flex !important;
+  justify-content: center !important;
+  gap: 8px;
 }
 
-.rating {
-  font-size: 16px;
-  color: #f5a623;
-  margin-top: 10px;
+.ant-carousel .slick-dots li {
+  width: 12px;
+  height: 12px;
+  background: #ccc;
+  border-radius: 50%;
+  transition: background 0.3s, width 0.3s;
 }
 
-.hotelImageContainer {
-  width: 50%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.ant-carousel .slick-dots li.slick-active {
+  width: 16px;
+  height: 16px;
+  background: var(--primary-color);
 }
 
-.hotelPhoto {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 12px;
-}
-
-/* Кнопки */
 .prevButton,
 .nextButton {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  color: var( --text-color);
   background: rgba(255, 255, 255, 0.8);
   border: none;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
@@ -113,40 +162,41 @@
   z-index: 10;
 }
 
+.prevButton:hover,
+.nextButton:hover {
+  background: rgba(255, 255, 255, 0.8);
+}
+
 .prevButton {
-  left: 10px;
+  left:5px;
 }
 
 .nextButton {
-  right: 10px;
+  right: 5px;
 }
 
-.prevButton:hover,
-.nextButton:hover {
-  background: rgba(255, 255, 255, 1);
-}
-
-/* Точки */
-:global(.ant-carousel .slick-dots) {
-  bottom: 10px;
-  display: flex;
-  justify-content: center;
-}
-
-/* Адаптивность */
 @media (max-width: 1024px) {
   .carouselContainer {
-    height: 350px;
+    height: auto;
   }
 
   .reviewSlide {
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
     padding: 15px;
   }
 
+  .reviewContent {
+    order: 1;
+    width: 100%;
+  }
+
+  .hotelImageContainer {
+    order: 2;
+    width: 100%;
+  }
+
   .hotelPhoto {
-    max-height: 320px;
+    max-height: 320px !important;
   }
 }
 
@@ -168,7 +218,7 @@
   }
 
   .hotelPhoto {
-    max-height: 280px;
+    max-height: 280px !important;
   }
 }
 
@@ -178,6 +228,13 @@
   }
 
   .hotelPhoto {
-    max-height: 200px;
+    max-height: 200px !important;
+  }
+  .prevButton {
+    left: 0px;
+  }
+
+  .nextButton {
+    right: 0px;
   }
 }

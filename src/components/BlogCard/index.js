@@ -1,18 +1,27 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import styles from './BlogCard.module.scss';
 
 export default function BlogCard({ image, alt, title, description, date }) {
+    const formattedTitle = encodeURIComponent(
+        title.toLowerCase().replace(/\s+/g, '-')
+    );
+
     return (
         <article className={styles.card}>
-            <img className={styles.images} src={image} alt={alt} />
+            <img
+                className={styles.images}
+                src={`/assets/images/blog/${image}.jpg`}
+                alt={alt}
+            />
             <div className={styles.textContainer}>
                 <h2 className={styles.cardTitle}>{title}</h2>
                 <p className={styles.cardDescription}>{description}</p>
                 <p className={styles.date}>Posted on: {date}</p>
-                <a href="#" className={styles.btn}>
+                <Link to={`/blog/${formattedTitle}`} className={styles.btn}>
                     Read More
-                </a>
+                </Link>
             </div>
         </article>
     );

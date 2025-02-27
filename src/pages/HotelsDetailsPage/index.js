@@ -18,16 +18,10 @@ export default function HotelsDetailsPage() {
     const [error, setError] = useState(null);
 
     useEffect(() => {
-        const numericId = Number(id); // Convert ID to a number
-        api.get(`/hotels/${numericId}`)
+        api.get(`/hotels/${id}`)
             .then((response) => {
-                if (response.data) {
-                    setHotel(response.data);
-                    setLoading(false);
-                } else {
-                    setError('Hotel not found');
-                    setLoading(false);
-                }
+                setHotel(response.data);
+                setLoading(false);
             })
             .catch(() => {
                 setError('Hotel not found');
@@ -37,7 +31,7 @@ export default function HotelsDetailsPage() {
 
     const getHotelImage = (image) => {
         if (image) {
-            return `${window.location.origin}/assets/images/hotels/${image}`;
+            return `/assets/images/hotels/${image}`;
         }
         return hotelImages[Math.floor(Math.random() * hotelImages.length)];
     };
@@ -50,41 +44,48 @@ export default function HotelsDetailsPage() {
             <button className={styles.backButton} onClick={() => navigate(-1)}>
                 ← Back
             </button>
-            <h1 className={styles.hotelName}>{hotel.name}</h1>
-            <img
-                src={getHotelImage(hotel.image)}
-                alt={hotel.name}
-                className={styles.hotelImage}
-            />
-            <div className={styles.hotelInfo}>
-                <p>
-                    <strong>Address:</strong> {hotel.address}, {hotel.city}
-                </p>
-                <p>
-                    <strong>Rating:</strong> {hotel.hotel_rating} ⭐
-                </p>
-                {hotel.phone_number && (
-                    <p>
-                        <strong>Phone:</strong> {hotel.phone_number}
-                    </p>
-                )}
-                {hotel.website ? (
-                    <p>
-                        <strong>Website:</strong>{' '}
-                        <a
-                            href={hotel.website}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            Visit
-                        </a>
-                    </p>
-                ) : (
-                    <p>
-                        <strong>Website:</strong> Not available
-                    </p>
-                )}
-            </div>
+            {hotel ? (
+                <>
+                    <h1 className={styles.hotelName}>{hotel.name}</h1>
+                    <img
+                        src={getHotelImage(hotel.image)}
+                        alt={hotel.name}
+                        className={styles.hotelImage}
+                    />
+                    <div className={styles.hotelInfo}>
+                        <p>
+                            <strong>Address:</strong> {hotel.address},{' '}
+                            {hotel.city}
+                        </p>
+                        <p>
+                            <strong>Rating:</strong> {hotel.hotel_rating} ⭐
+                        </p>
+                        {hotel.phone_number && (
+                            <p>
+                                <strong>Phone:</strong> {hotel.phone_number}
+                            </p>
+                        )}
+                        {hotel.website ? (
+                            <p>
+                                <strong>Website:</strong>{' '}
+                                <a
+                                    href={hotel.website}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    Visit
+                                </a>
+                            </p>
+                        ) : (
+                            <p>
+                                <strong>Website:</strong> Not available
+                            </p>
+                        )}
+                    </div>
+                </>
+            ) : (
+                <p className={styles.error}>Hotel not found</p>
+            )}
         </div>
     );
 }
