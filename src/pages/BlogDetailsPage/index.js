@@ -17,9 +17,11 @@ export default function BlogDetailsPage() {
                     .replace(/-/g, ' ')
                     .toLowerCase()
                     .trim();
+
                 const foundPost = response.data.find(
                     (post) => post.title.toLowerCase().trim() === formattedTitle
                 );
+
                 if (foundPost) {
                     setPost(foundPost);
                 } else {

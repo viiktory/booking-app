@@ -4,9 +4,7 @@ import { Link } from 'react-router-dom';
 import styles from './BlogCard.module.scss';
 
 export default function BlogCard({ image, alt, title, description, date }) {
-    const formattedTitle = encodeURIComponent(
-        title.toLowerCase().replace(/\s+/g, '-')
-    );
+    const slug = title.toLowerCase().replace(/\s+/g, '-');
 
     return (
         <article className={styles.card}>
@@ -19,7 +17,7 @@ export default function BlogCard({ image, alt, title, description, date }) {
                 <h2 className={styles.cardTitle}>{title}</h2>
                 <p className={styles.cardDescription}>{description}</p>
                 <p className={styles.date}>Posted on: {date}</p>
-                <Link to={`/blog/${formattedTitle}`} className={styles.btn}>
+                <Link to={`/blog/${slug}`} className={styles.btn}>
                     Read More
                 </Link>
             </div>
