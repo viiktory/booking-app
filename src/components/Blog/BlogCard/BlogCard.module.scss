@@ -22,13 +22,14 @@
   flex-direction: row-reverse;
 }
 
-
 .images {
   width: 50%;
   max-width: 500px;
   height: 300px;
   border-radius: 8px;
-  transition: filter 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    filter 0.3s ease,
+    box-shadow 0.3s ease;
   filter: brightness(0.8);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   object-fit: cover;
@@ -38,7 +39,6 @@
   filter: brightness(1);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
-
 
 .textContainer {
   flex: 1;
@@ -74,7 +74,9 @@
   padding: 0.75rem 1.5rem;
   border-radius: 0.5rem;
   font-size: 1rem;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
 
   &:hover {
     background-color: var(--hover-color);

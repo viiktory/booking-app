@@ -15,29 +15,29 @@ import './styles/global/reset.scss';
 import './styles/global/theme.scss';
 
 const router = createBrowserRouter([
-    {
-        path: '/',
-        element: <Layout />,
-        errorElement: <div>Something went wrong!</div>,
-        children: [
-            { index: true, element: <Home /> },
-            { path: '/about', element: <About /> },
-            { path: '/hotels', element: <Hotels />, loader: hotelsLoader },
-            { path: '/hotels/:id', element: <HotelsDetailsPage /> },
-            { path: '/blog', element: <Blog /> },
-            { path: '/blog/:title', element: <BlogDetailsPage /> },
-            { path: '/contact', element: <Contact /> },
-            { path: '*', element: <div>404 - not found</div> },
-        ],
-    },
+  {
+    path: '/',
+    element: <Layout />,
+    errorElement: <div>Something went wrong!</div>,
+    children: [
+      { index: true, element: <Home /> },
+      { path: '/about', element: <About /> },
+      { path: '/hotels', element: <Hotels />, loader: hotelsLoader },
+      { path: '/hotels/:id', element: <HotelsDetailsPage /> },
+      { path: '/blog', element: <Blog /> },
+      { path: '/blog/:title', element: <BlogDetailsPage /> },
+      { path: '/contact', element: <Contact /> },
+      { path: '*', element: <div>404 - not found</div> },
+    ],
+  },
 ]);
 
 function App() {
-    return (
-        <Provider store={store}>
-            <RouterProvider router={router} />
-        </Provider>
-    );
+  return (
+    <Provider store={store}>
+      <RouterProvider router={router} />
+    </Provider>
+  );
 }
 
 export default App;

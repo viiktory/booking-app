@@ -137,7 +137,9 @@
   height: 12px;
   background: #ccc;
   border-radius: 50%;
-  transition: background 0.3s, width 0.3s;
+  transition:
+    background 0.3s,
+    width 0.3s;
 }
 
 .ant-carousel .slick-dots li.slick-active {
@@ -151,7 +153,7 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  color: var( --text-color);
+  color: var(--text-color);
   background: rgba(255, 255, 255, 0.8);
   border: none;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
@@ -168,7 +170,7 @@
 }
 
 .prevButton {
-  left:5px;
+  left: 5px;
 }
 
 .nextButton {

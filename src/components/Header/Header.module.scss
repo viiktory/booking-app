@@ -54,7 +54,8 @@
   gap: 1.5rem;
 }
 
-  .themeToggle, .signIn {
+.themeToggle,
+.signIn {
   border: none;
   text-decoration: none;
   background-color: var(--primary-color);
@@ -62,10 +63,13 @@
   padding: 0.75rem 1.5rem;
   border-radius: 0.5rem;
   font-size: 1rem;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
 }
 
-.themeToggle:hover, .signIn:hover {
+.themeToggle:hover,
+.signIn:hover {
   background-color: var(--hover-color);
   transform: scale(1.05);
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
@@ -96,13 +100,13 @@
   z-index: 9;
 }
 
-
 @media (max-width: 1024px) {
   .navList ul {
     gap: 1.5rem;
   }
 
-  .themeToggle, .signIn {
+  .themeToggle,
+  .signIn {
     padding: 0.5rem 1rem;
     font-size: 0.875rem;
   }
@@ -157,7 +161,8 @@
     margin-top: 2rem;
   }
 
-  .themeToggle, .signIn {
+  .themeToggle,
+  .signIn {
     width: 100%;
     text-align: center;
     padding: 0.75rem 1rem;
@@ -192,8 +197,8 @@
   .logo {
     font-size: 1.2rem;
   }
-  .themeToggle, .signIn {
+  .themeToggle,
+  .signIn {
     padding: 0.5rem 0.875rem;
   }
 }
-

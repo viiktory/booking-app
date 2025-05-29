@@ -1,6 +1,6 @@
 :root {
-  --primary-color: #6D8777;
-  --hover-color: #45624E;
+  --primary-color: #6d8777;
+  --hover-color: #45624e;
   --text-color: #333;
   --logo-color: #222;
 }
@@ -19,12 +19,14 @@ body.dark {
   --text-color: #f5f5f5;
   --logo-color: #ddd;
   --link-color: #ddd;
-  --button-text-color:   #ddd;
-  --form-text:#555;
+  --button-text-color: #ddd;
+  --form-text: #555;
 }
 
 body {
   background-color: var(--background-color);
   color: var(--text-color);
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }

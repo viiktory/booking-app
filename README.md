@@ -4,31 +4,31 @@
 
 ### **Frontend:**
 
-* **Create React App** - Bootstrapped React application
+- **Create React App** - Bootstrapped React application
 
-* **React Router** - For navigation and routing
+- **React Router** - For navigation and routing
 
-* **Formik** - Form handling and validation
+- **Formik** - Form handling and validation
 
-* **Ant Design** - UI components for a modern design
+- **Ant Design** - UI components for a modern design
 
-* **PropTypes** - Type checking for components
+- **PropTypes** - Type checking for components
 
-* **Axios** - HTTP requests for API interactions
+- **Axios** - HTTP requests for API interactions
 
 ### **State Management:**
 
-* **Redux** - Centralized state management
+- **Redux** - Centralized state management
 
-* **Redux Thunk** - Async middleware for Redux
+- **Redux Thunk** - Async middleware for Redux
 
 ### **Backend & Environment Configuration:**
 
-* **Json-server** - Mock backend for data persistence (for development only)
+- **Json-server** - Mock backend for data persistence (for development only)
 
-* **ENV** - Environment variables for configuration
+- **ENV** - Environment variables for configuration
 
-* **Eslint** - Linting and code quality enforcement
+- **Eslint** - Linting and code quality enforcement
 
 ## **Installation & Setup**
 
@@ -79,9 +79,9 @@ Now your app should be fully functional with the mock backend running!
 
 If you encounter issues with the _json-server_ not starting correctly:
 
-* Make sure that **db.json** exists in the root of the project.
+- Make sure that **db.json** exists in the root of the project.
 
-* Ensure that no other processes are using port 3001 (you can change the port in
+- Ensure that no other processes are using port 3001 (you can change the port in
   the package.json script if necessary).
 
-* Check for any missing dependencies or errors in the terminal logs.
+- Check for any missing dependencies or errors in the terminal logs.
