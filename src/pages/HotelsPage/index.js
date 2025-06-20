@@ -65,11 +65,7 @@ export default function HotelsPage() {
 
   const getHotelImage = (image) => {
     if (image) {
-      try {
-        return require(`../../assets/images/hotels/${image}`);
-      } catch {
-        return hotelImages[Math.floor(Math.random() * hotelImages.length)];
-      }
+      return `/assets/images/hotels/${image}`;
     }
     return hotelImages[Math.floor(Math.random() * hotelImages.length)];
   };
