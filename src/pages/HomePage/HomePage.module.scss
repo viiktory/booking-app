@@ -1,14 +1,10 @@
-.pageContainer {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  min-height: 100vh;
-  background: url('../../assets/images/house.jpg') no-repeat center center;
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.homeBg {
+  background: url('../../assets/images/2.jpg') no-repeat center center;
   background-size: cover;
-  padding: 0px 20px;
-  overflow: hidden;
+  position: relative;
 }
 
 .overlay {
@@ -21,93 +17,146 @@
   z-index: 1;
 }
 
-.contentWrapper {
-  position: relative;
-  z-index: 2;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 40px 20px;
-  text-align: center;
-  color: var(--button-text-color);
+.homeContainer {
+  @include container;
 }
 
 .homeContent {
-  max-width: 1000px;
-  padding: 20px;
+  position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  text-align: center;
+  align-items: flex-start;
+  z-index: 10;
+
+  max-width: 40rem;
+  width: 100%;
+  min-height: calc(100vh - $header-height);
 }
 
 .homeTitle {
   font-size: 3rem;
-  margin-bottom: 1rem;
-  font-weight: bold;
-  text-align: center;
-  color: var(--button-text-color);
+  margin-bottom: 2rem;
 }
 
-.homeText {
-  font-size: 1.2rem;
-  line-height: 1.6;
-  max-width: 900px;
-  text-align: center;
-  color: var(--button-text-color);
-}
-
-.formWrapper {
+.homeDescription {
+  max-width: 28rem;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  position: relative;
-  z-index: 2;
+  margin-bottom: 1.5rem;
+}
 
-  @media (max-width: 768px) {
-    padding: 15px 0;
+.homeBtn {
+  background-color: var(--color-purple);
+  color: var(--color-light);
+  padding: 1rem 3rem;
+  font-size: 1.125rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: $box-shadow;
+  transition: all 0.3s ease;
+
+  .arrow-icon {
+    transition: transform 0.3s ease;
   }
 
-  @media (max-width: 480px) {
-    padding: 10px 0;
+  &:hover {
+    background-color: var(--color-purple-hover);
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(124, 58, 237, 0.3);
+
+    .arrow-icon {
+      transform: translateX(5px);
+    }
+  }
+
+  &:active {
+    transform: scale(0.98);
   }
 }
 
-@media (max-width: 1024px) {
-  .homeTitle {
-    font-size: 2.4rem;
-  }
-  .homeText {
-    font-size: 1.1rem;
-  }
-}
+//
+//.contentWrapper {
+//  position: relative;
+//  z-index: 2;
+//  flex: 1;
+//  display: flex;
+//  flex-direction: column;
+//  justify-content: center;
+//  align-items: center;
+//  width: 100%;
+//  max-width: 1200px;
+//  margin: 0 auto;
+//  padding: 40px 20px;
+//  text-align: center;
+//  color: var(--button-text-color);
+//}
+//
+//.homeContent {
+//  max-width: 1000px;
+//  padding: 20px;
+//  display: flex;
+//  flex-direction: column;
+//  align-items: center;
+//  justify-content: center;
+//  text-align: center;
+//}
+//
 
-@media (max-width: 768px) {
-  .homeTitle {
-    font-size: 2rem;
-  }
-  .homeText {
-    font-size: 1rem;
-  }
-  .pageContainer {
-    padding: 15px;
-  }
-}
-
-@media (max-width: 480px) {
-  .homeTitle {
-    font-size: 1.8rem;
-  }
-  .homeText {
-    font-size: 0.9rem;
-  }
-  .pageContainer {
-    padding: 10px;
-  }
-}
+//
+//.homeText {
+//  font-size: 1.2rem;
+//  line-height: 1.6;
+//  max-width: 900px;
+//  text-align: center;
+//  color: var(--button-text-color);
+//}
+//
+//.formWrapper {
+//  width: 100%;
+//  display: flex;
+//  justify-content: center;
+//  position: relative;
+//  z-index: 2;
+//
+//  @media (max-width: 768px) {
+//    padding: 15px 0;
+//  }
+//
+//  @media (max-width: 480px) {
+//    padding: 10px 0;
+//  }
+//}
+//
+//@media (max-width: 1024px) {
+//  .homeTitle {
+//    font-size: 2.4rem;
+//  }
+//  .homeText {
+//    font-size: 1.1rem;
+//  }
+//}
+//
+//@media (max-width: 768px) {
+//  .homeTitle {
+//    font-size: 2rem;
+//  }
+//  .homeText {
+//    font-size: 1rem;
+//  }
+//  .pageContainer {
+//    padding: 15px;
+//  }
+//}
+//
+//@media (max-width: 480px) {
+//  .homeTitle {
+//    font-size: 1.8rem;
+//  }
+//  .homeText {
+//    font-size: 0.9rem;
+//  }
+//  .pageContainer {
+//    padding: 10px;
+//  }
+//}

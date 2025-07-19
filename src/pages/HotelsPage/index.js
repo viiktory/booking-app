@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useLocation, Link } from 'react-router-dom';
 import { fetchHotels } from '../../store/slices/hotelsSlice';
-import BookingForm from '../../components/BookingForm';
+import BookingForm from '../../components/BookingForm/BookingForm';
 import styles from './HotelsPage.module.scss';
 
 const hotelImages = [
