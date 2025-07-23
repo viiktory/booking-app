@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import api from '../../utils/api';
+import api from '../../api/api';
 import styles from './BlogDetailsPage.module.scss';
 
 export default function BlogDetailsPage() {

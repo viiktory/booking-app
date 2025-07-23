@@ -1,9 +1,8 @@
-import { Link } from 'react-router-dom';
 import { useState } from 'react';
-import { NavItem } from '../../components';
+import { Link } from 'react-router-dom';
+import { FiMenu, FiX } from 'react-icons/fi';
 import { PATHS } from '../../paths';
-import { FiMenu } from 'react-icons/fi';
-import { FiX } from 'react-icons/fi';
+import { NavItem } from '../../components';
 import styles from './Header.module.scss';
 
 const Header = () => {
@@ -27,7 +26,7 @@ const Header = () => {
         <ul className={`${styles.navList} ${isOpen ? styles.activeNav : ''}`}>
           <NavItem className={styles.navItem} to={PATHS.HOME} label="Home" />
           <NavItem className={styles.navItem} to={PATHS.ABOUT} label="About us" />
-          <NavItem className={styles.navItem} to={PATHS.HOTELS.LIST} label="Hotels" />
+          <NavItem className={styles.navItem} to={PATHS.HOTELS} label="Hotels" />
           <NavItem className={styles.navItem} to={PATHS.BLOG} label="Blog" />
           <NavItem className={styles.navItem} to={PATHS.CONTACTS} label="Contact" />
         </ul>

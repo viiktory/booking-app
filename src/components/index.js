@@ -7,3 +7,17 @@ export { default as Navbar } from './Header/Header';
 export { default as Button } from './Button/Button';
 
 export { default as Layout } from './Layout/Layout';
+
+export { default as FieldForm } from './FieldForm/FieldForm';
+
+export { default as Field } from './Field/Field';
+
+export { default as Intro } from './About/Intro/Intro';
+
+export { default as AdvantageSection } from './About/AdvantageSection/AdvantageSection';
+
+export { default as AdvantageCard } from './About/AdvantageCard/AdvantageCard';
+
+export { default as ReviewsSection } from './About/ReviewsSection/ReviewsSection';
+
+export { default as ReviewsCard } from './About/ReviewsCard/ReviewsCard';

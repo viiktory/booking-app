@@ -1,17 +1,15 @@
 import React from 'react';
-import AboutIntro from '../../components/About/AboutIntro';
-import AboutFeatures from '../../components/About/AboutFeatures';
-import CustomerReviewsCarousel from '../../components/CustomerReviewsCarousel';
+import { Intro, AdvantageSection, ReviewsSection } from '../../components';
+import BookingForm from '../../components/BookingForm/BookingForm';
 import styles from './AboutPage.module.scss';
-import BookingForm from "../../components/BookingForm/BookingForm";
 
 const AboutUs = () => {
   return (
     <section className={styles.about} id="about">
-      <BookingForm/>
-      <AboutIntro />
-      <AboutFeatures />
-      <CustomerReviewsCarousel />
+      <BookingForm />
+      <Intro />
+      <AdvantageSection />
+      <ReviewsSection />
     </section>
   );
 };

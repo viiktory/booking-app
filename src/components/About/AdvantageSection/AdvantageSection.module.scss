@@ -1,0 +1,18 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.advantageSectionContainer {
+  background: url('../../../assets/images/about/green-leaves.jpg') no-repeat center center;
+  width: 100vw;
+  background-size: cover;
+  min-height: 32rem;
+}
+
+.advantageSectionContent {
+  @include container;
+  margin-top: 3rem;
+}
+
+.advantageSectionSwiper {
+  display: flex;
+}

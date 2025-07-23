@@ -1,0 +1,59 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.cardWrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 2rem;
+  border-radius: 1rem;
+  align-items: flex-start;
+}
+
+.content {
+  flex: 1;
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.userPhoto {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--color-purple);
+}
+
+.userName {
+  font-weight: 600;
+  color: var(--color-purple);
+  font-size: 1.1rem;
+}
+
+.reviewText {
+  font-size: 1rem;
+  color: var(--color-dark);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.stars {
+  color: var(--color-stars);
+  font-size: 20px;
+  display: flex;
+  gap: 4px;
+  margin-bottom: 8px;
+}
+
+
+.hotelImage {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+}

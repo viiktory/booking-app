@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import BlogCard from '../BlogCard';
-import api from '../../../utils/api';
+import api from '../../../api/api';
 import styles from './BlogPost.module.scss';
 
 export default function BlogPost() {

@@ -7,6 +7,9 @@
 
   --color-dark: #111827;
   --color-dark-hover: #1f2937;
+
+  --color-error: #e74c3c;
+  --color-stars:  #ffc107;
 }
 
 $font-main: 'Playfair Display', serif;
@@ -19,28 +22,3 @@ $header-height: 5rem;
 $footer-height: 10rem;
 
 $box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-
-//body.light {
-//  --background-color: #f5f5f5;
-//  --text-color: #333;
-//  --logo-color: #222;
-//  --link-color: #555;
-//  --button-text-color: #fff;
-//  --form-text: #fff;
-//}
-//
-//body.dark {
-//  --background-color: #333;
-//  --text-color: #f5f5f5;
-//  --logo-color: #ddd;
-//  --link-color: #ddd;
-//  --button-text-color: #ddd;
-//  --form-text: #555;
-//}
-//
-//body {
-//  background-color: var(--background-color);
-//  color: var(--text-color);
-//  transition: background-color 0.3s ease,
-//  color 0.3s ease;
-//}
