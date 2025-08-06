@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-const NavItem = ({ to = '', label, icon, target, className }) => {
+const NavItem = ({ to = '', label, icon, target, placeholder, className }) => {
   const isExternal = to.startsWith('http');
 
   if (isExternal) {
@@ -9,6 +9,7 @@ const NavItem = ({ to = '', label, icon, target, className }) => {
         <a href={to} className={className} target={target} rel="noopener noreferrer">
           {icon && <span className="nav-icon">{icon}</span>}
           {label}
+          {placeholder && <span className="nav-placeholder">{placeholder}</span>}
         </a>
       </li>
     );
@@ -19,6 +20,7 @@ const NavItem = ({ to = '', label, icon, target, className }) => {
       <a href={to} className={className}>
         {icon && <span className="nav-icon">{icon}</span>}
         {label}
+        {placeholder && <span className="nav-placeholder">{placeholder}</span>}
       </a>
     </li>
   );
@@ -29,6 +31,7 @@ NavItem.propTypes = {
   label: PropTypes.string.isRequired,
   icon: PropTypes.node,
   target: PropTypes.string,
+  placeholder: PropTypes.string,
   className: PropTypes.string,
 };
 

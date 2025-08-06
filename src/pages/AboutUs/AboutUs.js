@@ -1,13 +1,11 @@
 import React from 'react';
-import { Intro, AdvantageSection, ReviewsSection } from '../../components';
-import BookingForm from '../../components/BookingForm/BookingForm';
-import styles from './AboutPage.module.scss';
+import { BookingForm, IntroSection, AdvantageSection, ReviewsSection } from '../../components';
 
 const AboutUs = () => {
   return (
-    <section className={styles.about} id="about">
+    <section id="about">
       <BookingForm />
-      <Intro />
+      <IntroSection />
       <AdvantageSection />
       <ReviewsSection />
     </section>

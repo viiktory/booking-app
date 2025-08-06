@@ -2,17 +2,23 @@
 @import '../../../styles/mixins';
 
 .advantageSectionContainer {
-  background: url('../../../assets/images/about/green-leaves.jpg') no-repeat center center;
-  width: 100vw;
+  background: url('../../../assets/images/leaves.jpg') no-repeat center center;
+  width: 100%;
   background-size: cover;
   min-height: 32rem;
 }
 
 .advantageSectionContent {
   @include container;
-  margin-top: 3rem;
+  padding-top: 3rem;
 }
 
 .advantageSectionSwiper {
   display: flex;
+}
+
+@media (max-width: 768px) {
+  .advantageSectionContent {
+    padding-top: 2rem;
+  }
 }

@@ -1,12 +1,12 @@
 import { FiArrowRight } from 'react-icons/fi';
 import { PATHS } from '../../paths';
 import { AboutUs } from '../../pages';
-import styles from './HomePage.module.scss';
+import styles from './Home.module.scss';
 
-const HomePage = () => {
+const Home = () => {
   return (
     <>
-      <div className={styles.homeBg}>
+      <section className={styles.homeBg}>
         <div className={styles.overlay}></div>
         <div className={styles.homeContainer}>
           <div className={styles.homeContent}>
@@ -22,10 +22,10 @@ const HomePage = () => {
             </a>
           </div>
         </div>
-      </div>
+      </section>
       <AboutUs />
     </>
   );
 };
 
-export default HomePage;
+export default Home;

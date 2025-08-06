@@ -2,6 +2,7 @@
 @import '../../../styles/mixins';
 
 .cardWrapper {
+  @include container;
   display: flex;
   justify-content: space-between;
   gap: 2rem;
@@ -56,4 +57,10 @@
   height: 150px;
   object-fit: cover;
   border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .cardWrapper {
+    flex-direction: column;
+  }
 }

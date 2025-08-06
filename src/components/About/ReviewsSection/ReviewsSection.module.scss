@@ -2,7 +2,6 @@
 @import '../../../styles/mixins';
 
 .reviewsSectionContainer {
-  color: var(--color-dark);
   background-color: var(--color-light);
   width: 100vw;
   padding-block: 4rem;
@@ -10,8 +9,8 @@
 
 .reviewsSectionContent {
   @include container;
+}
+
+.reviewsSectionSwiper {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2rem;
 }

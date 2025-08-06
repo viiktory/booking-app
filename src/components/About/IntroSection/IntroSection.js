@@ -1,10 +1,10 @@
-import stairs from '../../../assets/images/1.jpg';
-import hotels from '../../../assets/images/2.jpg';
-import rest from '../../../assets/images/3.jpg';
+import resortHouse from '../../../assets/images/resortHouse.jpg';
+import apartment from '../../../assets/images/apartment.jpg';
+import restaurant from '../../../assets/images/restaurant.jpg';
 import { Button, Field } from '../../../components';
 import styles from './Intro.module.scss';
 
-const Intro = () => {
+const IntroSection = () => {
   return (
     <section className={styles.aboutIntroContainer}>
       <div className={styles.aboutIntroContent}>
@@ -23,11 +23,11 @@ const Intro = () => {
 
         <div className={styles.aboutIntroImages}>
           <div className={styles.imagesRow}>
-            <img className={styles.aboutIntroImage} src={stairs} alt="stairs" />
-            <img className={styles.aboutIntroImage} src={hotels} alt="hotels" />
+            <img className={styles.aboutIntroImage} src={resortHouse} alt="resort house" />
+            <img className={styles.aboutIntroImage} src={apartment} alt="apartment near the sea" />
           </div>
           <div className={styles.imagesRow}>
-            <img className={styles.aboutIntroImage} src={rest} alt="rest" />
+            <img className={styles.aboutIntroImage} src={restaurant} alt="restaurant" />
           </div>
         </div>
       </div>
@@ -35,4 +35,4 @@ const Intro = () => {
   );
 };
 
-export default Intro;
+export default IntroSection;

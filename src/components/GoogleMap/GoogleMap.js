@@ -1,7 +1,6 @@
-import React from 'react';
 import styles from './GoogleMap.module.scss';
 
-export default function GoogleMap() {
+const GoogleMap = () => {
   return (
     <div className={styles.mapContainer}>
       <iframe
@@ -15,10 +14,10 @@ export default function GoogleMap() {
         href="https://www.google.com/maps/place/123+Main+Street,+New+York,+USA"
         target="_blank"
         rel="noopener noreferrer"
-        className={styles.mapLinkButton}
-      >
-        View on Google Maps
-      </a>
+        className={styles.mapLink}
+      ></a>
     </div>
   );
-}
+};
+
+export default GoogleMap;

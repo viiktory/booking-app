@@ -28,13 +28,15 @@ const ReviewsSection = () => {
           title="We trust our customers and they trust us to"
           className="introTextWrapper"
         />
-            <Swiper modules={[Navigation]} navigation={true} slidesPerView={1}>
-              {review.map((item) => (
-                <SwiperSlide key={item.id}>
-                  <ReviewsCard item={item} />
-                </SwiperSlide>
-              ))}
-            </Swiper>
+        <div className={styles.reviewsSectionSwiper}>
+          <Swiper modules={[Navigation]} navigation={true} slidesPerView={1}>
+            {review.map((item) => (
+              <SwiperSlide key={item.id}>
+                <ReviewsCard item={item} />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
       </div>
     </section>
   );

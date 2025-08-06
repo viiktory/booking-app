@@ -1,5 +1,6 @@
-import { HomePage } from '../pages';
+import { Home, Hotel, Contact } from '../pages';
 import { Layout } from '../components';
+import { PATHS } from '../paths';
 
 export const routes = [
   {
@@ -8,7 +9,15 @@ export const routes = [
     children: [
       {
         index: true,
-        element: <HomePage />,
+        element: <Home />,
+      },
+      {
+        path: PATHS.HOTELS,
+        element: <Hotel />,
+      },
+      {
+        path: PATHS.CONTACTS,
+        element: <Contact />,
       },
     ],
   },

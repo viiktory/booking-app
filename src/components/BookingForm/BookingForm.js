@@ -1,11 +1,14 @@
 import { useForm } from 'react-hook-form';
+import { useNavigate } from 'react-router-dom';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { formSchema } from '../../features/formValidation';
 import { FiSend } from 'react-icons/fi';
-import styles from './BookingForm.module.scss';
+import { formSchema } from '../../features/searchFormValidation';
 import { FieldForm } from '../../components';
+import styles from './BookingForm.module.scss';
 
 const BookingForm = () => {
+  const navigate = useNavigate();
+
   const {
     register,
     handleSubmit,
@@ -19,7 +22,14 @@ const BookingForm = () => {
   });
 
   const onSubmit = (data) => {
-    console.log(data);
+    const query = new URLSearchParams({
+      location: data.location,
+      checkIn: data.checkIn,
+      checkOut: data.checkOut,
+    }).toString();
+
+    navigate(`/hotels?${query}`);
+
     reset();
   };
 
