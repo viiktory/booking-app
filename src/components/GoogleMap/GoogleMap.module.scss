@@ -12,6 +12,7 @@
 .map {
   @include container;
   display: block;
+  min-height: 15rem;
 }
 
 .mapLink {

@@ -1,0 +1,65 @@
+.formFieldWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  position: relative;
+  flex: 1 1 220px;
+}
+
+.vertical {
+  flex: unset;
+  min-width: 0;
+}
+
+.label {
+  color: var(--color-purple);
+  margin-bottom: 0.5rem;
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
+}
+
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.formInput,
+.formTextarea,
+select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ccc;
+  background: var(--color-light);
+  font-size: 1rem;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+
+  &:focus {
+    outline: none;
+    border-color: var(--color-purple);
+    box-shadow: 0 0 0 3px rgba(129, 91, 255, 0.2);
+  }
+}
+
+.formTextarea {
+  min-height: 13rem;
+  resize: vertical;
+}
+
+.error {
+  color: var(--color-error);
+  font-size: 0.85rem;
+  position: absolute;
+  bottom: -1.2rem;
+  left: 0;
+}
+
+@media (max-width: 768px) {
+  .formFieldWrapper {
+    flex: 1 1 100%;
+    min-width: unset;
+  }
+}
