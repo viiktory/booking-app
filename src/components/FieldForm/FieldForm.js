@@ -1,16 +1,7 @@
 import PropTypes from 'prop-types';
 import styles from './FieldForm.module.scss';
 
-const FieldForm = ({
-  label,
-  name,
-  type,
-  register,
-  errors,
-  option,
-  variant = 'booking',
-  vertical = false,
-}) => {
+const FieldForm = ({ label, name, type, register, errors, option, vertical = false }) => {
   return (
     <div className={`${styles.formFieldWrapper} ${vertical ? styles.vertical : ''}`}>
       <label className={styles.label} htmlFor={name}>
@@ -18,7 +9,11 @@ const FieldForm = ({
       </label>
       <div className={styles.inputWrapper}>
         {type === 'select' ? (
-          <select id={name} {...register(name)} className={styles.formInput}>
+          <select
+            id={name}
+            {...register(name)}
+            className={`${styles.formInput} ${errors ? styles.errorInput : ''}`}
+          >
             {option.map((opt) => (
               <option key={opt.value} value={opt.value}>
                 {opt.label}
@@ -26,9 +21,18 @@ const FieldForm = ({
             ))}
           </select>
         ) : type === 'textarea' ? (
-          <textarea id={name} {...register(name)} className={styles.formTextarea} />
+          <textarea
+            id={name}
+            {...register(name)}
+            className={`${styles.formTextarea} ${errors ? styles.errorInput : ''}`}
+          />
         ) : (
-          <input type={type} id={name} {...register(name)} className={styles.formInput} />
+          <input
+            type={type}
+            id={name}
+            {...register(name)}
+            className={`${styles.formInput} ${errors ? styles.errorInput : ''}`}
+          />
         )}
 
         {errors && <p className={styles.error}>{errors.message}</p>}
@@ -49,7 +53,7 @@ FieldForm.propTypes = {
       label: PropTypes.string,
     })
   ),
-  variant: PropTypes.string,
+  vertical: PropTypes.bool,
 };
 
 export default FieldForm;

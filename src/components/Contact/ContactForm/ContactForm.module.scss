@@ -9,14 +9,18 @@
 .contactContent {
   @include container;
   display: flex;
-  gap:2rem;
+  gap: 2rem;
   flex-wrap: wrap;
 }
 
 .contactMessage,
 .contactInput {
   flex: 1;
+  display: flex;
+  flex-direction: column;
 }
+
+
 
 .contactInput {
   display: flex;
@@ -24,4 +28,11 @@
   gap: 1rem;
   margin: 0;
   padding: 0;
+}
+
+@media (max-width: 768px) {
+  .contactContent {
+    flex-direction: column;
+    gap: 2rem;
+  }
 }

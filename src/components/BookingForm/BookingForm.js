@@ -36,43 +36,46 @@ const BookingForm = () => {
   return (
     <>
       <form onSubmit={handleSubmit(onSubmit)} className={styles.formContainer} autoComplete="off">
-        <FieldForm
-          label="Location"
-          name="location"
-          type="select"
-          register={register}
-          option={[
-            { value: '', label: 'Select a location' },
-            { value: 'New York', label: 'New York' },
-            { value: 'Boston', label: 'Boston' },
-          ]}
-        />
-        <FieldForm
-          label="Check In Date"
-          name="checkIn"
-          type="date"
-          register={register}
-          errors={errors.checkIn}
-        />
-        <FieldForm
-          label="Check Out Date"
-          name="checkOut"
-          type="date"
-          register={register}
-          errors={errors.checkOut}
-        />
+        <div className={styles.formRow}>
+          <FieldForm
+            label="Location"
+            name="location"
+            type="select"
+            register={register}
+            option={[
+              { value: '', label: 'Select a location' },
+              { value: 'New York', label: 'New York' },
+              { value: 'London', label: 'London' },
+              { value: 'Paris', label: 'Paris' },
+            ]}
+          />
+          <FieldForm
+            label="Check In Date"
+            name="checkIn"
+            type="date"
+            register={register}
+            errors={errors.checkIn}
+          />
+          <FieldForm
+            label="Check Out Date"
+            name="checkOut"
+            type="date"
+            register={register}
+            errors={errors.checkOut}
+          />
 
-        <FieldForm
-          label="Guests"
-          name="guests"
-          type="number"
-          register={register}
-          errors={errors.guests}
-        />
+          <FieldForm
+            label="Guests"
+            name="guests"
+            type="number"
+            register={register}
+            errors={errors.guests}
+          />
 
-        <button type="submit" className={styles.formBtn}>
-          <FiSend className={styles.formIcon} />
-        </button>
+          <button type="submit" className={styles.formBtn}>
+            <FiSend className={styles.formIcon} />
+          </button>
+        </div>
       </form>
     </>
   );

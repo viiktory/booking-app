@@ -3,7 +3,8 @@
   flex-direction: column;
   gap: 0.5rem;
   position: relative;
-  flex: 1 1 220px;
+  flex: 1;
+  height: 100%;
 }
 
 .vertical {
@@ -23,19 +24,18 @@
 .inputWrapper {
   display: flex;
   flex-direction: column;
+  flex: 1;
 }
 
-.formInput,
-.formTextarea,
-select {
+.formInput, select {
   width: 100%;
   padding: 0.75rem 1rem;
   border: 1px solid #ccc;
   background: var(--color-light);
+  height: 48px;
   font-size: 1rem;
-  transition:
-    border-color 0.2s ease,
-    box-shadow 0.2s ease;
+  transition: border-color 0.2s ease,
+  box-shadow 0.2s ease;
 
   &:focus {
     outline: none;
@@ -45,8 +45,21 @@ select {
 }
 
 .formTextarea {
-  min-height: 13rem;
-  resize: vertical;
+  width: 100%;
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ccc;
+  background: var(--color-light);
+  resize: none;
+  font-size: 1rem;
+  transition: border-color 0.2s ease,
+  box-shadow 0.2s ease;
+
+  &:focus {
+    outline: none;
+    border-color: var(--color-purple);
+    box-shadow: 0 0 0 3px rgba(129, 91, 255, 0.2);
+  }
 }
 
 .error {
@@ -54,7 +67,10 @@ select {
   font-size: 0.85rem;
   position: absolute;
   bottom: -1.2rem;
-  left: 0;
+}
+
+.errorInput {
+  border: 1px solid var(--color-error);
 }
 
 @media (max-width: 768px) {

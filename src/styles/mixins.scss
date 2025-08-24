@@ -1,3 +1,5 @@
+@import '../styles/variables';
+
 @mixin container {
   max-width: $container-width;
   width: 100%;

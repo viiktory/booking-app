@@ -30,8 +30,9 @@
   gap: 1rem;
 }
 
-.imagesRow:first-child {
-  justify-content: space-between;
+.imagesRow:first-child img{
+  flex: 1;
+  min-width: 0;
 }
 
 .imagesRow:last-child img {
@@ -56,6 +57,11 @@
   .imagesRow {
     flex-direction: column;
     gap: 0.75rem;
+  }
+
+  .imagesRow:first-child img {
+    flex: none;
+    width: 100%;
   }
 
   .aboutIntroImage {

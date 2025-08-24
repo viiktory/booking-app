@@ -12,9 +12,9 @@ export const formSchema = z
   })
   .refine((data) => new Date(data.checkIn) >= today, {
     path: ['checkIn'],
-    message: 'Check-in date cannot be in the past',
+    message: 'Cannot be in the past',
   })
   .refine((data) => new Date(data.checkOut) > new Date(data.checkIn), {
     path: ['checkOut'],
-    message: 'Check-out cannot be before check-in',
+    message: 'Cannot be before check-in',
   });

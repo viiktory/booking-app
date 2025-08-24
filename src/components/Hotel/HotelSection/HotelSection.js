@@ -1,8 +1,8 @@
 import { useQuery } from '@tanstack/react-query';
+import { useState } from 'react';
 import { fetchHotels } from '../../../api/fetchHotels';
 import { Button, Field, HotelCard } from '../../../components';
 import styles from './HotelSection.module.scss';
-import { useState } from 'react';
 
 const HotelSection = () => {
   const {

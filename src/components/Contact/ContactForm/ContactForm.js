@@ -15,6 +15,7 @@ const ContactForm = () => {
   });
 
   const onSubmit = (data) => {
+    console.log(data);
     reset();
   };
 
