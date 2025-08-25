@@ -1,0 +1,68 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.errorBox {
+  background: var(--color-light);
+}
+.errorContainer {
+  @include container;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+
+  color: var(--color-dark);
+  min-height: 100vh;
+  margin-top: 6rem;
+}
+
+.errorContent {
+  max-width: 500px;
+}
+
+.errorTitle {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+}
+
+.errorDescription {
+  font-size: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.errorList {
+  font-size: 1.2rem;
+  color: var(--color-purple);
+  margin-bottom: 2rem;
+  padding-left: 2rem;
+
+  li {
+    margin-bottom: 0.5rem;
+    list-style: disc;
+  }
+}
+
+.errorImage {
+  flex-shrink: 0;
+
+  .errorImg {
+    max-width: 450px;
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .errorContainer {
+    flex-direction: column;
+  }
+
+  .errorImage {
+    margin-top: 2rem;
+
+    .errorImg {
+      max-width: 300px;
+    }
+  }
+}

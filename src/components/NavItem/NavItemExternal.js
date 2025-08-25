@@ -1,0 +1,26 @@
+import PropTypes from 'prop-types';
+
+const NavItemExternal = ({ to, icon, label, className }) => {
+  return (
+    <li>
+      <a
+        href={to}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={label}
+        className={className}
+      >
+        {icon}
+      </a>
+    </li>
+  );
+};
+
+NavItemExternal.propTypes = {
+  to: PropTypes.string.isRequired,
+  icon: PropTypes.string.isRequired,
+  label: PropTypes.string,
+  className: PropTypes.string,
+};
+
+export default NavItemExternal;

@@ -1,0 +1,28 @@
+.accordionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.chevron {
+  display: none;
+  transition: transform 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .chevron {
+    display: inline-block;
+  }
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+.open {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}

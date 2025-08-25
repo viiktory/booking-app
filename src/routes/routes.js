@@ -1,4 +1,4 @@
-import { Home, Hotel, Contact } from '../pages';
+import { Home, Hotel, Contact, Error } from '../pages';
 import { Layout } from '../components';
 import { PATHS } from '../paths';
 
@@ -18,6 +18,10 @@ export const routes = [
       {
         path: PATHS.CONTACTS,
         element: <Contact />,
+      },
+      {
+        path: '*',
+        element: <Error />,
       },
     ],
   },

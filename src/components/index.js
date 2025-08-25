@@ -1,4 +1,8 @@
-export { default as NavItem } from './NavItem/NavItem';
+export { default as NavItemLink } from './NavItem/NavItemLink';
+
+export { default as NavItemExternal } from './NavItem/NavItemExternal';
+
+export { default as ContactItem } from './Contact/ContactItem';
 
 export { default as Header } from './Header/Header';
 
@@ -31,3 +35,7 @@ export { default as ContactForm } from './Contact/ContactForm/ContactForm';
 export { default as GoogleMap } from './GoogleMap/GoogleMap';
 
 export { default as ContactLinks } from './Contact/ContactLinks/ContactLinks';
+
+export { default as Footer } from './Footer/Footer';
+
+export { default as AccordionItem } from './AccordionItem/AccordionItem';

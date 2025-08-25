@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { FiMenu, FiX } from 'react-icons/fi';
 import { PATHS } from '../../paths';
-import { NavItem } from '../../components';
+import { NavItemLink } from '../../components';
 import styles from './Header.module.scss';
 
 const Header = () => {
@@ -25,11 +25,11 @@ const Header = () => {
         </button>
 
         <ul className={`${styles.navList} ${isOpen ? styles.activeNav : ''}`}>
-          <NavItem className={styles.navItem} to={PATHS.HOME} label="Home" />
-          <NavItem className={styles.navItem} to={PATHS.ABOUT} label="About us" />
-          <NavItem className={styles.navItem} to={PATHS.HOTELS} label="Hotel" />
-          <NavItem className={styles.navItem} to={PATHS.BLOG} label="Blog" />
-          <NavItem className={styles.navItem} to={PATHS.CONTACTS} label="Contact" />
+          <NavItemLink className={styles.navItem} to={PATHS.HOME} label="Home" />
+          <NavItemLink className={styles.navItem} to={PATHS.ABOUT} label="About us" />
+          <NavItemLink className={styles.navItem} to={PATHS.HOTELS} label="Hotel" />
+          <NavItemLink className={styles.navItem} to={PATHS.BLOG} label="Blog" />
+          <NavItemLink className={styles.navItem} to={PATHS.CONTACTS} label="Contact" />
         </ul>
       </nav>
     </header>

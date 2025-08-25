@@ -1,9 +1,20 @@
-import { FiArrowRight } from 'react-icons/fi';
 import PropTypes from 'prop-types';
+import { useNavigate } from 'react-router-dom';
+import { FiArrowRight } from 'react-icons/fi';
 
-const Button = ({ type, text, className, onClick, disabled }) => {
+const Button = ({ type, text, to, className, onClick, disabled }) => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    if (to) {
+      navigate(to);
+    } else if (onClick) {
+      onClick();
+    }
+  };
+
   return (
-    <button className={className} type={type} onClick={onClick} disabled={disabled}>
+    <button className={className} type={type} onClick={handleClick} disabled={disabled}>
       {text}
       <FiArrowRight className="arrow-icon" />
     </button>
@@ -13,6 +24,7 @@ const Button = ({ type, text, className, onClick, disabled }) => {
 Button.propTypes = {
   type: PropTypes.string,
   text: PropTypes.string,
+  to: PropTypes.string,
   className: PropTypes.string,
   onClick: PropTypes.func,
   disabled: PropTypes.bool,
