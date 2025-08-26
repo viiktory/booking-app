@@ -22,11 +22,13 @@ const BookingForm = () => {
   });
 
   const onSubmit = (data) => {
-    const query = new URLSearchParams({
-      location: data.location,
-      checkIn: data.checkIn,
-      checkOut: data.checkOut,
-    }).toString();
+    const queryParams = {
+      location: data.location || undefined,
+      checkIn: data.checkIn || undefined,
+      checkOut: data.checkOut || undefined,
+      page: 1,
+    };
+    const query = new URLSearchParams(queryParams).toString();
 
     navigate(`/hotels?${query}`);
 
