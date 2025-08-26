@@ -18,7 +18,7 @@ const NavItemExternal = ({ to, icon, label, className }) => {
 
 NavItemExternal.propTypes = {
   to: PropTypes.string.isRequired,
-  icon: PropTypes.string.isRequired,
+  icon: PropTypes.node,
   label: PropTypes.string,
   className: PropTypes.string,
 };

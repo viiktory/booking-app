@@ -20,80 +20,65 @@ const Footer = () => {
             <Link to={PATHS.HOME}>start over</Link>
           </h1>
           <p>Your trusted hotel booking partner</p>
-          <div className={styles.footerSocial}>
+          <div className={styles.footerSocialLinks}>
             <NavItemExternal
-              icon={<FaFacebook />}
+              icon={<FaFacebook className={styles.footerSocialIcons} />}
               to="https://facebook.com"
               label=""
-              className={styles.footerSocialLink}
             />
             <NavItemExternal
-              icon={<FaGoogle />}
+              icon={<FaGoogle className={styles.footerSocialIcons} />}
               to="https://google.com"
               label=""
-              className={styles.footerSocialLink}
             />
             <NavItemExternal
-              icon={<FaTelegram />}
+              icon={<FaTelegram className={styles.footerSocialIcons} />}
               to="https://web.telegram.org/k/"
               label=""
-              className={styles.footerSocialLink}
             />
           </div>
         </div>
 
-        <div className={styles.footerLinks}>
+        <div>
           <AccordionItem title="Useful links">
-            <NavItemLink className={styles.footerSocialLink} to={PATHS.HOME} label="FAQ" />
-            <NavItemLink className={styles.footerSocialLink} to={PATHS.HOME} label="How it works" />
-            <NavItemLink
-              className={styles.footerSocialLink}
-              to={PATHS.HOME}
-              label="Terms & Conditions"
-            />
-            <NavItemLink className={styles.footerSocialLink} to={PATHS.HOME} label="Support" />
+            <NavItemLink className={styles.footerLink} to={PATHS.HOME} label="FAQ" />
+            <NavItemLink className={styles.footerLink} to={PATHS.HOME} label="How it works" />
+            <NavItemLink className={styles.footerLink} to={PATHS.HOME} label="Terms & Conditions" />
+            <NavItemLink className={styles.footerLink} to={PATHS.HOME} label="Support" />
           </AccordionItem>
         </div>
 
-        <div className={styles.footerLinks}>
+        <div>
           <AccordionItem title="Privacy">
-            <NavItemLink className={styles.footerSocialLink} to={PATHS.HOME} label="About us" />
-            <NavItemLink
-              className={styles.footerSocialLink}
-              to={PATHS.HOME}
-              label="Privacy Policy"
-            />
-            <NavItemLink
-              className={styles.footerSocialLink}
-              to={PATHS.HOME}
-              label="Cookie Policy"
-            />
-            <NavItemLink className={styles.footerSocialLink} to={PATHS.HOME} label="Contact us" />
+            <NavItemLink className={styles.footerLink} to={PATHS.HOME} label="About us" />
+            <NavItemLink className={styles.footerLink} to={PATHS.HOME} label="Privacy Policy" />
+            <NavItemLink className={styles.footerLink} to={PATHS.HOME} label="Cookie Policy" />
+            <NavItemLink className={styles.footerLink} to={PATHS.HOME} label="Contact us" />
           </AccordionItem>
         </div>
 
-        <div className={styles.footerLinks}>
+        <div>
           <AccordionItem title="Contact info">
             <ContactItem
-              icon={<FaEnvelope className={styles.footerIcon} />}
+              icon={<FaEnvelope className={styles.footerIcons} />}
               to="mailto:info@startover.com"
               label=""
               placeholder="info@startover.com"
-              className={styles.footerSocialLink}
+              className={styles.footerLink}
             />
             <ContactItem
-              icon={<FaPhone className={styles.footerIcon} />}
+              icon={<FaPhone className={styles.footerIcons} />}
               to="tel:+1234567890"
               label=""
               placeholder="+1234567890"
-              className={styles.footerSocialLink}
+              className={styles.footerLink}
             />
             <ContactItem
-              icon={<FaMapMarkerAlt className={styles.footerIcon} />}
+              icon={<FaMapMarkerAlt className={styles.footerIcons} />}
               to="https://www.google.com/maps/place/123+Main+Street,+New+York,+USA"
               label=""
               placeholder="123 Main Street, New York, USA"
-              className={styles.footerSocialLink}
+              className={styles.footerLink}
             />
           </AccordionItem>
         </div>
