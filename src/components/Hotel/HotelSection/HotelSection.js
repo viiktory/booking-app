@@ -1,3 +1,4 @@
+// import {useState} from "react";
 import { useQuery } from '@tanstack/react-query';
 import { useLocation } from 'react-router-dom';
 import { fetchHotels } from '../../../api/fetchHotels';
@@ -20,6 +21,8 @@ const HotelSection = () => {
   const filteredHotels = selectedLocation
     ? hotels.filter((hotel) => hotel.city === selectedLocation)
     : hotels;
+
+  // const [currentPage, setCurrentPage] = useState(1);
 
   if (isLoading) return 'Loading...';
   if (isError) return 'Error!';

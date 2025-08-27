@@ -1,8 +1,7 @@
 import PropTypes from 'prop-types';
 import { useNavigate } from 'react-router-dom';
-import { FiArrowRight } from 'react-icons/fi';
 
-const Button = ({ type, text, to, className, onClick, disabled }) => {
+const Button = ({ type, text, to, className, onClick, disabled, icon: Icon }) => {
   const navigate = useNavigate();
 
   const handleClick = () => {
@@ -16,7 +15,7 @@ const Button = ({ type, text, to, className, onClick, disabled }) => {
   return (
     <button className={className} type={type} onClick={handleClick} disabled={disabled}>
       {text}
-      <FiArrowRight className="arrow-icon" />
+      {Icon && <Icon className="arrow-icon" />}
     </button>
   );
 };
@@ -28,6 +27,7 @@ Button.propTypes = {
   className: PropTypes.string,
   onClick: PropTypes.func,
   disabled: PropTypes.bool,
+  icon: PropTypes.element,
 };
 
 export default Button;

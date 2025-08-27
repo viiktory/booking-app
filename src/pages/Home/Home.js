@@ -1,4 +1,4 @@
-import { FiArrowRight } from 'react-icons/fi';
+import { FaArrowRight } from 'react-icons/fa6';
 import { PATHS } from '../../paths';
 import { AboutUs } from '../../pages';
 import styles from './Home.module.scss';
@@ -15,10 +15,9 @@ const Home = () => {
               Book your next stay easily and stress-free. Find the perfect hotel in just a few
               clicks. Your journey with comfort and ease today!
             </p>
-
             <a href={PATHS.ABOUT} className="homeBtn">
               Find
-              <FiArrowRight className="arrow-icon" />
+              <FaArrowRight className="arrow-icon" />
             </a>
           </div>
         </div>

@@ -1,8 +1,13 @@
+import { PATHS } from '../../../paths';
 import styles from './HotelCard.module.scss';
+import { Link } from 'react-router-dom';
 
 const HotelCard = ({ item }) => {
   return (
-    <div className={styles.hotelCardSection}>
+    <Link
+      to={`${PATHS.HOTELS.details.replace(':id', item.id)}`}
+      className={styles.hotelCardSection}
+    >
       <img src={item.image} alt={`Image of ${item.name}`} className={styles.hotelCardImage} />
       <div className={styles.hotelCardContent}>
         <header>
@@ -14,7 +19,7 @@ const HotelCard = ({ item }) => {
         </address>
         <p className={styles.hotelCardText}> {item.phone_number}</p>
       </div>
-    </div>
+    </Link>
   );
 };
 

@@ -1,4 +1,4 @@
-import { Home, Hotel, Contact, Error } from '../pages';
+import { Home, Hotel, Contact, Error, HotelDetails } from '../pages';
 import { Layout } from '../components';
 import { PATHS } from '../paths';
 
@@ -12,8 +12,12 @@ export const routes = [
         element: <Home />,
       },
       {
-        path: PATHS.HOTELS,
+        path: PATHS.HOTELS.hotels,
         element: <Hotel />,
+      },
+      {
+        path: PATHS.HOTELS.details,
+        element: <HotelDetails />,
       },
       {
         path: PATHS.CONTACTS,

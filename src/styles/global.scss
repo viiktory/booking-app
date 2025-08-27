@@ -36,7 +36,6 @@ p {
 }
 
 .navBox--default {
-  position: fixed;
   top: 0;
   background: var(--color-dark);
 }
@@ -79,6 +78,7 @@ p {
 }
 
 .introTextWrapper {
+  padding-top: 1rem;
 }
 
 .introTextWrapper span {

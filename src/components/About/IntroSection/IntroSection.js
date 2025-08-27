@@ -2,6 +2,7 @@ import resortHouse from '../../../assets/images/resortHouse.jpg';
 import apartment from '../../../assets/images/apartment.jpg';
 import restaurant from '../../../assets/images/restaurant.jpg';
 import { Button, Field } from '../../../components';
+import { FaArrowRight } from 'react-icons/fa6';
 import styles from './Intro.module.scss';
 
 const IntroSection = () => {
@@ -18,7 +19,7 @@ const IntroSection = () => {
             launch,we've helped thousands of travelers find their perfect stay."
             className="introTextWrapper"
           />
-          <Button text="read more" className="homeBtn" />
+          <Button text="read more" className="homeBtn" icon={FaArrowRight} />
         </div>
 
         <div className={styles.aboutIntroImages}>
