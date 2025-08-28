@@ -5,6 +5,10 @@ export const PATHS = {
     hotels: '/hotels',
     details: '/hotels/:id',
   },
-  BLOG: '/blog',
+
+  BLOG: {
+    blog: '/blog',
+    details: '/blog/:id',
+  },
   CONTACTS: '/contacts',
 };

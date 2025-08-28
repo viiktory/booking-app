@@ -1,17 +1,15 @@
 :root {
   --color-light: #f9fafb;
-  --color-light-hover: #f3f4f6;
+  --color-dark: #111827;
+
+  --color-title: #666;
+  --color-description: #333;
+
+  --color-background: #fff;
 
   --color-purple: #7c3aed;
   --color-purple-hover: #6d28d9;
   --color-purple-bg: #bfbaec;
-
-
-  --color-dark: #111827;
-  --color-dark-hover: #1f2937;
-
-  --color-description: #666;
-  --color-description-bg: #333;
 
   --color-error: #e74c3c;
   --color-stars: #ffc107;
@@ -19,11 +17,13 @@
 
 $font-main: 'Playfair Display', serif;
 $font-secondary: 'Roboto', sans-serif;
-$font-size: 1rem;
+$font-size-title: 1.2rem;
+$font-size-description: 1rem;
 
 $container-width: 75rem;
 $container-spacing: 1.25rem;
 $header-height: 5rem;
 $footer-height: 12rem;
 
-$box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+$box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+$transition: transform 0.3s ease;

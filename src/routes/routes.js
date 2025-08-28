@@ -1,4 +1,4 @@
-import { Home, Hotel, Contact, Error, HotelDetails } from '../pages';
+import { Home, Hotel, HotelDetails, Blog, BlogDetails, Contact, Error } from '../pages';
 import { Layout } from '../components';
 import { PATHS } from '../paths';
 
@@ -18,6 +18,14 @@ export const routes = [
       {
         path: PATHS.HOTELS.details,
         element: <HotelDetails />,
+      },
+      {
+        path: PATHS.BLOG.blog,
+        element: <Blog />,
+      },
+      {
+        path: PATHS.BLOG.details,
+        element: <BlogDetails />,
       },
       {
         path: PATHS.CONTACTS,

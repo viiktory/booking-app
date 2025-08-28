@@ -14,6 +14,8 @@ export { default as FieldForm } from './FieldForm/FieldForm';
 
 export { default as Field } from './Field/Field';
 
+export { default as CartItem } from './CardItem/CardItem';
+
 export { default as IntroSection } from './About/IntroSection/IntroSection';
 
 export { default as AdvantageSection } from './About/AdvantageSection/AdvantageSection';
@@ -29,6 +31,10 @@ export { default as BookingForm } from './BookingForm/BookingForm';
 export { default as HotelSection } from './Hotel/HotelSection/HotelSection';
 
 export { default as HotelCard } from './Hotel/HotelCard/HotelCard';
+
+export { default as BlogSection } from './Blog/BlogSection/BlogSection';
+
+export { default as BlogCard } from './Blog/BlogCard/BlogCard';
 
 export { default as ContactForm } from './Contact/ContactForm/ContactForm';
 

@@ -1,8 +1,8 @@
 import { useParams } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
-import { fetchHotels } from '../../api/fetchHotels';
-import { Button } from '../../components';
-import { PATHS } from '../../paths';
+import { fetchHotels } from '../../../api/fetchHotels';
+import { Button } from '../../../components';
+import { PATHS } from '../../../paths';
 import styles from './HotelDetails.module.scss';
 
 const HotelDetails = () => {

@@ -29,7 +29,7 @@ const HotelSection = () => {
 
   return (
     <section className={styles.hotelSectionContainer}>
-      <div className={styles.hotelSectionContent}>
+      <div className="container">
         <Field label="Hotels" title="Choose the best now" className="introTextWrapper" />
         <div className={styles.hotelSectionText}>
           {filteredHotels.map((hotel) => (
