@@ -1,7 +1,7 @@
 // import {useState} from "react";
 import { useQuery } from '@tanstack/react-query';
 import { useLocation } from 'react-router-dom';
-import { fetchHotels } from '../../../api/fetchHotels';
+import { getHotels } from '../../../api/getHotels';
 import { Field, HotelCard } from '../../../components';
 import styles from './HotelSection.module.scss';
 
@@ -12,7 +12,7 @@ const HotelSection = () => {
     isError,
   } = useQuery({
     queryKey: ['hotels'],
-    queryFn: fetchHotels,
+    queryFn: getHotels,
   });
 
   const locationSearch = new URLSearchParams(useLocation().search);

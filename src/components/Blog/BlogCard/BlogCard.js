@@ -12,7 +12,6 @@ const BlogCard = ({ item }) => {
       subheader={item.description}
       meta={
         <>
-          <p>{item.author}</p>
           <time>{item.date}</time>
         </>
       }

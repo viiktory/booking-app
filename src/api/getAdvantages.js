@@ -1,6 +1,6 @@
 import api from './api';
 
-export const fetchAdvantages = async () => {
+export const getAdvantages = async () => {
   const response = await api.get('/advantages');
   return response.data;
 };

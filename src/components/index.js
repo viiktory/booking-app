@@ -14,7 +14,9 @@ export { default as FieldForm } from './FieldForm/FieldForm';
 
 export { default as Field } from './Field/Field';
 
-export { default as CartItem } from './CardItem/CardItem';
+export { default as CartItem } from './Item/CardItem/CardItem';
+
+export { default as CardDetails } from './Item/CardDetails/CardDetails';
 
 export { default as IntroSection } from './About/IntroSection/IntroSection';
 

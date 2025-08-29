@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import { fetchAdvantages } from '../../../api/fetchAdvantages';
+import { getAdvantages } from '../../../api/getAdvantages';
 import { Field, AdvantageCard } from '../../../components';
 import styles from './AdvantageSection.module.scss';
 
@@ -14,7 +14,7 @@ const AdvantageSection = () => {
     isError,
   } = useQuery({
     queryKey: ['advantages'],
-    queryFn: fetchAdvantages,
+    queryFn: getAdvantages,
   });
 
   if (isLoading) return 'Loading...';

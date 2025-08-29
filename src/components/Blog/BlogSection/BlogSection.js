@@ -1,5 +1,5 @@
 import {useQuery} from '@tanstack/react-query';
-import {fetchBlogInfo} from '../../../api/fetchBlogInfo';
+import {getBlogs} from '../../../api/getBlogs';
 import {Field, BlogCard} from '../../../components';
 import styles from './BlogSection.module.scss';
 
@@ -10,7 +10,7 @@ const BlogSection = () => {
     isError,
   } = useQuery({
     queryKey: ['posts'],
-    queryFn: fetchBlogInfo,
+    queryFn: getBlogs,
   });
 
   if (isLoading) return 'Loading...';

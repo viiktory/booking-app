@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import { fetchReviews } from '../../../api/fetchReviews';
+import { getReviews } from '../../../api/getReviews';
 import { Field, ReviewsCard } from '../../../components';
 import styles from './ReviewsSection.module.scss';
 
@@ -14,7 +14,7 @@ const ReviewsSection = () => {
     isError,
   } = useQuery({
     queryKey: ['reviews'],
-    queryFn: fetchReviews,
+    queryFn: getReviews,
   });
 
   if (isLoading) return 'Loading...';

@@ -1,63 +1,42 @@
-import { useParams } from 'react-router-dom';
-import { useQuery } from '@tanstack/react-query';
-import { fetchHotels } from '../../../api/fetchHotels';
-import { Button } from '../../../components';
-import { PATHS } from '../../../paths';
-import styles from './HotelDetails.module.scss';
+import {useParams} from 'react-router-dom';
+import {useQuery} from '@tanstack/react-query';
+import {getHotelById} from '../../../api/getHotels';
+import {Button, CardDetails} from '../../../components';
 
 const HotelDetails = () => {
-  const { id } = useParams();
+  const {id} = useParams();
 
   const {
-    data: hotels = [],
+    data: hotel,
     isLoading,
     isError,
   } = useQuery({
-    queryKey: ['hotels'],
-    queryFn: fetchHotels,
+    queryKey: ['hotel', id],
+    queryFn: () => getHotelById(id),
   });
 
   if (isLoading) return <p>Loading...</p>;
   if (isError) return 'Error!';
-
-  const hotel = hotels.find((item) => item.id === Number(id));
   if (!hotel) return <p>Hotel not found</p>;
 
   return (
-    <section className={styles.hotelDetails}>
-      <div className={styles.hotelBox}>
-        <Button text="Back" to={PATHS.HOTELS.hotels} className={styles.hotelBtn} />
-
-        <div className={styles.hotelContainer}>
-          <div className={styles.hotelImages}>
-            <img src={hotel.image} alt={`Image of ${hotel.name}`} className={styles.hotelImage} />
-          </div>
-
-          <div className={styles.hotelContent}>
-            <h2 className={styles.hotelTitle}>{hotel.name}</h2>
-            <p className={styles.hotelRating}>
-              {hotel.stars} ★ ({hotel.hotel_rating})
-            </p>
-            <p className={styles.hotelAddress}>
-              {hotel.address}, {hotel.city}, {hotel.country}
-            </p>
-
-            <p className={styles.hotelDescription}>{hotel.description}</p>
-            <ul className={styles.hotelAmenities}>
-              {hotel.amenities.map((amenity, i) => (
-                <li key={i}>{amenity}</li>
-              ))}
-            </ul>
-
-            <div className={styles.hotelBook}>
-              <p className={styles.hotelPrice}>Price per night: ${hotel.price_per_night}</p>
-              <Button text="Book now" className="homeBtn" />
-            </div>
-          </div>
-        </div>
-      </div>
+    <section className="container">
+      <CardDetails
+        image={hotel.image}
+        alt={hotel.name}
+        name={hotel.name}
+        hotelRating={hotel.hotel_rating}
+        stars={hotel.stars}
+        description={hotel.description}
+        amenities={hotel.amenities}
+        address={`${hotel.address}, ${hotel.city}, ${hotel.country}`}
+        price={hotel.price_per_night}
+        actionButton={
+          <Button text="Book now" className="homeBtn"/>
+        }
+      />
     </section>
-  );
+  )
 };
 
 export default HotelDetails;
