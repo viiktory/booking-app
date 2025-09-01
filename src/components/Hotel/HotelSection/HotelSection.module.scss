@@ -13,3 +13,22 @@
   margin-top: 32px;
 }
 
+.paginationDots {
+  display: flex;
+  justify-content: center;
+  padding-block: 1rem;
+
+  .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ccc;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .dot.active {
+    background-color:var(--color-purple);
+  }
+}

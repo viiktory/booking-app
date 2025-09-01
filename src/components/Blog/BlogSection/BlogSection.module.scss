@@ -9,3 +9,19 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
 }
+
+.btnBlog {
+  background-color: var(--color-purple);
+  color: var(--color-light);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  transition: background-color 0.3s, transform 0.2s;
+  margin: 1rem auto;
+  display: block;
+  text-align: center;
+
+  &:hover {
+    background-color: (var(--color-purple-hover));
+  }
+}
