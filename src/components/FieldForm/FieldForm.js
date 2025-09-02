@@ -1,7 +1,17 @@
 import PropTypes from 'prop-types';
 import styles from './FieldForm.module.scss';
 
-const FieldForm = ({ label, name, type, register, errors, option, vertical = false }) => {
+const FieldForm = ({
+  label,
+  name,
+  type,
+  register,
+  registerOptions,
+  errors,
+  option,
+  rules,
+  vertical = false,
+}) => {
   return (
     <div className={`${styles.formFieldWrapper} ${vertical ? styles.vertical : ''}`}>
       <label className={styles.label} htmlFor={name}>
@@ -11,7 +21,7 @@ const FieldForm = ({ label, name, type, register, errors, option, vertical = fal
         {type === 'select' ? (
           <select
             id={name}
-            {...register(name)}
+            {...register(name, rules)}
             className={`${styles.formInput} ${errors ? styles.errorInput : ''}`}
           >
             {option.map((opt) => (
@@ -30,7 +40,7 @@ const FieldForm = ({ label, name, type, register, errors, option, vertical = fal
           <input
             type={type}
             id={name}
-            {...register(name)}
+            {...register(name, registerOptions)}
             className={`${styles.formInput} ${errors ? styles.errorInput : ''}`}
           />
         )}
@@ -46,6 +56,7 @@ FieldForm.propTypes = {
   name: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,
   register: PropTypes.func.isRequired,
+  registerOptions: PropTypes.func,
   errors: PropTypes.object,
   option: PropTypes.arrayOf(
     PropTypes.shape({
@@ -53,6 +64,7 @@ FieldForm.propTypes = {
       label: PropTypes.string,
     })
   ),
+  rules: PropTypes.object,
   vertical: PropTypes.bool,
 };
 

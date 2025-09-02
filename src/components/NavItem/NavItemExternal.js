@@ -10,7 +10,8 @@ const NavItemExternal = ({ to, icon, label, className }) => {
         aria-label={label}
         className={className}
       >
-        {icon}
+        {icon && <span className="icon">{icon}</span>}
+        {label}
       </a>
     </li>
   );

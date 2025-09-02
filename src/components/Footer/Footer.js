@@ -43,17 +43,33 @@ const Footer = () => {
           <AccordionItem title="Useful links">
             <NavItemLink className={styles.footerLink} to={PATHS.HOME} label="FAQ" />
             <NavItemLink className={styles.footerLink} to={PATHS.HOME} label="How it works" />
-            <NavItemLink className={styles.footerLink} to={PATHS.HOME} label="Terms & Conditions" />
-            <NavItemLink className={styles.footerLink} to={PATHS.HOME} label="Support" />
+            <NavItemExternal
+              className={styles.footerLink}
+              to="https://www.icertis.com/contracting-basics/what-are-terms-and-conditions/"
+              label="Terms & Conditions"
+            />
+            <NavItemExternal
+              className={styles.footerLink}
+              to="https://en.wikipedia.org/wiki/Support_and_resistance"
+              label="Support"
+            />
           </AccordionItem>
         </div>
 
         <div>
           <AccordionItem title="Privacy">
-            <NavItemLink className={styles.footerLink} to={PATHS.HOME} label="About us" />
-            <NavItemLink className={styles.footerLink} to={PATHS.HOME} label="Privacy Policy" />
-            <NavItemLink className={styles.footerLink} to={PATHS.HOME} label="Cookie Policy" />
-            <NavItemLink className={styles.footerLink} to={PATHS.HOME} label="Contact us" />
+            <NavItemLink className={styles.footerLink} to={PATHS.ABOUT_PAGE} label="About us" />
+            <NavItemExternal
+              className={styles.footerLink}
+              to="https://en.wikipedia.org/wiki/Privacy_policy"
+              label="Privacy Policy"
+            />
+            <NavItemExternal
+              className={styles.footerLink}
+              to="https://en.wikipedia.org/wiki/HTTP_cookie"
+              label="Cookie Policy"
+            />
+            <NavItemLink className={styles.footerLink} to={PATHS.CONTACTS} label="Contact us" />
           </AccordionItem>
         </div>
 

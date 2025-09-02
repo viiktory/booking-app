@@ -44,6 +44,8 @@ const BookingForm = () => {
             name="location"
             type="select"
             register={register}
+            rules={{ required: 'Location is required' }}
+            errors={errors.location}
             option={[
               { value: '', label: 'Select a location' },
               { value: 'New York', label: 'New York' },
@@ -71,6 +73,7 @@ const BookingForm = () => {
             name="guests"
             type="number"
             register={register}
+            registerOptions={{ valueAsNumber: true }}
             errors={errors.guests}
           />
 

@@ -24,7 +24,8 @@ const Header = () => {
           {isOpen ? <FiX /> : <FiMenu />}
         </button>
 
-        <ul className={`${styles.navList} ${isOpen ? styles.activeNav : ''}`}>
+        <ul className={`${styles.navList} ${isOpen ? styles.activeNav : ''}`}
+          onClick={() => setIsOpen(!isOpen)}>
           <NavItemLink className={styles.navItem} to={PATHS.HOME} label="Home" />
           <NavItemLink className={styles.navItem} to={PATHS.ABOUT_PAGE} label="About us" />
           <NavItemLink className={styles.navItem} to={PATHS.HOTELS.hotels} label="Hotel" />

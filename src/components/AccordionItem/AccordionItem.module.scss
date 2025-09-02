@@ -32,4 +32,8 @@
   .content {
     display: none;
   }
+
+  .content.open {
+    display: flex;
+  }
 }

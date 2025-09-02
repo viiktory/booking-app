@@ -1,8 +1,9 @@
 import { useQuery } from '@tanstack/react-query';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay } from 'swiper/modules';
+import { Autoplay, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 import { getAdvantages } from '../../../api/getAdvantages';
 import { Field, AdvantageCard } from '../../../components';
 import styles from './AdvantageSection.module.scss';
@@ -26,11 +27,12 @@ const AdvantageSection = () => {
         <Field label="About Us" title="Why Choose Us?" className="introTextWrapper customColor" />
         <div className={styles.advantageSectionSwiper}>
           <Swiper
-            modules={[Autoplay]}
+            modules={[Autoplay, Pagination]}
             loop={true}
             autoplay={{ delay: 3000, disableOnInteraction: false }}
             spaceBetween={20}
             slidesPerView={3}
+            pagination={{ clickable: true }}
             breakpoints={{
               320: { slidesPerView: 1 },
               768: { slidesPerView: 2 },

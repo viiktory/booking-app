@@ -6,7 +6,7 @@ const Contact = () => {
     <section className={styles.contactSection}>
       <GoogleMap />
       <ContactForm />
-      <ContactLinks />
+      {/*<ContactLinks />*/}
     </section>
   );
 };

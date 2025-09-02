@@ -3,7 +3,7 @@ import styles from './ReviewsCard.module.scss';
 
 const ReviewsCard = ({ item }) => {
   return (
-    <div className={styles.cardWrapper}>
+    <section className={styles.cardWrapper}>
       <div className={styles.content}>
         <div className={styles.userInfo}>
           <img className={styles.userPhoto} src={item.avatar} alt={item.name} />
@@ -17,8 +17,10 @@ const ReviewsCard = ({ item }) => {
         </div>
       </div>
 
-      <img className={styles.hotelImage} src={item.hotelImage} alt="hotel" />
-    </div>
+      <div className={styles.imageWrapper}>
+        <img className={styles.hotelImage} src={item.hotelImage} alt="hotel" />
+      </div>
+    </section>
   );
 };
 

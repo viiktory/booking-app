@@ -19,7 +19,7 @@ const IntroSection = () => {
             launch,we've helped thousands of travelers find their perfect stay."
             className="introTextWrapper"
           />
-          <Button text="read more" className="homeBtn" icon={FaArrowRight} />
+          <Button text="read more" className="homeBtn" icon={FaArrowRight} to="/errors" />
         </div>
 
         <div className={styles.aboutIntroImages}>
