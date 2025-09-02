@@ -1,10 +1,12 @@
-import { CardDetails } from '../../../components';
-import { useParams } from 'react-router-dom';
+import { Button, CardDetails } from '../../../components';
+import { useNavigate, useParams } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
 import { getBlogById } from '../../../api/getBlogs';
+import { FaArrowLeft } from 'react-icons/fa';
 
 const BlogDetails = () => {
   const { id } = useParams();
+  const navigate = useNavigate();
 
   const {
     data: post,
@@ -20,18 +22,29 @@ const BlogDetails = () => {
   if (!post) return <p>Blog not found</p>;
 
   return (
-    <CardDetails
-      image={post.image}
-      alt={post.alt}
-      title={post.title}
-      category={post.category}
-      readTime={post.readTime}
-      description={post.description}
-      author={post.author}
-      data={post.data}
-      views={post.views}
-      likes={post.likes}
-    />
+    <section style={{ background: '#f9fafb'}}>
+      <div className="container">
+      <Button
+        text="Back"
+        className="backBtn"
+        onClick={() => navigate(-1)}
+        icon={FaArrowLeft}
+        iconPosition="left"
+      />
+      <CardDetails
+        image={post.image}
+        alt={post.alt}
+        title={post.title}
+        category={post.category}
+        readTime={post.readTime}
+        description={post.description}
+        author={post.author}
+        data={post.data}
+        views={post.views}
+        likes={post.likes}
+      />
+      </div>
+    </section>
   );
 };
 

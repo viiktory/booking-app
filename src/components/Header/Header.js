@@ -26,7 +26,7 @@ const Header = () => {
 
         <ul className={`${styles.navList} ${isOpen ? styles.activeNav : ''}`}>
           <NavItemLink className={styles.navItem} to={PATHS.HOME} label="Home" />
-          <NavItemLink className={styles.navItem} to={PATHS.ABOUT} label="About us" />
+          <NavItemLink className={styles.navItem} to={PATHS.ABOUT_PAGE} label="About us" />
           <NavItemLink className={styles.navItem} to={PATHS.HOTELS.hotels} label="Hotel" />
           <NavItemLink className={styles.navItem} to={PATHS.BLOG.blog} label="Blog" />
           <NavItemLink className={styles.navItem} to={PATHS.CONTACTS} label="Contact" />

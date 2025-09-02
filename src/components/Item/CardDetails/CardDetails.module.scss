@@ -1,17 +1,14 @@
 @import '../../../styles/variables';
 
-.detailsBox {
-  background: var(--color-light);
-}
 
 .details {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
   background-color: var(--color-background);
-  margin-block: 2rem;
   box-shadow: $box-shadow;
   max-width: 800px;
+  margin: 2rem auto;
   border-radius: 1rem;
 }
 

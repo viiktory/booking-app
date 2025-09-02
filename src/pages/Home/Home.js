@@ -15,7 +15,7 @@ const Home = () => {
               Book your next stay easily and stress-free. Find the perfect hotel in just a few
               clicks. Your journey with comfort and ease today!
             </p>
-            <a href={PATHS.ABOUT} className="homeBtn">
+            <a href={PATHS.ABOUT_SECTION} className="homeBtn">
               Find
               <FaArrowRight className="arrow-icon" />
             </a>

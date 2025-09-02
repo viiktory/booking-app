@@ -1,10 +1,12 @@
-import {useParams} from 'react-router-dom';
-import {useQuery} from '@tanstack/react-query';
-import {getHotelById} from '../../../api/getHotels';
-import {Button, CardDetails} from '../../../components';
+import { useNavigate, useParams } from 'react-router-dom';
+import { useQuery } from '@tanstack/react-query';
+import { FaArrowLeft } from 'react-icons/fa';
+import { getHotelById } from '../../../api/getHotels';
+import { Button, CardDetails } from '../../../components';
 
 const HotelDetails = () => {
-  const {id} = useParams();
+  const { id } = useParams();
+  const navigate = useNavigate();
 
   const {
     data: hotel,
@@ -21,6 +23,13 @@ const HotelDetails = () => {
 
   return (
     <section className="container">
+      <Button
+        text="Back"
+        className="backBtn"
+        onClick={() => navigate(-1)}
+        icon={FaArrowLeft}
+        iconPosition="left"
+      />
       <CardDetails
         image={hotel.image}
         alt={hotel.name}
@@ -31,12 +40,10 @@ const HotelDetails = () => {
         amenities={hotel.amenities}
         address={`${hotel.address}, ${hotel.city}, ${hotel.country}`}
         price={hotel.price_per_night}
-        actionButton={
-          <Button text="Book now" className="homeBtn"/>
-        }
+        actionButton={<Button text="Book now" className="homeBtn" />}
       />
     </section>
-  )
+  );
 };
 
 export default HotelDetails;

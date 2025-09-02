@@ -43,43 +43,6 @@ p {
   }
 }
 
-.homeBtn {
-  background-color: var(--color-purple);
-  color: var(--color-light);
-  border: 1px solid transparent;
-  padding: 0.75rem 1rem;
-  font-size: 1.125rem;
-
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  gap: 0.5rem;
-
-  box-shadow: $box-shadow;
-  transition: all 0.3s ease;
-
-  min-width: 10rem;
-  height: 3rem;
-
-  .arrow-icon {
-    transition: transform 0.3s ease;
-  }
-
-  &:hover {
-    background-color: var(--color-purple-hover);
-    box-shadow: 0 8px 20px rgba(124, 58, 237, 0.3);
-
-    .arrow-icon {
-      transform: translateX(5px);
-    }
-  }
-
-  @media (max-width: 768px) {
-    min-width: 8rem;
-  }
-}
-
 .introTextWrapper {
   padding-top: 1rem;
 
