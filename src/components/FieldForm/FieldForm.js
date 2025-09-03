@@ -5,6 +5,7 @@ const FieldForm = ({
   label,
   name,
   type,
+  placeholder,
   register,
   registerOptions,
   errors,
@@ -33,6 +34,7 @@ const FieldForm = ({
         ) : type === 'textarea' ? (
           <textarea
             id={name}
+            placeholder={placeholder}
             {...register(name)}
             className={`${styles.formTextarea} ${errors ? styles.errorInput : ''}`}
           />
@@ -40,6 +42,7 @@ const FieldForm = ({
           <input
             type={type}
             id={name}
+            placeholder={placeholder}
             {...register(name, registerOptions)}
             className={`${styles.formInput} ${errors ? styles.errorInput : ''}`}
           />
@@ -52,10 +55,11 @@ const FieldForm = ({
 };
 
 FieldForm.propTypes = {
-  label: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
+  label: PropTypes.string,
+  name: PropTypes.string,
   type: PropTypes.string.isRequired,
-  register: PropTypes.func.isRequired,
+  placeholder: PropTypes.string,
+  register: PropTypes.func,
   registerOptions: PropTypes.func,
   errors: PropTypes.object,
   option: PropTypes.arrayOf(

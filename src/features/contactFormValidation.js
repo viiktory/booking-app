@@ -13,3 +13,11 @@ export const contactFormSchema = z.object({
     .min(10, 'Message must be at least 10 characters')
     .max(256, 'Message must be at most 256 characters'),
 });
+
+export const contactForm = z.object({
+  phone: z
+    .string()
+    .min(10, 'Phone number must be at least 10 digits')
+    .max(15, 'Phone number is too long')
+    .regex(/^\+?\d+$/, 'Phone number must contain only digits and optional +'),
+});

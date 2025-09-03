@@ -1,12 +1,14 @@
 import { useNavigate, useParams } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
+import { useState } from 'react';
 import { FaArrowLeft } from 'react-icons/fa';
 import { getHotelById } from '../../../api/getHotels';
-import { Button, CardDetails } from '../../../components';
+import { Button, CardDetails, CallbackForm } from '../../../components';
 
 const HotelDetails = () => {
   const { id } = useParams();
   const navigate = useNavigate();
+  const [isFormVisible, setIsFormVisible] = useState(false);
 
   const {
     data: hotel,
@@ -40,8 +42,11 @@ const HotelDetails = () => {
         amenities={hotel.amenities}
         address={`${hotel.address}, ${hotel.city}, ${hotel.country}`}
         price={hotel.price_per_night}
-        actionButton={<Button text="Book now" className="homeBtn" />}
+        actionButton={
+          <Button text="Book now" className="homeBtn" onClick={() => setIsFormVisible(true)} />
+        }
       />
+      {isFormVisible && <CallbackForm onClose={() => setIsFormVisible(false)} />}
     </section>
   );
 };

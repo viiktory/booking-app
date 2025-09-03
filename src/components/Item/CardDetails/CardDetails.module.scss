@@ -19,7 +19,7 @@
 
   .image {
     width: 100%;
-    height: 30rem;
+    height: 26rem;
     display: block;
     padding-inline: 1rem;
     object-fit: cover;
@@ -52,6 +52,7 @@
 .description {
   font-size: $font-size-title;
   color: var(--color-title);
+  line-height: 1.2;
 }
 
 .amenities {

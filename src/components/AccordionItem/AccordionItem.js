@@ -1,17 +1,15 @@
-import { useState } from 'react';
 import { FaChevronDown } from 'react-icons/fa';
 import styles from './AccordionItem.module.scss';
 
-const AccordionItem = ({ title, children }) => {
-  const [open, setOpen] = useState(false);
+const AccordionItem = ({ title, children, isOpen, onToggle }) => {
 
   return (
     <div className={styles.accordionItem}>
-      <h3 className={styles.accordionHeader} onClick={() => setOpen(!open)}>
+      <h3 className={styles.accordionHeader} onClick={onToggle}>
         {title}
-        <FaChevronDown className={`${styles.chevron} ${open ? styles.rotate : ''}`} />
+        <FaChevronDown className={`${styles.chevron} ${isOpen ? styles.rotate : ''}`} />
       </h3>
-      <ul className={`${styles.content} ${open ? styles.open : ''}`}>{children}</ul>
+      <ul className={`${styles.content} ${isOpen ? styles.open : ''}`}>{children}</ul>
     </div>
   );
 };

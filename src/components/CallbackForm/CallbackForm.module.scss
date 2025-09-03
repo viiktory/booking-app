@@ -1,0 +1,57 @@
+@import '../../styles/variables';
+
+.callbackFormWrapper {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.formContainer {
+  position: relative;
+  background: var(--color-light);
+  padding: 2rem;
+  height: 20rem;
+  width: 30rem;
+  box-shadow: $box-shadow;
+}
+
+.formTitle {
+  font-size: 1.5rem;
+  color: var(--color-dark);
+  padding-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.sentMessage {
+  background: var(--color-purple-bg);
+  padding: 1rem;
+  color: var(--color-purple);
+}
+
+.formBtn {
+  position: absolute;
+  z-index: 10;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1rem;
+  padding: 0.25rem;
+  background: var(--color-purple);
+  color: var(--color-light);
+
+  &:hover {
+    background: var(--color-error);
+  }
+}

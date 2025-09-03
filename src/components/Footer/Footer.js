@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 import { PATHS } from '../../paths';
 import {
   FaEnvelope,
@@ -12,6 +13,12 @@ import { NavItemExternal, NavItemLink, ContactItem, AccordionItem } from '../../
 import styles from './Footer.module.scss';
 
 const Footer = () => {
+  const [openIndex, setOpenIndex] = useState(false);
+
+  const handleToggle = (index) => {
+    setOpenIndex(openIndex === index ? false : index);
+  };
+
   return (
     <footer className={styles.footer}>
       <div className={styles.footerContainer}>
@@ -40,7 +47,11 @@ const Footer = () => {
         </div>
 
         <div>
-          <AccordionItem title="Useful links">
+          <AccordionItem
+            title="Useful links"
+            isOpen={openIndex === 0}
+            onToggle={() => handleToggle(0)}
+          >
             <NavItemLink className={styles.footerLink} to={PATHS.HOME} label="FAQ" />
             <NavItemLink className={styles.footerLink} to={PATHS.HOME} label="How it works" />
             <NavItemExternal
@@ -57,7 +68,7 @@ const Footer = () => {
         </div>
 
         <div>
-          <AccordionItem title="Privacy">
+          <AccordionItem title="Privacy" isOpen={openIndex === 1} onToggle={() => handleToggle(1)}>
             <NavItemLink className={styles.footerLink} to={PATHS.ABOUT_PAGE} label="About us" />
             <NavItemExternal
               className={styles.footerLink}
@@ -74,7 +85,11 @@ const Footer = () => {
         </div>
 
         <div>
-          <AccordionItem title="Contact info">
+          <AccordionItem
+            title="Contact info"
+            isOpen={openIndex === 2}
+            onToggle={() => handleToggle(2)}
+          >
             <ContactItem
               icon={<FaEnvelope className={styles.footerIcons} />}
               to="mailto:info@startover.com"
