@@ -4,31 +4,5 @@
 .hotelSectionContainer {
   background: var(--color-light);
   min-height: 100vh;
-}
-
-.hotelSectionText {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1rem;
-  margin-top: 32px;
-}
-
-.paginationDots {
-  display: flex;
-  justify-content: center;
-  padding-block: 1rem;
-
-  .dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background-color: #ccc;
-    margin: 0 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-
-  .dot.active {
-    background-color:var(--color-purple);
-  }
+  padding-block: 2rem;
 }

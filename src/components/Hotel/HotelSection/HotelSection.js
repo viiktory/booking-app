@@ -1,13 +1,17 @@
 import { useQuery } from '@tanstack/react-query';
 import { useLocation } from 'react-router-dom';
-import { useState } from 'react';
 import { getHotels } from '../../../api/getHotels';
 import { Field, HotelCard } from '../../../components';
 import styles from './HotelSection.module.scss';
 
-const HotelSection = () => {
-  const [currentPage, setCurrentPage] = useState(1);
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Grid } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/grid';
 
+const HotelSection = () => {
   const {
     data: hotels = [],
     isLoading,
@@ -27,30 +31,31 @@ const HotelSection = () => {
   if (isLoading) return 'Loading...';
   if (isError) return 'Error!';
 
-  const hotelPerPage = 6;
-  const totalPages = Math.ceil(filteredHotels.length / hotelPerPage);
-
-  const startIndex = (currentPage - 1) * hotelPerPage;
-  const endIndex = startIndex + hotelPerPage;
-  const currentHotels = filteredHotels.slice(startIndex, endIndex);
-
   return (
     <section className={styles.hotelSectionContainer}>
       <div className="container">
         <Field label="Hotels" title="Choose the best now" className="introTextWrapper" />
         <div className={styles.hotelSectionText}>
-          {currentHotels.map((hotel) => (
-            <HotelCard key={hotel.id} item={hotel} />
-          ))}
-        </div>
-        <div className={styles.paginationDots}>
-          {Array.from({ length: totalPages }, (_, index) => (
-            <span
-              key={index}
-              className={`${styles.dot} ${currentPage === index + 1 ? styles.active : ''}`}
-              onClick={() => setCurrentPage(index + 1)}
-            />
-          ))}
+          <Swiper
+            modules={[Pagination, Navigation, Grid]}
+            spaceBetween={20}
+            slidesPerView={3}
+            slidesPerGroup={3}
+            grid={{ rows: 2, fill: 'row' }}
+            navigation
+            pagination={{ clickable: true }}
+            breakpoints={{
+              320: { slidesPerView: 1, slidesPerGroup: 1, grid: { rows: 2 } },
+              768: { slidesPerView: 2, slidesPerGroup: 2, grid: { rows: 2 } },
+              1024: { slidesPerView: 3, slidesPerGroup: 3, grid: { rows: 2 } },
+            }}
+          >
+            {filteredHotels.map((hotel) => (
+              <SwiperSlide key={hotel.id}>
+                <HotelCard item={hotel} />
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
       </div>
     </section>

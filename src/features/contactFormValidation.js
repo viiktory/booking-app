@@ -15,9 +15,5 @@ export const contactFormSchema = z.object({
 });
 
 export const contactForm = z.object({
-  phone: z
-    .string()
-    .min(10, 'Phone number must be at least 10 digits')
-    .max(15, 'Phone number is too long')
-    .regex(/^\+?\d+$/, 'Phone number must contain only digits and optional +'),
+  phone: z.string().regex(/^\+\d{10,14}$/, 'Phone must start with + and contain 10-14 digits'),
 });
