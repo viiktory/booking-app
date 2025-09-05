@@ -1,15 +1,14 @@
 import { useQuery } from '@tanstack/react-query';
 import { useLocation } from 'react-router-dom';
-import { getHotels } from '../../../api/getHotels';
-import { Field, HotelCard } from '../../../components';
-import styles from './HotelSection.module.scss';
-
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Grid } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/grid';
+import { getHotels } from '../../../api/getHotels';
+import { Field, HotelCard } from '../../../components';
+import styles from './HotelSection.module.scss';
 
 const HotelSection = () => {
   const {

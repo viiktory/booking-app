@@ -37,6 +37,7 @@
 .title {
   font-size: 2rem;
   color: var(--color-dark);
+  line-height: 1.3;
 }
 
 .rating {
@@ -45,10 +46,12 @@
   display: flex;
   align-items: center;
 }
+
 .category {
   font-size: $font-size-description;
   color: var(--color-purple);
 }
+
 .description {
   font-size: $font-size-title;
   color: var(--color-title);

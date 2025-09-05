@@ -5,8 +5,7 @@ import { Field, BlogCard, Button } from '../../../components';
 import styles from './BlogSection.module.scss';
 
 const BlogSection = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const blogsPerPage = 4;
+  const [blogVisible, setBlogVisible] = useState(4);
 
   const {
     data: posts = [],
@@ -20,15 +19,8 @@ const BlogSection = () => {
   if (isLoading) return 'Loading...';
   if (isError) return 'Error!';
 
-  const currentPosts = posts.slice(currentIndex, currentIndex + blogsPerPage);
-
   const handleMore = () => {
-    const nextIndex = currentIndex + blogsPerPage;
-    if (nextIndex >= posts.length) {
-      setCurrentIndex(0);
-    } else {
-      setCurrentIndex(nextIndex);
-    }
+    setBlogVisible((prev) => prev + blogVisible);
   };
 
   return (
@@ -39,12 +31,16 @@ const BlogSection = () => {
           title="Read our newest blog post right away"
           className="introTextWrapper"
         />
+
         <div className={styles.blogCards}>
-          {currentPosts.map((post) => (
+          {posts.slice(0, blogVisible).map((post) => (
             <BlogCard key={post.id} item={post} />
           ))}
         </div>
-        <Button text="More" className={styles.btnBlog} onClick={handleMore} />
+
+        {blogVisible < posts.length && (
+          <Button text="More" className={styles.btnBlog} onClick={handleMore} />
+        )}
       </div>
     </section>
   );
