@@ -70,7 +70,9 @@
     flex-direction: column;
     min-height: 32rem;
   }
-
+  .content {
+    align-self: start;
+  }
   .imageWrapper {
     width: 100%;
     height: 200px;

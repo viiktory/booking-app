@@ -2,39 +2,36 @@
 @import '../../../styles/mixins';
 
 .contactContainer {
-  background: url('../../../assets/images/bg-1.jpg') no-repeat center center;
-  width: 100%;
-  background-size: cover;
+  background: var(--color-light);
   min-height: 32rem;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  padding-block: 2rem;
+  background: url("../../../assets/images/bg-send.jpg") center 38%;
+  background-size: cover;
 }
 
-.contactContent {
+.contactForm {
   @include container;
-  display: flex;
-  gap: 2rem;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
 }
 
-.contactMessage,
-.contactInput {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
+.contactTitle {
+  grid-column: 1 / -1;
+  font-size: 1.5rem;
+  color: var(--color-description);
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
 }
-
 
 .contactInput {
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
-  margin: 0;
-  padding: 0;
 }
 
 @media (max-width: 768px) {
-  .contactContent {
-    flex-direction: column;
-    gap: 2rem;
+  .contactForm {
+    grid-template-columns: 1fr;
   }
 }

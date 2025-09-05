@@ -1,8 +1,9 @@
 import { useForm } from 'react-hook-form';
+import {toast} from "react-toastify";
 import { zodResolver } from '@hookform/resolvers/zod';
 import { contactFormSchema } from '../../../features/contactFormValidation';
 import { FieldForm, Field, Button } from '../../../components';
-import contactStyles from './ContactForm.module.scss';
+import styles from './ContactForm.module.scss';
 
 const ContactForm = () => {
   const {
@@ -15,19 +16,23 @@ const ContactForm = () => {
   });
 
   const onSubmit = (data) => {
-    console.log(data);
     reset();
+    toast.success('Your request has been sent!');
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className={contactStyles.contactContainer}>
+    <section className={styles.contactContainer}>
       <Field
         label="Contact"
         title="Contact us to get free support"
         className="introTextWrapper container"
       />
-      <div className={contactStyles.contactContent}>
-        <div className={contactStyles.contactMessage}>
+      <form onSubmit={handleSubmit(onSubmit)} className={styles.contactForm}>
+        <h3 className={styles.contactTitle}>
+          Need help or advice? Leave a message and we will respond as soon as possible.
+        </h3>
+
+        <div className={styles.contactMessage}>
           <FieldForm
             label="Your message"
             name="message"
@@ -36,7 +41,8 @@ const ContactForm = () => {
             errors={errors.message}
           />
         </div>
-        <div className={contactStyles.contactInput}>
+
+        <div className={styles.contactInput}>
           <FieldForm
             vertical
             label="Name"
@@ -55,8 +61,8 @@ const ContactForm = () => {
           />
           <Button text="Send" className="homeBtn" />
         </div>
-      </div>
-    </form>
+      </form>
+    </section>
   );
 };
 

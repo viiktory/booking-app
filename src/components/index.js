@@ -42,10 +42,10 @@ export { default as ContactForm } from './Contact/ContactForm/ContactForm';
 
 export { default as GoogleMap } from './GoogleMap/GoogleMap';
 
-export { default as ContactLinks } from './Contact/ContactLinks/ContactLinks';
-
 export { default as Footer } from './Footer/Footer';
 
 export { default as AccordionItem } from './AccordionItem/AccordionItem';
 
 export { default as CallbackForm } from './CallbackForm/CallbackForm';
+
+export { default as SubscribeNews } from './SubscribeNews/SubscribeNews';

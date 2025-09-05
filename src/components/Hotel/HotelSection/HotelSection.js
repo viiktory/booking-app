@@ -44,7 +44,7 @@ const HotelSection = () => {
             navigation
             pagination={{ clickable: true }}
             breakpoints={{
-              320: { slidesPerView: 1, slidesPerGroup: 1, grid: { rows: 2 } },
+              320: { slidesPerView: 1, slidesPerGroup: 1, grid: { rows: 2 }, pagination: false },
               768: { slidesPerView: 2, slidesPerGroup: 2, grid: { rows: 2 } },
               1024: { slidesPerView: 3, slidesPerGroup: 3, grid: { rows: 2 } },
             }}

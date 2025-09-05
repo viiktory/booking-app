@@ -17,3 +17,7 @@ export const contactFormSchema = z.object({
 export const contactForm = z.object({
   phone: z.string().regex(/^\+\d{10,14}$/, 'Phone must start with + and contain 10-14 digits'),
 });
+
+export const subscribeSchema = contactFormSchema.pick({
+  email: true,
+});

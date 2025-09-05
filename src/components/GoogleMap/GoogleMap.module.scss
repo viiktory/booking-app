@@ -2,18 +2,42 @@
 @import '../../styles/mixins';
 
 .mapContainer {
+  @include container;
   display: flex;
+  padding-block: 2rem;
+  gap: 1rem;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 30rem;
-  background: var(--color-light);
 }
 
-.map {
-  @include container;
-  display: block;
-  min-height: 15rem;
+.mapTitle {
+  grid-column: 1 / -1;
+  font-size: 2rem;
+  color: var(--color-dark);
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
 }
 
-.mapLink {
+.mapDescription {
+  font-size: 1rem;
+  color: var(--color-description);
+  margin-bottom: 1rem;
 }
+
+.mapBtn {
+  color: var(--color-purple);
+  border: 2px solid var(--color-purple);
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: var(--color-purple);
+    color: var(--color-background);
+    border: transparent;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+}
+

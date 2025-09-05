@@ -1,0 +1,50 @@
+@import "../../styles/mixins";
+
+.subscribeSection {
+  @include container;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.subscribeImage {
+  max-width: 50%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.subscribeContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.subscribeTitle {
+  font-size: 2rem;
+  color: var(--color-dark);
+  margin-bottom: 0.5rem;
+}
+
+.subscribeDescription {
+  font-size: 1rem;
+  color: var(--color-description);
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .subscribeSection {
+    flex-direction: column;
+  }
+
+  .subscribeImage {
+    max-width: 100%;
+  }
+
+  .subscribeContent {
+    width: 100%;
+  }
+}
