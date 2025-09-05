@@ -52,8 +52,8 @@ const Footer = () => {
             isOpen={openIndex === 0}
             onToggle={() => handleToggle(0)}
           >
-            <NavItemLink className={styles.footerLink} to={PATHS.HOME} label="FAQ" />
-            <NavItemLink className={styles.footerLink} to={PATHS.HOME} label="How it works" />
+            <NavItemLink className={styles.footerLink} to={PATHS.FAQ} label="FAQ" />
+            <NavItemLink className={styles.footerLink} to={PATHS.FAQ} label="How it works" />
             <NavItemExternal
               className={styles.footerLink}
               to="https://www.icertis.com/contracting-basics/what-are-terms-and-conditions/"

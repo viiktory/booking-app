@@ -1,6 +1,6 @@
 import ErrorImg from '../../assets/images/404_error.png';
-import { Button } from '../../components';
 import { PATHS } from '../../paths';
+import { Button } from '../../components';
 import styles from './Error.module.scss';
 
 const Error = () => {
@@ -19,9 +19,7 @@ const Error = () => {
           <Button text="Take me Back" to={PATHS.HOME} className="homeBtn" />
         </div>
 
-        <div className={styles.errorImage}>
-          <img src={ErrorImg} alt="404 error" className={styles.errorImg} />
-        </div>
+        <img src={ErrorImg} alt="404 error" className={styles.errorImg} />
       </section>
     </main>
   );

@@ -4,6 +4,7 @@
 .errorBox {
   background: var(--color-light);
 }
+
 .errorContainer {
   @include container;
   display: flex;
@@ -42,14 +43,12 @@
   }
 }
 
-.errorImage {
-  flex-shrink: 0;
 
-  .errorImg {
-    max-width: 450px;
-    width: 100%;
-    height: auto;
-  }
+.errorImg {
+  max-width: 50%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
 }
 
 @media (max-width: 768px) {
@@ -57,11 +56,7 @@
     flex-direction: column;
   }
 
-  .errorImage {
-    margin-top: 2rem;
-
-    .errorImg {
-      max-width: 300px;
-    }
+  .errorImg {
+    max-width: 100%;
   }
 }

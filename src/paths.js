@@ -12,4 +12,5 @@ export const PATHS = {
     details: '/blog/:id',
   },
   CONTACTS: '/contacts',
+  FAQ: '/faq',
 };

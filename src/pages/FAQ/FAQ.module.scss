@@ -1,0 +1,58 @@
+@import "../../styles/mixins";
+
+.faqSection {
+  @include container;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.faqImage {
+  max-width: 50%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.faqContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.faqTitle {
+  font-size: 2rem;
+  color: var(--color-dark);
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.accordionItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: var(--color-title);
+  font-size: 1rem;
+
+  h3 {
+    color: var(--color-purple);
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .faqSection {
+    flex-direction: column;
+  }
+
+  .faqImage {
+    max-width: 100%;
+  }
+
+  .faqContent {
+    width: 100%;
+  }
+}
