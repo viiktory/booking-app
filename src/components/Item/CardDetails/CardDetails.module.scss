@@ -69,6 +69,13 @@
     border-radius: 12px;
     font-size: $font-size-base;
     color: var(--color-description);
+    transition: background 0.3s ease, transform 0.3s ease;
+
+    &:hover {
+      background: var(--color-purple);
+      color: var(--color-light);
+      transform: translateY(-2px);
+    }
   }
 }
 
@@ -112,6 +119,11 @@
     display: flex;
     align-items: center;
     gap: 0.25rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 }
 

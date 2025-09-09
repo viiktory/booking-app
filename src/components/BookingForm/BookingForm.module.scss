@@ -39,10 +39,12 @@
   color: var(--color-light);
   height: 48px;
   min-width: auto;
+  transition: all 0.4s ease;
 
   &:hover {
     background: var(--color-purple-hover);
     box-shadow: 0 8px 20px rgba(124, 58, 237, 0.3);
+    transform: translateY(-2px);
   }
 }
 

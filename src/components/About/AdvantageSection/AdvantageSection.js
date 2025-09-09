@@ -29,7 +29,7 @@ const AdvantageSection = () => {
           <Swiper
             modules={[Autoplay, Pagination]}
             loop={true}
-            autoplay={{ delay: 3000, disableOnInteraction: false }}
+            autoplay={{ delay: 2000, disableOnInteraction: false }}
             spaceBetween={20}
             slidesPerView={3}
             pagination={{ clickable: true }}

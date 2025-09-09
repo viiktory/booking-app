@@ -10,6 +10,12 @@
   padding: 2rem;
   text-align: center;
   line-height: 1.2;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.8);
+  }
 }
 
 .advantageCardHeader {
@@ -34,6 +40,12 @@
   color: var(--color-dark);
   width: 3rem;
   height: 3rem;
+  transition: transform 0.3s ease, background 0.3s ease;
+
+  &:hover {
+    transform: scale(1.2) rotate(10deg);
+    background: var(--color-purple-hover);
+  }
 }
 
 .advantageCarTitle {

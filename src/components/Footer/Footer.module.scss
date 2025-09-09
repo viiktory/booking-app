@@ -31,15 +31,36 @@
 
 .footerSocialIcons {
   font-size: 2rem;
+  transition: transform 0.3s ease, color 0.3s ease;
 
   &:hover {
-    color: var(--color-purple);
+    transform: scale(1.1);
+    color: var(--color-purple-hover);
   }
 }
 
 .footerLink {
+  position: relative;
+  transition: color 0.3s ease;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-purple-hover);
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+  }
+
   &:hover {
-    color: var(--color-purple);
+    color: var(--color-purple-hover);
+  }
+
+  &:hover::after {
+    width: 100%;
   }
 }
 
@@ -50,10 +71,6 @@
 .footerSocialLink {
   display: flex;
   gap: 1rem;
-}
-
-.footerSocialLink:hover {
-  color: var(--color-purple);
 }
 
 .footerIcon {
