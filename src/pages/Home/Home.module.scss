@@ -44,12 +44,9 @@
 .homeDescription {
   max-width: 28rem;
   width: 100%;
-  font-size: 1.2rem;
+  font-size: $font-size-description;
   margin-bottom: 3rem;
   line-height: 1.2;
-}
-
-.homeBtn {
 }
 
 @media (max-width: 768px) {
@@ -58,7 +55,7 @@
     margin-bottom: 1rem;
   }
   .homeDescription {
-    font-size: 1.125rem;
+    font-size: $font-size-base;
     margin-bottom: 2.2rem;
   }
 }

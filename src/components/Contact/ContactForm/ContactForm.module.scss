@@ -31,7 +31,11 @@
 }
 
 @media (max-width: 768px) {
-  .contactForm {
+  .contactContainer {
+    min-height: 22rem;
+    padding: 0 0 2rem 0;
+  }
+    .contactForm {
     grid-template-columns: 1fr;
   }
 }

@@ -4,7 +4,6 @@
 .hotelSectionContainer {
   background: var(--color-light);
   min-height: 100vh;
-  padding-block: 2rem;
 }
 
 .hotelSectionText {
@@ -18,13 +17,13 @@
   .nextBtn {
     right: -2.5rem;
   }
-}
 
-@media (max-width: 768px) {
-  .prevBtn {
-    left: -0.5rem;
-  }
-  .nextBtn {
-    right: -0.5rem;
+  @media (max-width: 768px) {
+    .prevBtn {
+      left: -1rem;
+    }
+    .nextBtn {
+      right: -1rem;
+    }
   }
 }

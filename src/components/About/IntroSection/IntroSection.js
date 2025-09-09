@@ -1,13 +1,13 @@
 import resortHouse from '../../../assets/images/resortHouse.jpg';
 import apartment from '../../../assets/images/apartment.jpg';
+import { FaArrowRight } from 'react-icons/fa6';
 import restaurant from '../../../assets/images/restaurant.jpg';
 import { Button, Field } from '../../../components';
-import { FaArrowRight } from 'react-icons/fa6';
 import styles from './Intro.module.scss';
 
 const IntroSection = () => {
   return (
-    <section className={styles.aboutIntroContainer}>
+    <section className="container">
       <div className={styles.aboutIntroContent}>
         <div className={styles.aboutIntroText}>
           <Field

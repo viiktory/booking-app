@@ -1,4 +1,3 @@
-import React from 'react';
 import { BookingForm, IntroSection, AdvantageSection, ReviewsSection } from '../../components';
 
 const AboutUs = () => {

@@ -4,11 +4,11 @@
 .reviewsSectionContainer {
   background-color: var(--color-light);
   width: 100%;
-  padding-block: 4rem;
 }
 
 .reviewsSectionContent {
   @include container;
+  padding-block: 3rem;
 }
 
 .reviewsSectionSwiper {
@@ -21,13 +21,19 @@
   .nextBtn {
     right: -2.5rem;
   }
-}
 
-@media (max-width: 768px) {
-  .prevBtn {
-    left: -0.5rem;
-  }
-  .nextBtn {
-    right: -0.5rem;
+  @media (max-width: 768px) {
+    .prevBtn {
+      left: -1rem;
+    }
+
+    .nextBtn {
+      right: -1rem;
+    }
+    .prevBtn,
+    .nextBtn {
+      width: 1.75rem;
+      height: 1.75rem;
+    }
   }
 }

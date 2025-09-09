@@ -6,7 +6,7 @@
   flex-direction: column;
   gap: 1.5rem;
   background-color: var(--color-background);
-  box-shadow: $box-shadow;
+  box-shadow: 0 4px 10px var(--color-purple-bg);
   max-width: 800px;
   margin: 2rem auto;
   border-radius: 1rem;
@@ -41,19 +41,19 @@
 }
 
 .rating {
-  font-size: $font-size-description;
+  font-size: $font-size-base;
   color: var(--color-stars);
   display: flex;
   align-items: center;
 }
 
 .category {
-  font-size: $font-size-description;
+  font-size: $font-size-base;
   color: var(--color-purple);
 }
 
 .description {
-  font-size: $font-size-title;
+  font-size: $font-size-base;
   color: var(--color-title);
   line-height: 1.2;
 }
@@ -67,7 +67,7 @@
     background-color: var(--color-purple-bg);
     padding: 0.25rem 0.5rem;
     border-radius: 12px;
-    font-size: $font-size-description;
+    font-size: $font-size-base;
     color: var(--color-description);
   }
 }
@@ -77,7 +77,7 @@
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 1rem;
-  font-size: $font-size-description;
+  font-size: $font-size-base;
   color: var(--color-dark);
 
   span, time {
@@ -86,17 +86,17 @@
 }
 
 .address {
-  font-size: $font-size-description;
+  font-size: $font-size-base;
   color: var(--color-title)
 }
 
 .phone {
-  font-size: $font-size-description;
+  font-size: $font-size-base;
   color: var(--color-title)
 }
 
 .price {
-  font-size: $font-size-title;
+  font-size: $font-size-description;
   color: var(--color-dark);
 }
 
@@ -104,7 +104,7 @@
   display: flex;
   justify-content: space-between;
   gap: 1rem;
-  font-size: $font-size-description;
+  font-size: $font-size-base;
   color: var(--color-purple);
   align-items: center;
 
@@ -117,4 +117,11 @@
 
 .actionButton {
 
+}
+
+@media (max-width: 768px) {
+  .details {
+    margin: 0 0 2rem 0;
+    gap: 1rem;
+  }
 }
