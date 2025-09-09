@@ -87,6 +87,7 @@ p {
   display: flex;
   justify-content: center;
   gap: 0.5rem;
+  padding-top: 1rem;
 
   .swiper-pagination-bullet {
     width: 12px;
@@ -105,8 +106,8 @@ p {
 
 .swiper-button-prev,
 .swiper-button-next {
+  background: var(--color-purple-bg);
   color: var(--color-purple);
-  background: var(--color-background);
   border-radius: 50%;
   width: 2rem;
   height: 2rem;
@@ -115,25 +116,19 @@ p {
   align-items: center;
   top: 50%;
   z-index: 10;
+  transition: opacity 0.3s ease;
 
   &:hover {
-    background: var(--color-purple);
     color: var(--color-background);
+    background: var(--color-purple);
   }
 
   &::after {
     font-size: 1.5rem;
   }
-}
 
-.swiper-button-prev {
-  left: 0.1rem;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.swiper-button-next {
-  right: 0.1rem;
-  top: 50%;
-  transform: translateY(-50%);
+  &.swiper-button-disabled {
+    opacity: 0;
+    pointer-events: none;
+  }
 }

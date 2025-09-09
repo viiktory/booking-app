@@ -6,3 +6,25 @@
   min-height: 100vh;
   padding-block: 2rem;
 }
+
+.hotelSectionText {
+  position: relative;
+  padding-inline: 1rem;
+
+  .prevBtn {
+    left: -2.5rem;
+  }
+
+  .nextBtn {
+    right: -2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .prevBtn {
+    left: -0.5rem;
+  }
+  .nextBtn {
+    right: -0.5rem;
+  }
+}

@@ -12,5 +12,22 @@
 }
 
 .reviewsSectionSwiper {
-  display: flex;
+  position: relative;
+
+  .prevBtn {
+    left: -2.5rem;
+  }
+
+  .nextBtn {
+    right: -2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .prevBtn {
+    left: -0.5rem;
+  }
+  .nextBtn {
+    right: -0.5rem;
+  }
 }

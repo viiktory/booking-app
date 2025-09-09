@@ -41,10 +41,18 @@ const HotelSection = () => {
             slidesPerView={3}
             slidesPerGroup={3}
             grid={{ rows: 2, fill: 'row' }}
-            navigation
+            navigation={{
+              prevEl: `.${styles.prevBtn}`,
+              nextEl: `.${styles.nextBtn}`,
+            }}
             pagination={{ clickable: true }}
             breakpoints={{
-              320: { slidesPerView: 1, slidesPerGroup: 1, grid: { rows: 2 }, pagination: false },
+              320: {
+                slidesPerView: 1,
+                slidesPerGroup: 1,
+                grid: { rows: 2 },
+                pagination: false,
+              },
               768: { slidesPerView: 2, slidesPerGroup: 2, grid: { rows: 2 } },
               1024: { slidesPerView: 3, slidesPerGroup: 3, grid: { rows: 2 } },
             }}
@@ -55,6 +63,8 @@ const HotelSection = () => {
               </SwiperSlide>
             ))}
           </Swiper>
+          <button className={`${styles.prevBtn} swiper-button-prev`}></button>
+          <button className={`${styles.nextBtn} swiper-button-next`}></button>
         </div>
       </div>
     </section>

@@ -29,13 +29,22 @@ const ReviewsSection = () => {
           className="introTextWrapper"
         />
         <div className={styles.reviewsSectionSwiper}>
-          <Swiper modules={[Navigation]} navigation={true} slidesPerView={1}>
+          <Swiper
+            modules={[Navigation]}
+            navigation={{
+              prevEl: `.${styles.prevBtn}`,
+              nextEl: `.${styles.nextBtn}`,
+            }}
+            slidesPerView={1}
+          >
             {review.map((item) => (
               <SwiperSlide key={item.id}>
-                <ReviewsCard item={item} />
+                <ReviewsCard item={item}/>
               </SwiperSlide>
             ))}
           </Swiper>
+          <button className={`${styles.prevBtn} swiper-button-prev`}></button>
+          <button className={`${styles.nextBtn} swiper-button-next`}></button>
         </div>
       </div>
     </section>
