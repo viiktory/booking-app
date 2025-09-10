@@ -1,4 +1,4 @@
-@import "../../styles/mixins";
+@use '../../styles/mixins' as *;
 
 .subscribeSection {
   @include container;
@@ -8,9 +8,9 @@
   gap: 2rem;
   margin-block: 2rem;
   background: linear-gradient(
-      135deg,
-      rgba(124, 58, 237, 0.05),
-      rgba(124, 58, 237, 0.15)
+    135deg,
+    rgba(124, 58, 237, 0.05),
+    rgba(124, 58, 237, 0.15)
   );
   border-radius: 1rem;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
@@ -24,7 +24,9 @@
   object-fit: cover;
   padding-block: 1rem;
   border-radius: 1rem;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
 
   &:hover {
     transform: scale(1.03);

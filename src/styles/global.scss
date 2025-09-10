@@ -1,13 +1,9 @@
-@import './reset';
-@import './variables';
-@import './mixins';
+@use './reset' as *;
+@use './variables' as *;
+@use './mixins' as *;
 
 @import url('https://fonts.googleapis.com/css2?family=Jost:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Jost:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-
-//* {
-//  outline: 4px solid green !important;
-//}
 
 body {
   font-family: $font-secondary;
@@ -87,10 +83,11 @@ p {
 }
 
 .swiper-pagination {
+  position: relative;
+  margin-top: 1.5rem;
   display: flex;
   justify-content: center;
   gap: 0.5rem;
-  padding-top: 1rem;
 
   .swiper-pagination-bullet {
     width: 12px;
@@ -99,7 +96,8 @@ p {
     background-color: var(--color-title);
     margin: 0 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
 
     &.swiper-pagination-bullet-active {
       background-color: var(--color-purple);
@@ -112,22 +110,26 @@ p {
   background: var(--color-purple-bg);
   color: var(--color-purple);
   border-radius: 50%;
-  width: 2rem;
-  height: 2rem;
+  width: 3rem;
+  height: 3rem;
   display: flex;
   justify-content: center;
   align-items: center;
   top: 50%;
   z-index: 10;
-  transition: opacity 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
 
   &:hover {
     color: var(--color-background);
     background: var(--color-purple);
+
+    transform: scale(1.05);
   }
 
   &::after {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
+    font-weight: bold;
   }
 
   &.swiper-button-disabled {

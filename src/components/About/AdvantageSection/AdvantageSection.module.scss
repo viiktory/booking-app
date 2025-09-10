@@ -1,5 +1,4 @@
-@import '../../../styles/variables';
-@import '../../../styles/mixins';
+@use '../../../styles/mixins' as *;
 
 .advantageSectionContainer {
   background: url('../../../assets/images/leaves.jpg') no-repeat center center;
@@ -12,8 +11,6 @@
   @include container;
   padding-top: 3rem;
 }
-
-
 
 @media (max-width: 768px) {
   .advantageSectionContent {

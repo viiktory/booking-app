@@ -28,12 +28,6 @@ Thumbs.db
 .env.test.local
 .env.production.local
 
-# ESLint, Prettier, and other config files
-.eslintrc.json
-.prettierrc
-.eslintignore
-.prettierignore
-
 # VSCode settings
 .vscode/*
 !.vscode/settings.json

@@ -1,7 +1,16 @@
 import { Link } from 'react-router-dom';
 import styles from './CartItem.module.scss';
 
-const CartItem = ({ to, image, alt, header, subheader, meta, footer, className }) => {
+const CartItem = ({
+  to,
+  image,
+  alt,
+  header,
+  subheader,
+  meta,
+  footer,
+  className
+}) => {
   return (
     <Link to={to} className={`${styles.card} ${className || ''}`}>
       {image && <img src={image} alt={alt} className={styles.card__image} />}

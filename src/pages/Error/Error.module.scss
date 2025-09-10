@@ -1,5 +1,4 @@
-@import '../../styles/variables';
-@import '../../styles/mixins';
+@use '../../styles/mixins' as *;
 
 .errorBox {
   background: var(--color-light);
@@ -19,6 +18,23 @@
 
 .errorContent {
   max-width: 500px;
+}
+
+.rotatingIcon {
+  font-size: 6rem;
+  color: var(--color-purple);
+  margin-bottom: 1rem;
+
+  animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .errorTitle {
@@ -42,7 +58,6 @@
     list-style: disc;
   }
 }
-
 
 .errorImg {
   max-width: 50%;

@@ -10,9 +10,9 @@ const ContactForm = () => {
     register,
     handleSubmit,
     formState: { errors },
-    reset,
+    reset
   } = useForm({
-    resolver: zodResolver(contactFormSchema),
+    resolver: zodResolver(contactFormSchema)
   });
 
   const onSubmit = () => {
@@ -30,7 +30,8 @@ const ContactForm = () => {
       <AnimatedSection viewport={{ once: true }}>
         <form onSubmit={handleSubmit(onSubmit)} className={styles.contactForm}>
           <h3 className={styles.contactTitle}>
-            Need help or advice? Leave a message and we will respond as soon as possible.
+            Need help or advice? Leave a message and we will respond as soon as
+            possible.
           </h3>
 
           <div className={styles.contactMessage}>

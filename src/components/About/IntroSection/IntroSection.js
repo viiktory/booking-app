@@ -20,12 +20,21 @@ const IntroSection = () => {
             launch,we've helped thousands of travelers find their perfect stay."
               className="introTextWrapper"
             />
-            <Button text="read more" className="homeBtn" icon={FaArrowRight} to="/errors" />
+            <Button
+              text="read more"
+              className="homeBtn"
+              icon={FaArrowRight}
+              to="/errors"
+            />
           </div>
 
           <div className={styles.aboutIntroImages}>
             <div className={styles.imagesRow}>
-              <img className={styles.aboutIntroImage} src={resortHouse} alt="resort house" />
+              <img
+                className={styles.aboutIntroImage}
+                src={resortHouse}
+                alt="resort house"
+              />
               <img
                 className={styles.aboutIntroImage}
                 src={apartment}
@@ -33,7 +42,11 @@ const IntroSection = () => {
               />
             </div>
             <div className={styles.imagesRow}>
-              <img className={styles.aboutIntroImage} src={restaurant} alt="restaurant" />
+              <img
+                className={styles.aboutIntroImage}
+                src={restaurant}
+                alt="restaurant"
+              />
             </div>
           </div>
         </div>

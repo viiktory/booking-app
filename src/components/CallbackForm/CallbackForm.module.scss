@@ -1,4 +1,4 @@
-@import '../../styles/variables';
+@use '../../styles/variables' as *;
 
 .callbackFormWrapper {
   position: fixed;
@@ -17,14 +17,14 @@
   position: relative;
   background: var(--color-light);
   padding: 2rem;
-  margin-inline: 1rem ;
+  margin-inline: 1rem;
   height: 20rem;
   width: 30rem;
   box-shadow: $box-shadow;
 }
 
 .formTitle {
-  font-size: 1.5rem;
+  font-size: $font-size-h2;
   color: var(--color-dark);
   padding-bottom: 0.5rem;
   line-height: 1.2;

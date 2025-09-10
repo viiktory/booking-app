@@ -1,9 +1,8 @@
 import { ContactForm, GoogleMap, SubscribeNews } from '../../components';
-import styles from './Contact.module.scss';
 
 const Contact = () => {
   return (
-    <section className={styles.contactSection}>
+    <section>
       <ContactForm />
       <GoogleMap />
       <SubscribeNews />

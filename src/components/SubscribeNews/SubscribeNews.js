@@ -11,9 +11,9 @@ const SubscribeNews = () => {
     register,
     handleSubmit,
     formState: { errors },
-    reset,
+    reset
   } = useForm({
-    resolver: zodResolver(subscribeSchema),
+    resolver: zodResolver(subscribeSchema)
   });
 
   const onSubmit = () => {
@@ -24,9 +24,18 @@ const SubscribeNews = () => {
   return (
     <AnimatedSection viewport={{ once: true, amount: 0.3 }}>
       <section className={styles.subscribeSection}>
-        <img className={styles.subscribeImage} src={SubscribeImg} alt="subscribe_news" />
-        <form className={styles.subscribeContent} onSubmit={handleSubmit(onSubmit)}>
-          <h2 className={styles.subscribeTitle}>Subscribe to our Newsletter!</h2>
+        <img
+          className={styles.subscribeImage}
+          src={SubscribeImg}
+          alt="subscribe_news"
+        />
+        <form
+          className={styles.subscribeContent}
+          onSubmit={handleSubmit(onSubmit)}
+        >
+          <h2 className={styles.subscribeTitle}>
+            Subscribe to our Newsletter!
+          </h2>
           <p className={styles.subscribeDescription}>
             Be the first to receive exclusive offers and latest news
           </p>

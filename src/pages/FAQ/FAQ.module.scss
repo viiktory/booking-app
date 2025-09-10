@@ -1,4 +1,5 @@
-@import "../../styles/mixins";
+@use '../../styles/mixins' as *;
+@use '../../styles/variables' as *;
 
 .faqSection {
   @include container;
@@ -12,8 +13,9 @@
 .faqImage {
   max-width: 50%;
   height: auto;
+  border-radius: 50%;
   object-fit: cover;
-  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
 .faqContent {
@@ -21,6 +23,20 @@
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  padding: 2rem;
+  background: var(--color-light);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+  .accordionHeader {
+    color: var(--color-purple);
+    font-size: 1.25rem;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: var(--color-dark);
+    }
+  }
 }
 
 .faqTitle {
@@ -28,6 +44,19 @@
   color: var(--color-dark);
   margin-bottom: 0.5rem;
   line-height: 1.3;
+  position: relative;
+  padding-left: 1rem;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.4rem;
+    width: 6px;
+    height: 80%;
+    background: var(--color-purple);
+    border-radius: 4px;
+  }
 }
 
 .accordionItem {
@@ -35,17 +64,13 @@
   flex-direction: column;
   gap: 0.5rem;
   color: var(--color-title);
-  font-size: 1rem;
-
-  h3 {
-    color: var(--color-purple);
-    font-size: 1.5rem;
-  }
+  font-size: $font-size-base;
 }
 
 @media (max-width: 768px) {
   .faqSection {
     flex-direction: column;
+    align-items: center;
   }
 
   .faqImage {
@@ -59,7 +84,7 @@
     font-size: 2rem;
   }
   .accordionItem {
-    h3 {
+    .accordionHeader {
       font-size: 1rem;
     }
   }

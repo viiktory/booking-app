@@ -1,5 +1,4 @@
-@import '../../../styles/variables';
-@import '../../../styles/mixins';
+@use '../../../styles/mixins' as *;
 
 .hotelSectionContainer {
   background: var(--color-light);
@@ -9,6 +8,7 @@
 .hotelSectionText {
   position: relative;
   padding-inline: 1rem;
+  margin-bottom: 1rem;
 
   .prevBtn {
     left: -2.5rem;
@@ -20,9 +20,13 @@
 
   @media (max-width: 768px) {
     .prevBtn {
+      width: 2rem;
+      height: 2rem;
       left: -1rem;
     }
     .nextBtn {
+      width: 2rem;
+      height: 2rem;
       right: -1rem;
     }
   }

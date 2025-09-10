@@ -27,15 +27,17 @@
   flex: 1;
 }
 
-.formInput, select {
+.formInput,
+select {
   width: 100%;
   padding: 0.75rem 1rem;
   border: 1px solid #ccc;
   background: var(--color-light);
   height: 48px;
   font-size: 1rem;
-  transition: border-color 0.2s ease,
-  box-shadow 0.2s ease;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
 
   &:focus {
     outline: none;
@@ -52,8 +54,9 @@
   background: var(--color-light);
   resize: none;
   font-size: 1rem;
-  transition: border-color 0.2s ease,
-  box-shadow 0.2s ease;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
 
   &:focus {
     outline: none;

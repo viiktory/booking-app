@@ -23,7 +23,7 @@ const CardDetails = ({
   amenities = [],
   actionButton,
   onclick,
-  isLiked,
+  isLiked
 }) => {
   return (
     <section className={styles.details}>
@@ -85,14 +85,20 @@ const CardDetails = ({
               </span>
             )}
             {likes && (
-              <span onClick={onclick} style={{ color: isLiked ? 'red' : 'inherit' }}>
+              <button
+                type="button"
+                onClick={onclick}
+                style={{ color: isLiked ? 'red' : 'inherit' }}
+              >
                 <FaHeart /> {likes}
-              </span>
+              </button>
             )}
           </div>
         )}
 
-        {actionButton && <div className={styles.actionButton}>{actionButton}</div>}
+        {actionButton && (
+          <div className={styles.actionButton}>{actionButton}</div>
+        )}
       </div>
     </section>
   );

@@ -12,10 +12,10 @@ const AdvantageSection = () => {
   const {
     data: advantages = [],
     isLoading,
-    isError,
+    isError
   } = useQuery({
     queryKey: ['advantages'],
-    queryFn: getAdvantages,
+    queryFn: getAdvantages
   });
 
   if (isLoading) return 'Loading...';
@@ -25,7 +25,11 @@ const AdvantageSection = () => {
     <section className={styles.advantageSectionContainer}>
       <AnimatedSection viewport={{ once: true, amount: 0.3 }}>
         <div className={styles.advantageSectionContent}>
-          <Field label="About Us" title="Why Choose Us?" className="introTextWrapper customColor" />
+          <Field
+            label="About Us"
+            title="Why Choose Us?"
+            className="introTextWrapper customColor"
+          />
           <div className={styles.advantageSectionSwiper}>
             <Swiper
               modules={[Autoplay, Pagination]}
@@ -37,7 +41,7 @@ const AdvantageSection = () => {
               breakpoints={{
                 320: { slidesPerView: 1 },
                 768: { slidesPerView: 2 },
-                1024: { slidesPerView: 3 },
+                1024: { slidesPerView: 3 }
               }}
             >
               {advantages.map((item) => (

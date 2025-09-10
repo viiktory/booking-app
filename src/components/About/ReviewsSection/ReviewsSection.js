@@ -11,10 +11,10 @@ const ReviewsSection = () => {
   const {
     data: review = [],
     isLoading,
-    isError,
+    isError
   } = useQuery({
     queryKey: ['reviews'],
-    queryFn: getReviews,
+    queryFn: getReviews
   });
 
   if (isLoading) return 'Loading...';
@@ -34,7 +34,7 @@ const ReviewsSection = () => {
               modules={[Navigation]}
               navigation={{
                 prevEl: `.${styles.prevBtn}`,
-                nextEl: `.${styles.nextBtn}`,
+                nextEl: `.${styles.nextBtn}`
               }}
               slidesPerView={1}
             >

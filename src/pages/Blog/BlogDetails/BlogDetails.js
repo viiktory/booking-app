@@ -13,10 +13,10 @@ const BlogDetails = () => {
   const {
     data: post,
     isLoading,
-    isError,
+    isError
   } = useQuery({
     queryKey: ['post', id],
-    queryFn: () => getBlogById(id),
+    queryFn: () => getBlogById(id)
   });
 
   if (isLoading) return <p>Loading...</p>;

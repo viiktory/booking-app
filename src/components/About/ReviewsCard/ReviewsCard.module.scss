@@ -1,5 +1,5 @@
-@import '../../../styles/variables';
-@import '../../../styles/mixins';
+@use '../../../styles/mixins' as *;
+@use '../../../styles/variables' as *;
 
 .cardWrapper {
   @include container;
@@ -38,7 +38,7 @@
 }
 
 .reviewText {
-  font-size: 1rem;
+  font-size: $font-size-base;
   color: var(--color-dark);
   line-height: 1.6;
   margin-bottom: 1rem;
@@ -64,8 +64,11 @@
   display: block;
 }
 
-.userPhoto, .hotelImage {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.userPhoto,
+.hotelImage {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 
   &:hover {
     transform: scale(1.05);

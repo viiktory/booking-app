@@ -1,8 +1,4 @@
-@import '../../styles/variables';
-@import '../../styles/mixins';
-
-@import '../../styles/variables';
-@import '../../styles/mixins';
+@use '../../styles/mixins' as *;
 
 .formContainer {
   @include container;
@@ -13,17 +9,21 @@
   gap: 1.5rem;
   flex-wrap: wrap;
   padding: 2rem;
+  margin-top: 2rem;
   min-height: 220px;
 
   position: relative;
   z-index: 10;
-  margin-top: -100px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
   transition: box-shadow 0.3s ease;
 
   &:hover {
     box-shadow: 0 12px 35px rgba(0, 0, 0, 0.16);
   }
+}
+
+.homeMargin {
+  margin-top: -100px;
 }
 
 .formRow {
@@ -54,7 +54,7 @@
 }
 
 @media (max-width: 768px) {
-  .formContainer{
+  .formContainer {
     margin-top: auto;
   }
 

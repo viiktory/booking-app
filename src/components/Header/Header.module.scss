@@ -1,5 +1,5 @@
-@import '../../styles/variables';
-@import '../../styles/mixins';
+@use '../../styles/mixins' as *;
+@use '../../styles/variables' as *;
 
 .navbar {
   @include container;
@@ -64,7 +64,6 @@
   }
 }
 
-
 @media (max-width: 768px) {
   .navList {
     display: none;
@@ -82,8 +81,9 @@
 
     transform: translateY(-100%);
     opacity: 0;
-    transition: transform 0.3s ease,
-    opacity 0.3s ease;
+    transition:
+      transform 0.3s ease,
+      opacity 0.3s ease;
 
     pointer-events: none;
   }

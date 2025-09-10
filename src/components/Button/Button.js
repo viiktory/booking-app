@@ -9,7 +9,7 @@ const Button = ({
   onClick,
   disabled,
   icon: Icon,
-  iconPosition = 'right',
+  iconPosition = 'right'
 }) => {
   const navigate = useNavigate();
 
@@ -22,7 +22,12 @@ const Button = ({
   };
 
   return (
-    <button className={className} type={type} onClick={handleClick} disabled={disabled}>
+    <button
+      className={className}
+      type={type}
+      onClick={handleClick}
+      disabled={disabled}
+    >
       {iconPosition === 'left' && Icon && <Icon className="arrow-icon" />}
       {text}
       {iconPosition === 'right' && Icon && <Icon className="arrow-icon" />}
@@ -38,7 +43,7 @@ Button.propTypes = {
   onClick: PropTypes.func,
   disabled: PropTypes.bool,
   icon: PropTypes.element,
-  iconPosition: PropTypes.string,
+  iconPosition: PropTypes.string
 };
 
 export default Button;

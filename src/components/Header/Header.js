@@ -20,17 +20,41 @@ const Header = () => {
         <h1 className={styles.logo}>
           <Link to={PATHS.HOME}>start over</Link>
         </h1>
-        <button className={styles.menuBtn} onClick={toggleMenu}>
+        <button
+          className={styles.menuBtn}
+          onClick={toggleMenu}
+          aria-expanded={isOpen}
+          aria-label={isOpen ? 'Close menu' : 'Open menu'}
+        >
           {isOpen ? <FiX /> : <FiMenu />}
         </button>
 
-        <ul className={`${styles.navList} ${isOpen ? styles.activeNav : ''}`}
-          onClick={() => setIsOpen(!isOpen)}>
-          <NavItemLink className={styles.navItem} to={PATHS.HOME} label="Home" />
-          <NavItemLink className={styles.navItem} to={PATHS.ABOUT_PAGE} label="About us" />
-          <NavItemLink className={styles.navItem} to={PATHS.HOTELS.hotels} label="Hotel" />
-          <NavItemLink className={styles.navItem} to={PATHS.BLOG.blog} label="Blog" />
-          <NavItemLink className={styles.navItem} to={PATHS.CONTACTS} label="Contact" />
+        <ul className={`${styles.navList} ${isOpen ? styles.activeNav : ''}`}>
+          <NavItemLink
+            className={styles.navItem}
+            to={PATHS.HOME}
+            label="Home"
+          />
+          <NavItemLink
+            className={styles.navItem}
+            to={PATHS.ABOUT_PAGE}
+            label="About us"
+          />
+          <NavItemLink
+            className={styles.navItem}
+            to={PATHS.HOTELS.hotels}
+            label="Hotel"
+          />
+          <NavItemLink
+            className={styles.navItem}
+            to={PATHS.BLOG.blog}
+            label="Blog"
+          />
+          <NavItemLink
+            className={styles.navItem}
+            to={PATHS.CONTACTS}
+            label="Contact"
+          />
         </ul>
       </nav>
     </header>

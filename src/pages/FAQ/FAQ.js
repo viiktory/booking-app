@@ -9,10 +9,10 @@ const FAQ = () => {
   const {
     data: faqData,
     isLoading,
-    isError,
+    isError
   } = useQuery({
     queryKey: ['faq'],
-    queryFn: getFAQ,
+    queryFn: getFAQ
   });
 
   const [openIndex, setOpenIndex] = useState([]);
@@ -29,7 +29,9 @@ const FAQ = () => {
       <section className={styles.faqSection}>
         <img className={styles.faqImage} src={FAQImg} alt="FAQ" />
         <div className={styles.faqContent}>
-          <h2 className={styles.faqTitle}>Frequently asked questions about hotel reservations</h2>
+          <h2 className={styles.faqTitle}>
+            Frequently asked questions about hotel reservations
+          </h2>
           <div className={styles.accordionItem}>
             {faqData?.map((item, index) => (
               <AccordionItem

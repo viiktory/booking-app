@@ -1,4 +1,9 @@
-import { BookingForm, IntroSection, AdvantageSection, ReviewsSection } from '../../components';
+import {
+  BookingForm,
+  IntroSection,
+  AdvantageSection,
+  ReviewsSection
+} from '../../components';
 
 const AboutUs = () => {
   return (

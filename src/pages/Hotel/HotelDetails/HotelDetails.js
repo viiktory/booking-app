@@ -3,7 +3,12 @@ import { useQuery } from '@tanstack/react-query';
 import { useState } from 'react';
 import { FaArrowLeft } from 'react-icons/fa';
 import { getHotelById } from '../../../api/getHotels';
-import { Button, CardDetails, CallbackForm, AnimatedSection } from '../../../components';
+import {
+  Button,
+  CardDetails,
+  CallbackForm,
+  AnimatedSection
+} from '../../../components';
 
 const HotelDetails = () => {
   const { id } = useParams();
@@ -13,10 +18,10 @@ const HotelDetails = () => {
   const {
     data: hotel,
     isLoading,
-    isError,
+    isError
   } = useQuery({
     queryKey: ['hotel', id],
-    queryFn: () => getHotelById(id),
+    queryFn: () => getHotelById(id)
   });
 
   if (isLoading) return <p>Loading...</p>;
@@ -44,10 +49,16 @@ const HotelDetails = () => {
           address={`${hotel.address}, ${hotel.city}, ${hotel.country}`}
           price={hotel.price_per_night}
           actionButton={
-            <Button text="Book now" className="homeBtn" onClick={() => setIsFormVisible(true)} />
+            <Button
+              text="Book now"
+              className="homeBtn"
+              onClick={() => setIsFormVisible(true)}
+            />
           }
         />
-        {isFormVisible && <CallbackForm onClose={() => setIsFormVisible(false)} />}
+        {isFormVisible && (
+          <CallbackForm onClose={() => setIsFormVisible(false)} />
+        )}
       </AnimatedSection>
     </section>
   );

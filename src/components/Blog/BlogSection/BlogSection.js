@@ -10,10 +10,10 @@ const BlogSection = () => {
   const {
     data: posts = [],
     isLoading,
-    isError,
+    isError
   } = useQuery({
     queryKey: ['posts'],
-    queryFn: getBlogs,
+    queryFn: getBlogs
   });
 
   if (isLoading) return 'Loading...';
@@ -39,7 +39,11 @@ const BlogSection = () => {
           </div>
 
           {blogVisible < posts.length && (
-            <Button text="More" className={styles.btnBlog} onClick={handleMore} />
+            <Button
+              text="More"
+              className={styles.btnBlog}
+              onClick={handleMore}
+            />
           )}
         </AnimatedSection>
       </div>

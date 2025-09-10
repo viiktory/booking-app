@@ -14,6 +14,6 @@ Field.propTypes = {
   label: PropTypes.string,
   title: PropTypes.string,
   description: PropTypes.string,
-  className: PropTypes.string,
+  className: PropTypes.string
 };
 export default Field;

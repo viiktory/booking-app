@@ -21,7 +21,7 @@ NavItemExternal.propTypes = {
   to: PropTypes.string.isRequired,
   icon: PropTypes.node,
   label: PropTypes.string,
-  className: PropTypes.string,
+  className: PropTypes.string
 };
 
 export default NavItemExternal;

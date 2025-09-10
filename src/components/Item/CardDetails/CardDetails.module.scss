@@ -1,5 +1,5 @@
-@import '../../../styles/variables';
-
+@use '../../../styles/mixins' as *;
+@use '../../../styles/variables' as *;
 
 .details {
   display: flex;
@@ -69,7 +69,9 @@
     border-radius: 12px;
     font-size: $font-size-base;
     color: var(--color-description);
-    transition: background 0.3s ease, transform 0.3s ease;
+    transition:
+      background 0.3s ease,
+      transform 0.3s ease;
 
     &:hover {
       background: var(--color-purple);
@@ -87,19 +89,20 @@
   font-size: $font-size-base;
   color: var(--color-dark);
 
-  span, time {
+  span,
+  time {
     display: inline-block;
   }
 }
 
 .address {
   font-size: $font-size-base;
-  color: var(--color-title)
+  color: var(--color-title);
 }
 
 .phone {
   font-size: $font-size-base;
-  color: var(--color-title)
+  color: var(--color-title);
 }
 
 .price {
@@ -119,7 +122,9 @@
     display: flex;
     align-items: center;
     gap: 0.25rem;
-    transition: transform 0.3s ease, color 0.3s ease;
+    transition:
+      transform 0.3s ease,
+      color 0.3s ease;
 
     &:hover {
       transform: scale(1.1);
@@ -128,12 +133,11 @@
 }
 
 .actionButton {
-
 }
 
 @media (max-width: 768px) {
   .details {
-    margin: 0 0 2rem 0;
+    margin: 1rem 0 2rem;
     gap: 1rem;
   }
 }

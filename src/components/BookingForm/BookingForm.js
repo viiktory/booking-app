@@ -1,5 +1,5 @@
 import { useForm } from 'react-hook-form';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { FiSend } from 'react-icons/fi';
 import { formSchema } from '../../features/searchFormValidation';
@@ -8,17 +8,19 @@ import styles from './BookingForm.module.scss';
 
 const BookingForm = () => {
   const navigate = useNavigate();
+  const location = useLocation();
+  const isHome = location.pathname === '/';
 
   const {
     register,
     handleSubmit,
     formState: { errors },
-    reset,
+    reset
   } = useForm({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      guests: 1,
-    },
+      guests: 1
+    }
   });
 
   const onSubmit = (data) => {
@@ -26,7 +28,7 @@ const BookingForm = () => {
       location: data.location || undefined,
       checkIn: data.checkIn || undefined,
       checkOut: data.checkOut || undefined,
-      page: 1,
+      page: 1
     };
     const query = new URLSearchParams(queryParams).toString();
 
@@ -37,7 +39,11 @@ const BookingForm = () => {
 
   return (
     <>
-      <form onSubmit={handleSubmit(onSubmit)} className={styles.formContainer} autoComplete="off">
+      <form
+        onSubmit={handleSubmit(onSubmit)}
+        className={`${styles.formContainer} ${isHome ? styles.homeMargin : ''}`}
+        autoComplete="off"
+      >
         <AnimatedSection viewport={{ once: true }}>
           <div className={styles.formRow}>
             <FieldForm
@@ -51,7 +57,7 @@ const BookingForm = () => {
                 { value: '', label: 'Select a location' },
                 { value: 'New York', label: 'New York' },
                 { value: 'London', label: 'London' },
-                { value: 'Paris', label: 'Paris' },
+                { value: 'Paris', label: 'Paris' }
               ]}
             />
             <FieldForm

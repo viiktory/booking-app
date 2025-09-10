@@ -1,4 +1,4 @@
-@import '../styles/variables';
+@use '../styles/variables' as *;
 
 @mixin container {
   max-width: $container-width;
@@ -6,7 +6,6 @@
   padding-inline: $container-spacing;
   margin: 0 auto;
 }
-
 
 @mixin button-base {
   position: relative;
@@ -23,7 +22,9 @@
   min-width: 10rem;
   height: 3rem;
   cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.3s ease;
 
   .arrow-icon {
     transition: transform 0.3s ease;
@@ -46,14 +47,20 @@
   z-index: 0;
 
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     top: 50%;
     left: 50%;
     width: 0%;
     height: 0%;
-    background: radial-gradient(circle, var(--color-purple-hover) 0%, transparent 70%);
-    transition: width 0.6s ease, height 0.6s ease;
+    background: radial-gradient(
+      circle,
+      var(--color-purple-hover) 0%,
+      transparent 70%
+    );
+    transition:
+      width 0.6s ease,
+      height 0.6s ease;
     transform: translate(-50%, -50%);
     border-radius: 50%;
     z-index: -1;

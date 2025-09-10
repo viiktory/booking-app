@@ -14,7 +14,7 @@ const NavItemLink = ({ to = '', label, className }) => {
 NavItemLink.propTypes = {
   to: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
-  className: PropTypes.string,
+  className: PropTypes.string
 };
 
 export default NavItemLink;

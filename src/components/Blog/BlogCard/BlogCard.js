@@ -22,17 +22,18 @@ const BlogCard = ({ item }) => {
           <span>
             <FaRegEye /> {item.views}
           </span>
-          <span
+          <button
+            type="button"
             onClick={(e) => {
               e.preventDefault();
               toggleLike(item.id);
             }}
             style={{
-              color: isLiked ? 'red' : 'inherit',
+              color: isLiked ? 'red' : 'inherit'
             }}
           >
             <FaHeart /> {likesCount}
-          </span>
+          </button>
         </>
       }
     />

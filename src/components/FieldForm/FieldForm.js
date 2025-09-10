@@ -11,10 +11,12 @@ const FieldForm = ({
   errors,
   option,
   rules,
-  vertical = false,
+  vertical = false
 }) => {
   return (
-    <div className={`${styles.formFieldWrapper} ${vertical ? styles.vertical : ''}`}>
+    <div
+      className={`${styles.formFieldWrapper} ${vertical ? styles.vertical : ''}`}
+    >
       <label className={styles.label} htmlFor={name}>
         {label}
       </label>
@@ -65,11 +67,11 @@ FieldForm.propTypes = {
   option: PropTypes.arrayOf(
     PropTypes.shape({
       value: PropTypes.string,
-      label: PropTypes.string,
+      label: PropTypes.string
     })
   ),
   rules: PropTypes.object,
-  vertical: PropTypes.bool,
+  vertical: PropTypes.bool
 };
 
 export default FieldForm;

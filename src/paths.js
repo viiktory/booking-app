@@ -4,13 +4,13 @@ export const PATHS = {
   ABOUT_SECTION: '#about',
   HOTELS: {
     hotels: '/hotels',
-    details: '/hotels/:id',
+    details: '/hotels/:id'
   },
 
   BLOG: {
     blog: '/blog',
-    details: '/blog/:id',
+    details: '/blog/:id'
   },
   CONTACTS: '/contacts',
-  FAQ: '/faq',
+  FAQ: '/faq'
 };

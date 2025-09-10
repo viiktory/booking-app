@@ -14,10 +14,10 @@ const HotelSection = () => {
   const {
     data: hotels = [],
     isLoading,
-    isError,
+    isError
   } = useQuery({
     queryKey: ['hotels'],
-    queryFn: getHotels,
+    queryFn: getHotels
   });
 
   const locationSearch = new URLSearchParams(useLocation().search);
@@ -33,7 +33,11 @@ const HotelSection = () => {
   return (
     <section className={styles.hotelSectionContainer}>
       <div className="container">
-        <Field label="Hotels" title="Choose the best now" className="introTextWrapper" />
+        <Field
+          label="Hotels"
+          title="Choose the best now"
+          className="introTextWrapper"
+        />
         <AnimatedSection viewport={{ once: true }}>
           <div className={styles.hotelSectionText}>
             <Swiper
@@ -44,7 +48,7 @@ const HotelSection = () => {
               grid={{ rows: 2, fill: 'row' }}
               navigation={{
                 prevEl: `.${styles.prevBtn}`,
-                nextEl: `.${styles.nextBtn}`,
+                nextEl: `.${styles.nextBtn}`
               }}
               pagination={{ clickable: true }}
               breakpoints={{
@@ -52,10 +56,10 @@ const HotelSection = () => {
                   slidesPerView: 1,
                   slidesPerGroup: 1,
                   grid: { rows: 2 },
-                  pagination: false,
+                  pagination: false
                 },
                 768: { slidesPerView: 2, slidesPerGroup: 2, grid: { rows: 2 } },
-                1024: { slidesPerView: 3, slidesPerGroup: 3, grid: { rows: 2 } },
+                1024: { slidesPerView: 3, slidesPerGroup: 3, grid: { rows: 2 } }
               }}
             >
               {filteredHotels.map((hotel) => (

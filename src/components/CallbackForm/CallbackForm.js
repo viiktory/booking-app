@@ -11,9 +11,9 @@ const CallbackForm = ({ onClose }) => {
     register,
     handleSubmit,
     formState: { errors },
-    reset,
+    reset
   } = useForm({
-    resolver: zodResolver(contactForm),
+    resolver: zodResolver(contactForm)
   });
 
   const onSubmit = () => {

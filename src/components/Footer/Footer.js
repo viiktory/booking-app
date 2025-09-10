@@ -7,9 +7,14 @@ import {
   FaGoogle,
   FaMapMarkerAlt,
   FaPhone,
-  FaTelegram,
+  FaTelegram
 } from 'react-icons/fa';
-import { NavItemExternal, NavItemLink, ContactItem, AccordionItem } from '../../components';
+import {
+  NavItemExternal,
+  NavItemLink,
+  ContactItem,
+  AccordionItem
+} from '../../components';
 import styles from './Footer.module.scss';
 
 const Footer = () => {
@@ -52,8 +57,16 @@ const Footer = () => {
             isOpen={openIndex === 0}
             onToggle={() => handleToggle(0)}
           >
-            <NavItemLink className={styles.footerLink} to={PATHS.FAQ} label="FAQ" />
-            <NavItemLink className={styles.footerLink} to={PATHS.FAQ} label="How it works" />
+            <NavItemLink
+              className={styles.footerLink}
+              to={PATHS.FAQ}
+              label="FAQ"
+            />
+            <NavItemLink
+              className={styles.footerLink}
+              to={PATHS.FAQ}
+              label="How it works"
+            />
             <NavItemExternal
               className={styles.footerLink}
               to="https://www.icertis.com/contracting-basics/what-are-terms-and-conditions/"
@@ -68,8 +81,16 @@ const Footer = () => {
         </div>
 
         <div>
-          <AccordionItem title="Privacy" isOpen={openIndex === 1} onToggle={() => handleToggle(1)}>
-            <NavItemLink className={styles.footerLink} to={PATHS.ABOUT_PAGE} label="About us" />
+          <AccordionItem
+            title="Privacy"
+            isOpen={openIndex === 1}
+            onToggle={() => handleToggle(1)}
+          >
+            <NavItemLink
+              className={styles.footerLink}
+              to={PATHS.ABOUT_PAGE}
+              label="About us"
+            />
             <NavItemExternal
               className={styles.footerLink}
               to="https://en.wikipedia.org/wiki/Privacy_policy"
@@ -80,7 +101,11 @@ const Footer = () => {
               to="https://en.wikipedia.org/wiki/HTTP_cookie"
               label="Cookie Policy"
             />
-            <NavItemLink className={styles.footerLink} to={PATHS.CONTACTS} label="Contact us" />
+            <NavItemLink
+              className={styles.footerLink}
+              to={PATHS.CONTACTS}
+              label="Contact us"
+            />
           </AccordionItem>
         </div>
 
@@ -114,7 +139,9 @@ const Footer = () => {
           </AccordionItem>
         </div>
       </div>
-      <p className={styles.copy}>© {new Date().getFullYear()} Start Over. All rights reserved.</p>
+      <p className={styles.copy}>
+        © {new Date().getFullYear()} Start Over. All rights reserved.
+      </p>
     </footer>
   );
 };

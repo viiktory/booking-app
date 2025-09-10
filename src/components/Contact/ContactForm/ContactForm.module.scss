@@ -1,11 +1,10 @@
-@import '../../../styles/variables';
-@import '../../../styles/mixins';
+@use '../../../styles/mixins' as *;
 
 .contactContainer {
   background: var(--color-light);
   min-height: 32rem;
   padding-block: 2rem;
-  background: url("../../../assets/images/bg-send.jpg") center 38%;
+  background: url('../../../assets/images/bg-send.jpg') center 38%;
   background-size: cover;
 }
 
@@ -52,7 +51,7 @@
     min-height: 22rem;
     padding: 0 0 2rem 0;
   }
-    .contactForm {
+  .contactForm {
     grid-template-columns: 1fr;
   }
 }
