@@ -3,7 +3,7 @@ import { useQuery } from '@tanstack/react-query';
 import { getBlogById } from '../../../api/getBlogs';
 import useLikesStore from '../../../store/useLikesStore';
 import { FaArrowLeft } from 'react-icons/fa';
-import { Button, CardDetails } from '../../../components';
+import { Button, CardDetails, AnimatedSection } from '../../../components';
 
 const BlogDetails = () => {
   const { id } = useParams();
@@ -36,20 +36,22 @@ const BlogDetails = () => {
           icon={FaArrowLeft}
           iconPosition="left"
         />
-        <CardDetails
-          image={post.image}
-          alt={post.alt}
-          title={post.title}
-          category={post.category}
-          readTime={post.readTime}
-          description={post.description}
-          author={post.author}
-          data={post.data}
-          views={post.views}
-          likes={likesCount}
-          onclick={() => toggleLike(post.id)}
-          isLiked={isLiked}
-        />
+        <AnimatedSection viewport={{ once: true }}>
+          <CardDetails
+            image={post.image}
+            alt={post.alt}
+            title={post.title}
+            category={post.category}
+            readTime={post.readTime}
+            description={post.description}
+            author={post.author}
+            data={post.data}
+            views={post.views}
+            likes={likesCount}
+            onclick={() => toggleLike(post.id)}
+            isLiked={isLiked}
+          />
+        </AnimatedSection>
       </div>
     </section>
   );

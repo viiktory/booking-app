@@ -3,7 +3,7 @@ import { useQuery } from '@tanstack/react-query';
 import { useState } from 'react';
 import { FaArrowLeft } from 'react-icons/fa';
 import { getHotelById } from '../../../api/getHotels';
-import { Button, CardDetails, CallbackForm } from '../../../components';
+import { Button, CardDetails, CallbackForm, AnimatedSection } from '../../../components';
 
 const HotelDetails = () => {
   const { id } = useParams();
@@ -32,21 +32,23 @@ const HotelDetails = () => {
         icon={FaArrowLeft}
         iconPosition="left"
       />
-      <CardDetails
-        image={hotel.image}
-        alt={hotel.name}
-        name={hotel.name}
-        hotelRating={hotel.hotel_rating}
-        stars={hotel.stars}
-        description={hotel.description}
-        amenities={hotel.amenities}
-        address={`${hotel.address}, ${hotel.city}, ${hotel.country}`}
-        price={hotel.price_per_night}
-        actionButton={
-          <Button text="Book now" className="homeBtn" onClick={() => setIsFormVisible(true)} />
-        }
-      />
-      {isFormVisible && <CallbackForm onClose={() => setIsFormVisible(false)} />}
+      <AnimatedSection viewport={{ once: true }}>
+        <CardDetails
+          image={hotel.image}
+          alt={hotel.name}
+          name={hotel.name}
+          hotelRating={hotel.hotel_rating}
+          stars={hotel.stars}
+          description={hotel.description}
+          amenities={hotel.amenities}
+          address={`${hotel.address}, ${hotel.city}, ${hotel.country}`}
+          price={hotel.price_per_night}
+          actionButton={
+            <Button text="Book now" className="homeBtn" onClick={() => setIsFormVisible(true)} />
+          }
+        />
+        {isFormVisible && <CallbackForm onClose={() => setIsFormVisible(false)} />}
+      </AnimatedSection>
     </section>
   );
 };

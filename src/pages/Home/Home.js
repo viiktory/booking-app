@@ -1,6 +1,7 @@
 import { FaArrowRight } from 'react-icons/fa6';
 import { PATHS } from '../../paths';
 import { AboutUs } from '../../pages';
+import { AnimatedSection } from '../../components';
 import styles from './Home.module.scss';
 
 const Home = () => {
@@ -10,15 +11,17 @@ const Home = () => {
         <div className={styles.overlay}></div>
         <div className={styles.homeContainer}>
           <div className={styles.homeContent}>
-            <h1 className={styles.homeTitle}>Start Over – Your Ideal Hotel Booking Experience</h1>
-            <p className={styles.homeDescription}>
-              Book your next stay easily and stress-free. Find the perfect hotel in just a few
-              clicks. Your journey with comfort and ease today!
-            </p>
-            <a href={PATHS.ABOUT_SECTION} className="homeBtn">
-              Find
-              <FaArrowRight className="arrow-icon" />
-            </a>
+            <AnimatedSection>
+              <h1 className={styles.homeTitle}>Start Over – Your Ideal Hotel Booking Experience</h1>
+              <p className={styles.homeDescription}>
+                Book your next stay easily and stress-free. Find the perfect hotel in just a few
+                clicks. Your journey with comfort and ease today!
+              </p>
+              <a href={PATHS.ABOUT_SECTION} className="homeBtn">
+                Find
+                <FaArrowRight className="arrow-icon" />
+              </a>
+            </AnimatedSection>
           </div>
         </div>
       </section>

@@ -30,6 +30,7 @@
   &__header {
     font-size: $font-size-description;
     color: var(--color-purple);
+    position: relative;
 
     &:hover {
       color: var(--color-title);

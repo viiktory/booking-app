@@ -49,3 +49,5 @@ export { default as AccordionItem } from './AccordionItem/AccordionItem';
 export { default as CallbackForm } from './CallbackForm/CallbackForm';
 
 export { default as SubscribeNews } from './SubscribeNews/SubscribeNews';
+
+export { default as AnimatedSection } from './AnimatedSection/AnimatedSection';

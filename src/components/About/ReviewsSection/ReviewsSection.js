@@ -4,7 +4,7 @@ import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { getReviews } from '../../../api/getReviews';
-import { Field, ReviewsCard } from '../../../components';
+import { Field, ReviewsCard, AnimatedSection } from '../../../components';
 import styles from './ReviewsSection.module.scss';
 
 const ReviewsSection = () => {
@@ -22,31 +22,33 @@ const ReviewsSection = () => {
 
   return (
     <section className={styles.reviewsSectionContainer}>
-      <div className={styles.reviewsSectionContent}>
-        <Field
-          label="Reviews"
-          title="We trust our customers and they trust us to"
-          className="introTextWrapper"
-        />
-        <div className={styles.reviewsSectionSwiper}>
-          <Swiper
-            modules={[Navigation]}
-            navigation={{
-              prevEl: `.${styles.prevBtn}`,
-              nextEl: `.${styles.nextBtn}`,
-            }}
-            slidesPerView={1}
-          >
-            {review.map((item) => (
-              <SwiperSlide key={item.id}>
-                <ReviewsCard item={item}/>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-          <button className={`${styles.prevBtn} swiper-button-prev`}></button>
-          <button className={`${styles.nextBtn} swiper-button-next`}></button>
+      <AnimatedSection viewport={{ once: true, amount: 0.3 }}>
+        <div className={styles.reviewsSectionContent}>
+          <Field
+            label="Reviews"
+            title="We trust our customers and they trust us to"
+            className="introTextWrapper"
+          />
+          <div className={styles.reviewsSectionSwiper}>
+            <Swiper
+              modules={[Navigation]}
+              navigation={{
+                prevEl: `.${styles.prevBtn}`,
+                nextEl: `.${styles.nextBtn}`,
+              }}
+              slidesPerView={1}
+            >
+              {review.map((item) => (
+                <SwiperSlide key={item.id}>
+                  <ReviewsCard item={item} />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+            <button className={`${styles.prevBtn} swiper-button-prev`}></button>
+            <button className={`${styles.nextBtn} swiper-button-next`}></button>
+          </div>
         </div>
-      </div>
+      </AnimatedSection>
     </section>
   );
 };

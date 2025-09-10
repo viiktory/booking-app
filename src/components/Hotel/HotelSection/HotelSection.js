@@ -7,7 +7,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/grid';
 import { getHotels } from '../../../api/getHotels';
-import { Field, HotelCard } from '../../../components';
+import { Field, HotelCard, AnimatedSection } from '../../../components';
 import styles from './HotelSection.module.scss';
 
 const HotelSection = () => {
@@ -34,38 +34,40 @@ const HotelSection = () => {
     <section className={styles.hotelSectionContainer}>
       <div className="container">
         <Field label="Hotels" title="Choose the best now" className="introTextWrapper" />
-        <div className={styles.hotelSectionText}>
-          <Swiper
-            modules={[Pagination, Navigation, Grid]}
-            spaceBetween={20}
-            slidesPerView={3}
-            slidesPerGroup={3}
-            grid={{ rows: 2, fill: 'row' }}
-            navigation={{
-              prevEl: `.${styles.prevBtn}`,
-              nextEl: `.${styles.nextBtn}`,
-            }}
-            pagination={{ clickable: true }}
-            breakpoints={{
-              320: {
-                slidesPerView: 1,
-                slidesPerGroup: 1,
-                grid: { rows: 2 },
-                pagination: false,
-              },
-              768: { slidesPerView: 2, slidesPerGroup: 2, grid: { rows: 2 } },
-              1024: { slidesPerView: 3, slidesPerGroup: 3, grid: { rows: 2 } },
-            }}
-          >
-            {filteredHotels.map((hotel) => (
-              <SwiperSlide key={hotel.id}>
-                <HotelCard item={hotel} />
-              </SwiperSlide>
-            ))}
-          </Swiper>
-          <button className={`${styles.prevBtn} swiper-button-prev`}></button>
-          <button className={`${styles.nextBtn} swiper-button-next`}></button>
-        </div>
+        <AnimatedSection viewport={{ once: true }}>
+          <div className={styles.hotelSectionText}>
+            <Swiper
+              modules={[Pagination, Navigation, Grid]}
+              spaceBetween={20}
+              slidesPerView={3}
+              slidesPerGroup={3}
+              grid={{ rows: 2, fill: 'row' }}
+              navigation={{
+                prevEl: `.${styles.prevBtn}`,
+                nextEl: `.${styles.nextBtn}`,
+              }}
+              pagination={{ clickable: true }}
+              breakpoints={{
+                320: {
+                  slidesPerView: 1,
+                  slidesPerGroup: 1,
+                  grid: { rows: 2 },
+                  pagination: false,
+                },
+                768: { slidesPerView: 2, slidesPerGroup: 2, grid: { rows: 2 } },
+                1024: { slidesPerView: 3, slidesPerGroup: 3, grid: { rows: 2 } },
+              }}
+            >
+              {filteredHotels.map((hotel) => (
+                <SwiperSlide key={hotel.id}>
+                  <HotelCard item={hotel} />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+            <button className={`${styles.prevBtn} swiper-button-prev`}></button>
+            <button className={`${styles.nextBtn} swiper-button-next`}></button>
+          </div>
+        </AnimatedSection>
       </div>
     </section>
   );

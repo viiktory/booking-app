@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  background-color: var(--color-light);
+  background-color: var(--color-background);
   min-height: 15rem;
   color: var(--color-dark);
   padding: 2rem;
@@ -14,7 +14,8 @@
 
   &:hover {
     transform: scale(1.05);
-    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.8);
+    background: var(--color-light);
+    box-shadow: 0 4px 4px rgba(124, 58, 237, 0.2);
   }
 }
 

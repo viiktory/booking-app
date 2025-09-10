@@ -6,7 +6,7 @@
 
 .formContainer {
   @include container;
-  background: var(--color-light);
+  background: var(--color-background);
   display: flex;
   align-items: center;
   justify-content: center;
