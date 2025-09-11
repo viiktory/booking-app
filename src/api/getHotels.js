@@ -6,6 +6,6 @@ export const getHotels = async () => {
 };
 
 export const getHotelById = async (id) => {
-  const hotels = getHotels();
+  const hotels = await getHotels();
   return hotels.find((hotel) => hotel.id === id);
 };

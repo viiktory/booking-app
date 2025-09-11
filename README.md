@@ -4,7 +4,7 @@
 [![SCSS](https://img.shields.io/badge/SCSS-hotpink?style=for-the-badge&logo=sass&logoColor=white)](https://sass-lang.com/)
 
 **🌍 Live
-Demo: [booking-app-hotels.vercel.app](https://booking-app-lime-alpha.vercel.app/)**
+Demo: [booking-app-hotels.vercel.app](https://booking-app-hotels.vercel.app/)**
 
 # Start Over – Hotel Booking Website
 

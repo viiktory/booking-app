@@ -6,6 +6,6 @@ export const getBlogs = async () => {
 };
 
 export const getBlogById = async (id) => {
-  const blogs = getBlogs();
+  const blogs = await getBlogs();
   return blogs.find((blog) => blog.id === id);
 };
