@@ -1,0 +1,815 @@
+{
+  "hotels": [
+    {
+      "id": 1,
+      "name": "Grand Central Hotel",
+      "address": "123 Main St, Manhattan",
+      "city": "New York",
+      "country": "USA",
+      "hotel_rating": 4.5,
+      "phone_number": "+1 212-555-1234",
+      "image": "https://plus.unsplash.com/premium_photo-1694475027390-8fd837fb67e8?q=80&w=705&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "Grand Central Hotel offers spacious rooms with skyline views, modern interiors, and easy access to the city's top attractions.",
+      "stars": 5,
+      "price_per_night": 210,
+      "amenities": [
+        "Free WiFi",
+        "Gym",
+        "Restaurant",
+        "Room Service",
+        "Bar",
+        "Airport Shuttle"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Central Park Inn",
+      "address": "456 Park Ave, Manhattan",
+      "city": "New York",
+      "country": "USA",
+      "hotel_rating": 4.2,
+      "phone_number": "+1 212-555-5678",
+      "image": "https://images.unsplash.com/photo-1684050139459-3f8837803b3a?q=80&w=627&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "Central Park Inn features cozy rooms, a rooftop terrace, and is just steps away from Central Park.",
+      "stars": 4,
+      "price_per_night": 160,
+      "amenities": [
+        "Free WiFi",
+        "Restaurant",
+        "Bar",
+        "Air Conditioning",
+        "Pet Friendly"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Times Square Suites",
+      "address": "789 Broadway, Manhattan",
+      "city": "New York",
+      "country": "USA",
+      "hotel_rating": 4.8,
+      "phone_number": "+1 212-555-9012",
+      "image": "https://images.unsplash.com/photo-1698870157085-11632d2ddef8?q=80&w=688&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "Times Square Suites offers luxury accommodation with panoramic views, fine dining, and premium services in the heart of Manhattan.",
+      "stars": 5,
+      "price_per_night": 320,
+      "amenities": [
+        "Free WiFi",
+        "Spa",
+        "Fitness Center",
+        "Restaurant",
+        "Swimming Pool",
+        "Concierge Service"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "The Londoner",
+      "address": "10 Leicester Square",
+      "city": "London",
+      "country": "UK",
+      "hotel_rating": 4.6,
+      "phone_number": "+44 20 7946 0000",
+      "image": "https://plus.unsplash.com/premium_photo-1677343839916-6e669f0483ba?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "The Londoner blends modern elegance with a central location, offering stylish rooms and first-class dining.",
+      "stars": 5,
+      "price_per_night": 280,
+      "amenities": [
+        "Free WiFi",
+        "Restaurant",
+        "Bar",
+        "Spa",
+        "Airport Shuttle",
+        "Meeting Rooms"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "The Savoy",
+      "address": "Strand, London",
+      "city": "London",
+      "country": "UK",
+      "hotel_rating": 4.9,
+      "phone_number": "+44 20 7836 4343",
+      "image": "https://images.unsplash.com/photo-1605488966977-a0eb707550c0?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "The Savoy is an iconic London landmark, offering timeless luxury, riverside views, and world-class service.",
+      "stars": 5,
+      "price_per_night": 400,
+      "amenities": [
+        "Free WiFi",
+        "Spa",
+        "Restaurant",
+        "Concierge Service",
+        "Swimming Pool",
+        "Airport Shuttle"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Royal Garden Hotel",
+      "address": "2-24 Kensington High St",
+      "city": "London",
+      "country": "UK",
+      "hotel_rating": 4.4,
+      "phone_number": "+44 20 7937 1000",
+      "image": "https://images.unsplash.com/photo-1737039865879-35b71abaffa5?q=80&w=1175&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "Royal Garden Hotel overlooks Kensington Gardens and offers modern amenities, elegant rooms, and fine dining.",
+      "stars": 4,
+      "price_per_night": 220,
+      "amenities": [
+        "Free WiFi",
+        "Restaurant",
+        "Bar",
+        "Room Service",
+        "Fitness Center"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Hotel Le Meurice",
+      "address": "228 Rue de Rivoli",
+      "city": "Paris",
+      "country": "France",
+      "hotel_rating": 4.7,
+      "phone_number": "+33 1 44 58 10 10",
+      "image": "https://images.unsplash.com/photo-1716831309985-48246936fe42?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "Central Park Inn features cozy rooms, a rooftop terrace, and is just steps away from Central Park.",
+      "stars": 4,
+      "price_per_night": 160,
+      "amenities": [
+        "Free WiFi",
+        "Restaurant",
+        "Bar",
+        "Air Conditioning",
+        "Pet Friendly"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Hotel Lutetia",
+      "address": "45 Boulevard Raspail",
+      "city": "Paris",
+      "country": "France",
+      "hotel_rating": 4.5,
+      "phone_number": "+33 1 49 54 46 00",
+      "image": "https://plus.unsplash.com/premium_photo-1742454193796-68978b1f24ee?q=80&w=688&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "The Londoner blends modern elegance with a central location, offering stylish rooms and first-class dining.",
+      "stars": 5,
+      "price_per_night": 280,
+      "amenities": [
+        "Free WiFi",
+        "Restaurant",
+        "Bar",
+        "Spa",
+        "Airport Shuttle",
+        "Meeting Rooms"
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Le Bristol Paris",
+      "address": "112 Rue du Faubourg Saint-Honoré",
+      "city": "Paris",
+      "country": "France",
+      "hotel_rating": 4.9,
+      "phone_number": "+33 1 53 43 43 00",
+      "image": "https://images.unsplash.com/photo-1646139501502-092ea1087775?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "The Londoner blends modern elegance with a central location, offering stylish rooms and first-class dining.",
+      "stars": 5,
+      "price_per_night": 280,
+      "amenities": [
+        "Free WiFi",
+        "Restaurant",
+        "Bar",
+        "Spa",
+        "Airport Shuttle",
+        "Meeting Rooms"
+      ]
+    },
+    {
+      "id": 10,
+      "name": "The Hoxton",
+      "address": "206 Coney Island Ave",
+      "city": "New York",
+      "country": "USA",
+      "hotel_rating": 4.3,
+      "phone_number": "+1 718-555-3344",
+      "image": "https://images.unsplash.com/photo-1684491294607-87ecc08a3c0f?q=80&w=715&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "Grand Central Hotel offers spacious rooms with skyline views, modern interiors, and easy access to the city's top attractions.",
+      "stars": 5,
+      "price_per_night": 210,
+      "amenities": [
+        "Free WiFi",
+        "Gym",
+        "Restaurant",
+        "Room Service",
+        "Bar",
+        "Airport Shuttle"
+      ]
+    },
+    {
+      "id": 11,
+      "name": "CitizenM London Bankside",
+      "address": "20 Lavington St",
+      "city": "London",
+      "country": "UK",
+      "hotel_rating": 4.2,
+      "phone_number": "+44 20 7378 1444",
+      "image": "https://images.unsplash.com/photo-1737039865879-35b71abaffa5?q=80&w=1175&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "Central Park Inn features cozy rooms, a rooftop terrace, and is just steps away from Central Park.",
+      "stars": 4,
+      "price_per_night": 160,
+      "amenities": [
+        "Free WiFi",
+        "Restaurant",
+        "Bar",
+        "Air Conditioning",
+        "Pet Friendly"
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Hôtel Regina Louvre",
+      "address": "2 Place des Pyramides",
+      "city": "Paris",
+      "country": "France",
+      "hotel_rating": 4.4,
+      "phone_number": "+33 1 42 60 20 40",
+      "image": "https://plus.unsplash.com/premium_photo-1742454193796-68978b1f24ee?q=80&w=688&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "Royal Garden Hotel overlooks Kensington Gardens and offers modern amenities, elegant rooms, and fine dining.",
+      "stars": 4,
+      "price_per_night": 220,
+      "amenities": [
+        "Free WiFi",
+        "Restaurant",
+        "Bar",
+        "Room Service",
+        "Fitness Center"
+      ]
+    },
+    {
+      "id": 13,
+      "name": "The Standard, High Line",
+      "address": "848 Washington St",
+      "city": "New York",
+      "country": "USA",
+      "hotel_rating": 4.5,
+      "phone_number": "+1 212-675-3000",
+      "image": "https://images.unsplash.com/photo-1698870157085-11632d2ddef8?q=80&w=688&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "The Londoner blends modern elegance with a central location, offering stylish rooms and first-class dining.",
+      "stars": 5,
+      "price_per_night": 280,
+      "amenities": [
+        "Free WiFi",
+        "Restaurant",
+        "Bar",
+        "Spa",
+        "Airport Shuttle",
+        "Meeting Rooms"
+      ]
+    },
+    {
+      "id": 14,
+      "name": "Shangri-La Hotel",
+      "address": "22 Grosvenor Square",
+      "city": "London",
+      "country": "UK",
+      "hotel_rating": 4.7,
+      "phone_number": "+44 20 7499 8888",
+      "image": "https://images.unsplash.com/photo-1676089774775-c7dd632e3e07?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "Grand Central Hotel offers spacious rooms with skyline views, modern interiors, and easy access to the city's top attractions.",
+      "stars": 5,
+      "price_per_night": 210,
+      "amenities": [
+        "Free WiFi",
+        "Gym",
+        "Restaurant",
+        "Room Service",
+        "Bar",
+        "Airport Shuttle"
+      ]
+    },
+    {
+      "id": 15,
+      "name": "Hotel Daniel Paris",
+      "address": "27 Rue Saint-Dominique",
+      "city": "Paris",
+      "country": "France",
+      "hotel_rating": 4.3,
+      "phone_number": "+33 1 45 51 90 00",
+      "image": "https://images.unsplash.com/photo-1698870157085-11632d2ddef8?q=80&w=688&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "The Savoy is an iconic London landmark, offering timeless luxury, riverside views, and world-class service.",
+      "stars": 5,
+      "price_per_night": 400,
+      "amenities": [
+        "Free WiFi",
+        "Spa",
+        "Restaurant",
+        "Concierge Service",
+        "Swimming Pool",
+        "Airport Shuttle"
+      ]
+    },
+    {
+      "id": 16,
+      "name": "Moxy NYC East Village",
+      "address": "112 E 11th St",
+      "city": "New York",
+      "country": "USA",
+      "hotel_rating": 4.0,
+      "phone_number": "+1 212-375-3800",
+      "image": "https://plus.unsplash.com/premium_photo-1694475027390-8fd837fb67e8?q=80&w=705&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "The Savoy is an iconic London landmark, offering timeless luxury, riverside views, and world-class service.",
+      "stars": 5,
+      "price_per_night": 400,
+      "amenities": [
+        "Free WiFi",
+        "Spa",
+        "Restaurant",
+        "Concierge Service",
+        "Swimming Pool",
+        "Airport Shuttle"
+      ]
+    },
+    {
+      "id": 17,
+      "name": "The Ned",
+      "address": "27 Poultry",
+      "city": "London",
+      "country": "UK",
+      "hotel_rating": 4.6,
+      "phone_number": "+44 20 3828 7000",
+      "image": "https://images.unsplash.com/photo-1669287456268-abc2e13b66ba?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "Royal Garden Hotel overlooks Kensington Gardens and offers modern amenities, elegant rooms, and fine dining.",
+      "stars": 4,
+      "price_per_night": 220,
+      "amenities": [
+        "Free WiFi",
+        "Restaurant",
+        "Bar",
+        "Room Service",
+        "Fitness Center"
+      ]
+    },
+    {
+      "id": 18,
+      "name": "Hotel Recamier",
+      "address": "3bis Place Saint-Sulpice",
+      "city": "Paris",
+      "country": "France",
+      "hotel_rating": 4.5,
+      "phone_number": "+33 1 42 60 00 88",
+      "image": "https://plus.unsplash.com/premium_photo-1742454193796-68978b1f24ee?q=80&w=688&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "Central Park Inn features cozy rooms, a rooftop terrace, and is just steps away from Central Park.",
+      "stars": 4,
+      "price_per_night": 160,
+      "amenities": [
+        "Free WiFi",
+        "Restaurant",
+        "Bar",
+        "Air Conditioning",
+        "Pet Friendly"
+      ]
+    },
+    {
+      "id": 19,
+      "name": "The Marlton Hotel",
+      "address": "5 W 8th St",
+      "city": "New York",
+      "country": "USA",
+      "hotel_rating": 4.4,
+      "phone_number": "+1 212-677-1900",
+      "image": "https://images.unsplash.com/photo-1742734068844-ea2cebc553f8?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "The Londoner blends modern elegance with a central location, offering stylish rooms and first-class dining.",
+      "stars": 5,
+      "price_per_night": 280,
+      "amenities": [
+        "Free WiFi",
+        "Restaurant",
+        "Bar",
+        "Spa",
+        "Airport Shuttle",
+        "Meeting Rooms"
+      ]
+    },
+    {
+      "id": 20,
+      "name": "Ham Yard Hotel",
+      "address": "1 Ham Yard",
+      "city": "London",
+      "country": "UK",
+      "hotel_rating": 4.7,
+      "phone_number": "+44 20 7034 2000",
+      "image": "https://images.unsplash.com/photo-1752915570812-ddf0530f458d?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "Royal Garden Hotel overlooks Kensington Gardens and offers modern amenities, elegant rooms, and fine dining.",
+      "stars": 4,
+      "price_per_night": 220,
+      "amenities": [
+        "Free WiFi",
+        "Restaurant",
+        "Bar",
+        "Room Service",
+        "Fitness Center"
+      ]
+    },
+    {
+      "id": 21,
+      "name": "Grand Central Hotel",
+      "address": "123 Main St, Manhattan",
+      "city": "New York",
+      "country": "USA",
+      "hotel_rating": 4.5,
+      "phone_number": "+1 212-555-1234",
+      "image": "https://plus.unsplash.com/premium_photo-1694475027390-8fd837fb67e8?q=80&w=705&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "Grand Central Hotel offers spacious rooms with skyline views, modern interiors, and easy access to the city's top attractions.",
+      "stars": 5,
+      "price_per_night": 210,
+      "amenities": [
+        "Free WiFi",
+        "Gym",
+        "Restaurant",
+        "Room Service",
+        "Bar",
+        "Airport Shuttle"
+      ]
+    },
+    {
+      "id": 22,
+      "name": "Central Park Inn",
+      "address": "456 Park Ave, Manhattan",
+      "city": "New York",
+      "country": "USA",
+      "hotel_rating": 4.2,
+      "phone_number": "+1 212-555-5678",
+      "image": "https://images.unsplash.com/photo-1684050139459-3f8837803b3a?q=80&w=627&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "Central Park Inn features cozy rooms, a rooftop terrace, and is just steps away from Central Park.",
+      "stars": 4,
+      "price_per_night": 160,
+      "amenities": [
+        "Free WiFi",
+        "Restaurant",
+        "Bar",
+        "Air Conditioning",
+        "Pet Friendly"
+      ]
+    },
+    {
+      "id": 23,
+      "name": "Times Square Suites",
+      "address": "789 Broadway, Manhattan",
+      "city": "New York",
+      "country": "USA",
+      "hotel_rating": 4.8,
+      "phone_number": "+1 212-555-9012",
+      "image": "https://images.unsplash.com/photo-1698870157085-11632d2ddef8?q=80&w=688&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "Times Square Suites offers luxury accommodation with panoramic views, fine dining, and premium services in the heart of Manhattan.",
+      "stars": 5,
+      "price_per_night": 320,
+      "amenities": [
+        "Free WiFi",
+        "Spa",
+        "Fitness Center",
+        "Restaurant",
+        "Swimming Pool",
+        "Concierge Service"
+      ]
+    },
+    {
+      "id": 24,
+      "name": "The Londoner",
+      "address": "10 Leicester Square",
+      "city": "London",
+      "country": "UK",
+      "hotel_rating": 4.6,
+      "phone_number": "+44 20 7946 0000",
+      "image": "https://plus.unsplash.com/premium_photo-1677343839916-6e669f0483ba?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "The Londoner blends modern elegance with a central location, offering stylish rooms and first-class dining.",
+      "stars": 5,
+      "price_per_night": 280,
+      "amenities": [
+        "Free WiFi",
+        "Restaurant",
+        "Bar",
+        "Spa",
+        "Airport Shuttle",
+        "Meeting Rooms"
+      ]
+    },
+    {
+      "id": 25,
+      "name": "The Savoy",
+      "address": "Strand, London",
+      "city": "London",
+      "country": "UK",
+      "hotel_rating": 4.9,
+      "phone_number": "+44 20 7836 4343",
+      "image": "https://images.unsplash.com/photo-1605488966977-a0eb707550c0?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "The Savoy is an iconic London landmark, offering timeless luxury, riverside views, and world-class service.",
+      "stars": 5,
+      "price_per_night": 400,
+      "amenities": [
+        "Free WiFi",
+        "Spa",
+        "Restaurant",
+        "Concierge Service",
+        "Swimming Pool",
+        "Airport Shuttle"
+      ]
+    },
+    {
+      "id": 26,
+      "name": "Royal Garden Hotel",
+      "address": "2-24 Kensington High St",
+      "city": "London",
+      "country": "UK",
+      "hotel_rating": 4.4,
+      "phone_number": "+44 20 7937 1000",
+      "image": "https://images.unsplash.com/photo-1737039865879-35b71abaffa5?q=80&w=1175&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "Royal Garden Hotel overlooks Kensington Gardens and offers modern amenities, elegant rooms, and fine dining.",
+      "stars": 4,
+      "price_per_night": 220,
+      "amenities": [
+        "Free WiFi",
+        "Restaurant",
+        "Bar",
+        "Room Service",
+        "Fitness Center"
+      ]
+    },
+    {
+      "id": 27,
+      "name": "Hotel Le Meurice",
+      "address": "228 Rue de Rivoli",
+      "city": "Paris",
+      "country": "France",
+      "hotel_rating": 4.7,
+      "phone_number": "+33 1 44 58 10 10",
+      "image": "https://images.unsplash.com/photo-1716831309985-48246936fe42?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "Central Park Inn features cozy rooms, a rooftop terrace, and is just steps away from Central Park.",
+      "stars": 4,
+      "price_per_night": 160,
+      "amenities": [
+        "Free WiFi",
+        "Restaurant",
+        "Bar",
+        "Air Conditioning",
+        "Pet Friendly"
+      ]
+    },
+    {
+      "id": 28,
+      "name": "Hotel Lutetia",
+      "address": "45 Boulevard Raspail",
+      "city": "Paris",
+      "country": "France",
+      "hotel_rating": 4.5,
+      "phone_number": "+33 1 49 54 46 00",
+      "image": "https://plus.unsplash.com/premium_photo-1742454193796-68978b1f24ee?q=80&w=688&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "The Londoner blends modern elegance with a central location, offering stylish rooms and first-class dining.",
+      "stars": 5,
+      "price_per_night": 280,
+      "amenities": [
+        "Free WiFi",
+        "Restaurant",
+        "Bar",
+        "Spa",
+        "Airport Shuttle",
+        "Meeting Rooms"
+      ]
+    },
+    {
+      "id": 29,
+      "name": "Le Bristol Paris",
+      "address": "112 Rue du Faubourg Saint-Honoré",
+      "city": "Paris",
+      "country": "France",
+      "hotel_rating": 4.9,
+      "phone_number": "+33 1 53 43 43 00",
+      "image": "https://images.unsplash.com/photo-1646139501502-092ea1087775?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "The Londoner blends modern elegance with a central location, offering stylish rooms and first-class dining.",
+      "stars": 5,
+      "price_per_night": 280,
+      "amenities": [
+        "Free WiFi",
+        "Restaurant",
+        "Bar",
+        "Spa",
+        "Airport Shuttle",
+        "Meeting Rooms"
+      ]
+    }
+  ],
+  "reviews": [
+    {
+      "id": "1",
+      "name": "Anna R.",
+      "avatar": "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=761&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "text": "Booking with Start Over was so easy!",
+      "hotelImage": "https://images.unsplash.com/photo-1522798514-97ceb8c4f1c8?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "rating": 5
+    },
+    {
+      "id": "2",
+      "name": "Michael T.",
+      "avatar": "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "text": "Affordable prices and great recommendations. Definitely my go-to platform!",
+      "hotelImage": "https://images.unsplash.com/photo-1580628646348-dbb9dfb2728f?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "rating": 4
+    },
+    {
+      "id": "3",
+      "name": "Sophia L.",
+      "avatar": "https://images.unsplash.com/photo-1743090597731-d6fc3800ebf6?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "text": "The user interface is super intuitive. I love how quickly I can compare hotels and book the one I like!",
+      "hotelImage": "https://images.unsplash.com/photo-1712928247899-2932f4c7dea3?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "rating": 5
+    },
+    {
+      "id": "4",
+      "name": "John D.",
+      "avatar": "https://images.unsplash.com/photo-1580518337843-f959e992563b?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "text": "Fantastic service and a seamless booking experience. Highly recommended!",
+      "hotelImage": "https://images.unsplash.com/photo-1565031491910-e57fac031c41?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "rating": 4
+    }
+  ],
+  "posts": [
+    {
+      "id": "1",
+      "image": "https://images.unsplash.com/photo-1590675560125-0d832b9d719e?q=80&w=689&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "alt": "Hotel room with modern amenities",
+      "title": "How to Choose the Best hotels for Your Trip",
+      "description": "Learn about key factors to consider when booking hotels, from location and amenities to guest reviews. Choosing the right hotel can make or break your travel experience. Discover tips to ensure a comfortable and memorable stay.",
+      "date": "September 25, 2025",
+      "category": "Hotels",
+      "author": "Viktoria Travel Blog",
+      "readTime": "6 min read",
+      "views": 1250,
+      "likes": 220
+    },
+    {
+      "id": "2",
+      "image": "https://images.unsplash.com/photo-1543716091-a840c05249ec?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "alt": "New York City skyline with iconic buildings",
+      "title": "Top 5 Travel Destinations in 2025",
+      "description": "Explore the top travel destinations for 2025, including hidden gems and popular hotspots. Learn what makes each location unique and how to plan your visit efficiently. Make your next adventure unforgettable.",
+      "date": "June 4, 2025",
+      "category": "Destinations",
+      "author": "John Smith",
+      "readTime": "5 min read",
+      "views": 980,
+      "likes": 150
+    },
+    {
+      "id": "3",
+      "image": "https://images.unsplash.com/photo-1522199710521-72d69614c702?q=80&w=1172&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "alt": "Top things for a Vacation",
+      "title": "Packing Tips for a Perfect Vacation",
+      "description": "Packing efficiently can save time, money, and stress. Learn essential tips for organizing your luggage, choosing versatile clothing, and never forgetting important items. Travel smart and enjoy your vacation without worries.",
+      "date": "April  13, 2025",
+      "category": "Travel Tips",
+      "author": "Emily Johnson",
+      "readTime": "4 min read",
+      "views": 740,
+      "likes": 120
+    },
+    {
+      "id": "4",
+      "image": "https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "alt": "Person checking minute hotel deals on a smartphone",
+      "title": "Last Minute Hotel Deals: How to Book at the Best Price",
+      "description": "Finding last-minute hotel deals can seem daunting, but it doesn’t have to be. Learn strategies for spotting discounts, using booking platforms wisely, and securing the best rooms at affordable prices. Save money while still enjoying comfort.",
+      "date": "May 5, 2025",
+      "category": "Budget Travel",
+      "author": "Michael Brown",
+      "readTime": "7 min read",
+      "views": 1580,
+      "likes": 310
+    },
+    {
+      "id": "5",
+      "image": "https://images.unsplash.com/photo-1618914239396-6d0868064a25?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "alt": "Traveler saving money while booking a hotel",
+      "title": "Smart Budgeting: How to Save Money on Hotel Bookings",
+      "description": "Discover practical ways to save on accommodations without compromising quality. From timing your bookings to using loyalty programs and promo codes, these tips help you maximize value. Travel smarter and stretch your budget further.",
+      "date": "February 10, 2025",
+      "category": "Budget Travel",
+      "author": "Sarah Lee",
+      "readTime": "5 min read",
+      "views": 1100,
+      "likes": 180
+    },
+    {
+      "id": "6",
+      "image": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "alt": "Happy family enjoying their stay at a hotel",
+      "title": "Best Family Friendly Hotels for a Perfect Vacation",
+      "description": "Family travel requires careful planning to keep everyone happy. Explore hotels offering kid-friendly amenities, entertainment options, and safety measures. Ensure your family vacation is fun, relaxing, and memorable.",
+      "date": "September  20, 2025",
+      "category": "Family Travel",
+      "author": "Anna White",
+      "readTime": "6 min read",
+      "views": 1320,
+      "likes": 240
+    },
+    {
+      "id": "7",
+      "image": "https://images.unsplash.com/photo-1505691938895-1758d7feb511?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0",
+      "alt": "Eco-friendly hotel surrounded by nature",
+      "title": "Eco-Friendly Hotels: Travel Sustainably in 2025",
+      "description": "Sustainable travel is more important than ever. Learn about hotels that minimize environmental impact while providing exceptional comfort and service. Make eco-conscious choices without sacrificing your travel experience.",
+      "date": "October 12, 2025",
+      "category": "Sustainable Travel",
+      "author": "David Green",
+      "readTime": "5 min read",
+      "views": 890,
+      "likes": 140
+    },
+    {
+      "id": "8",
+      "image": "https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0",
+      "alt": "Traveler working remotely in a cozy hotel lobby",
+      "title": "Best Hotels for Remote Work and Digital Nomads",
+      "description": "Balancing work and travel requires the right environment. Discover hotels with fast Wi-Fi, ergonomic workspaces, and inspiring surroundings. Stay productive while exploring new destinations around the world.",
+      "date": "November 2, 2025",
+      "category": "Work & Travel",
+      "author": "Laura Martinez",
+      "readTime": "6 min read",
+      "views": 1430,
+      "likes": 260
+    },
+    {
+      "id": "9",
+      "image": "https://images.unsplash.com/photo-1502920514313-52581002a659?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0",
+      "alt": "Luxury hotel room with ocean view",
+      "title": "Top Luxury Hotels with Stunning Ocean Views",
+      "description": "Indulge in luxury with hotels that offer breathtaking ocean views, world-class amenities, and exceptional service. Learn how to select the perfect resort for relaxation, fine dining, and unforgettable experiences.",
+      "date": "December 15, 2025",
+      "category": "Luxury Travel",
+      "author": "Sophia Brown",
+      "readTime": "7 min read",
+      "views": 1670,
+      "likes": 310
+    }
+  ],
+  "advantages": [
+    {
+      "id": "1",
+      "icon": "FaRegSmile",
+      "title": "Easy-to-use Interface",
+      "description": "Fast and efficient bookings with a simple and user-friendly design."
+    },
+    {
+      "id": "2",
+      "icon": "FaHotel",
+      "title": "Wide Range of Hotels",
+      "description": "Access to hotels of all kinds, from luxury stays to budget-friendly options."
+    },
+    {
+      "id": "3",
+      "icon": "FaDollarSign",
+      "title": "Transparent Pricing",
+      "description": "No hidden fees — what you see is what you pay for."
+    },
+    {
+      "id": "4",
+      "icon": "FaStar",
+      "title": "Personalized Recommendations",
+      "description": "Tailored suggestions based on your preferences and past choices."
+    },
+    {
+      "id": "5",
+      "icon": "FaRegSmile",
+      "title": "24/7 Support",
+      "description": "Our support team is always available to help you with any questions or issues."
+    },
+    {
+      "id": "6",
+      "icon": "FaHotel",
+      "title": "Verified Reviews",
+      "description": "Read real, verified guest reviews to make confident booking decisions."
+    }
+  ],
+  "faqData": [
+    {
+      "title": "How to book a hotel?",
+      "text": "You choose the hotel, dates of stay and room, then fill in the contact details and confirm the reservation. You will receive a confirmation by email."
+    },
+    {
+      "title": "Do you need to make a prepayment?",
+      "text": "It depends on the rules of the specific hotel. Some require prepayment, others allow payment at the time of check-in. The conditions are always indicated at the time of booking."
+    },
+    {
+      "title": "Can I cancel my reservation?",
+      "text": "Yes, most hotels allow free cancellation up to a certain date. You will find cancellation conditions in the room description before confirmation."
+    },
+    {
+      "title": "How to change the dates of my reservation?",
+      "text": "You can change the dates by contacting our support service or directly with the hotel. Change conditions depend on the policy of the specific hotel."
+    },
+    {
+      "title": "Are there hidden charges?",
+      "text": "No, when booking you see the full price of the stay. If the hotel has additional services (for example, parking or food), they are listed separately."
+    }
+  ]
+}
