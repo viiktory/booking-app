@@ -61,7 +61,9 @@ const ContactForm = () => {
               register={register}
               errors={errors.email}
             />
-            <Button text="Send" type="submit" className="homeBtn" />
+            <div className={styles.contactInput}>
+              <Button text="Send" type="submit" className="homeBtn" />
+            </div>
           </div>
         </form>
       </AnimatedSection>

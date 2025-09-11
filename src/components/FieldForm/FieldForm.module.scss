@@ -35,9 +35,8 @@ select {
   background: var(--color-light);
   height: 48px;
   font-size: 1rem;
-  transition:
-    border-color 0.2s ease,
-    box-shadow 0.2s ease;
+  transition: border-color 0.2s ease,
+  box-shadow 0.2s ease;
 
   &:focus {
     outline: none;
@@ -54,9 +53,8 @@ select {
   background: var(--color-light);
   resize: none;
   font-size: 1rem;
-  transition:
-    border-color 0.2s ease,
-    box-shadow 0.2s ease;
+  transition: border-color 0.2s ease,
+  box-shadow 0.2s ease;
 
   &:focus {
     outline: none;
@@ -86,6 +84,13 @@ select.errorInput:focus {
 @media (max-width: 768px) {
   .formFieldWrapper {
     flex: 1 1 100%;
-    min-width: unset;
+    width: 100%;
+    min-width: 0;
+  }
+  .formInput,
+  select,
+  .formTextarea {
+    width: 100%;
+    box-sizing: border-box;
   }
 }
