@@ -16,7 +16,7 @@
 .formContainer {
   position: relative;
   background: var(--color-light);
-  padding: 2rem;
+  padding: 2.5rem;
   margin-inline: 1rem;
   height: 20rem;
   width: 30rem;
@@ -24,7 +24,7 @@
 }
 
 .formTitle {
-  font-size: $font-size-h2;
+  font-size: $font-size-h3;
   color: var(--color-dark);
   padding-bottom: 0.5rem;
   line-height: 1.2;
@@ -54,5 +54,11 @@
 
   &:hover {
     background: var(--color-error);
+  }
+}
+
+@media (max-width: 768px) {
+  .formTitle{
+    font-size: $font-size-description;
   }
 }

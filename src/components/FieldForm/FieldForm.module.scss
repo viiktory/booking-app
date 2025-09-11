@@ -87,6 +87,12 @@ select.errorInput:focus {
     width: 100%;
     min-width: 0;
   }
+
+  .formFieldWrapper.vertical {
+    flex: 1 1 100%;
+    width: 100%;
+  }
+
   .formInput,
   select,
   .formTextarea {
