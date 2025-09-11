@@ -1,87 +1,84 @@
-# Booking App
+![Home Page](./public/screenhots/home_page.PNG)
 
-## **Tech Stack**
+[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://react.dev/)
+[![SCSS](https://img.shields.io/badge/SCSS-hotpink?style=for-the-badge&logo=sass&logoColor=white)](https://sass-lang.com/)
 
-### **Frontend:**
+**🌍 Live
+Demo: [booking-app-hotels.vercel.app](https://booking-app-lime-alpha.vercel.app/)**
 
-- **Create React App** - Bootstrapped React application
+# Start Over – Hotel Booking Website
 
-- **React Router** - For navigation and routing
+---
 
-- **Formik** - Form handling and validation
+**Start Over** - a web application for quick and convenient hotel reservations.
+A simple interface, adaptive design and smooth animation make the service
+accessible to every user.
 
-- **Ant Design** - UI components for a modern design
+## ⚙️ Technologies and stack
 
-- **PropTypes** - Type checking for components
+---
 
-- **Axios** - HTTP requests for API interactions
+- **React** – for building a component interface
+- **SCSS** – for flexible styling
+- **Zustand** – state management
+- **Zod** and **React Hook Form** – form validation
+- **Framer Motion** – animations
+- **Swiper** – interactive carousels
+- **React Toastify** - notifications
+- **React Router DOM** – routing
+- **Axios** – backend requests
 
-### **State Management:**
+## ✨ Features
 
-- **Redux** - Centralized state management
+---
 
-- **Redux Thunk** - Async middleware for Redux
+- **Hotel search and filtering**
+- **Informative blog section**
+- **Forms with validation and notifications**
+- **Responsive design**
+- **Carousels and interactive elements**
+- **Clean and stylish interface**
 
-### **Backend & Environment Configuration:**
+## 📂 Project structure
 
-- **Json-server** - Mock backend for data persistence (for development only)
+---
 
-- **ENV** - Environment variables for configuration
+```text
+📂 booking-app
+├── 📂 public               # static files
+├── 📂 src
+│   ├── 📂 assets           # images
+│   ├── 📂 api              # backend requests
+│   ├── 📂 components       # components
+│   ├── 📂 features         # form validation
+│   ├── 📂 pages            # pages
+│   ├── 📂 routes           # application routes
+│   ├── 📂 store            # state management (Zustand)
+│   ├── 📂 styles           # global styles
+│   ├── 📄 App.js
+│   └── 📄 index.js
+├── 📄 .editorconfig
+├── 📄 .eslintrc.js
+├── 📄 .prettierrc
+├── 📄 package.json
+├── 📄 package-lock.json
+└── 📄 README.md
+```
 
-- **Eslint** - Linting and code quality enforcement
+## 🚀 Local project launch
 
-## **Installation & Setup**
+---
 
-To run the project locally, follow these steps:
+**Clone the repository**
 
-1. **Clone the repository:**
+`https://github.com/viiktory/booking-app.git`
 
-`git clone https://github.com/viiktory/booking-app.git
-cd booking-app`
-
-2. **Install dependencies:**
+**Install dependencies**
 
 `npm install`
 
-3. **Start the development server:**
+**Run the project**
 
-In one terminal window, run:
+`npm start`
 
-`npm start
-`
-This will start the frontend application, which will be available
-at http://localhost:3000.
-
-4. **Run the mock backend:**
-
-In a separate terminal window, run:
-
-`npm run server`
-
-This will start _json-server_, which will mock a backend API and be available
-at http://localhost:3001.
-
-Make sure the **db.json** file is in place in the root of the project (it should
-already be there, but ensure it has the necessary data).
-
-Now your app should be fully functional with the mock backend running!
-
-## Features
-
-1. [ ] Browse and filter hotels
-2. [ ] View hotel details and reviews
-3. [ ] Sign in for personalized experience
-4. [ ] Booking functionality (in progress)
-5. [ ] Light/Dark theme toggle
-6. [ ] Responsive design
-
-## Troubleshooting
-
-If you encounter issues with the _json-server_ not starting correctly:
-
-- Make sure that **db.json** exists in the root of the project.
-
-- Ensure that no other processes are using port 3001 (you can change the port in
-  the package.json script if necessary).
-
-- Check for any missing dependencies or errors in the terminal logs.
+Now, head to **http://localhost:3000** in your browser

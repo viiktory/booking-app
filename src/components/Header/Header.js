@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { FiMenu, FiX } from 'react-icons/fi';
 import { PATHS } from '../../paths';
@@ -9,6 +9,10 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
   const isHome = location.pathname === PATHS.HOME;
+
+  useEffect(() => {
+    setIsOpen(false);
+  }, [location.pathname]);
 
   const toggleMenu = () => {
     setIsOpen((prev) => !prev);
