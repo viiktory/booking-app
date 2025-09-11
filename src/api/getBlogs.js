@@ -1,7 +1,7 @@
 import api from './api';
 
 export const getBlogs = async () => {
-  const response = await api.get('/data', { params: { type: '/posts' } });
+  const response = await api.get('/data', { params: { type: 'posts' } });
   return response.data;
 };
 

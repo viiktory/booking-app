@@ -1,7 +1,7 @@
 import api from './api';
 
 export const getHotels = async () => {
-  const response = await api.get('/data', { params: { type: '/hotels' } });
+  const response = await api.get('/data', { params: { type: 'hotels' } });
   return response.data;
 };
 
