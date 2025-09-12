@@ -7,7 +7,8 @@ import {
   BlogDetails,
   Contact,
   Error,
-  FAQ
+  FAQ,
+  Legal
 } from '../pages';
 import { Layout } from '../components';
 import { PATHS } from '../paths';
@@ -48,6 +49,14 @@ export const routes = [
       {
         path: PATHS.FAQ,
         element: <FAQ />
+      },
+      {
+        path: PATHS.LEGAL,
+        element: <Legal />
+      },
+      {
+        path: PATHS.ERROR,
+        element: <Error />
       },
       {
         path: '*',

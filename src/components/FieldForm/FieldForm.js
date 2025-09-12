@@ -50,7 +50,7 @@ const FieldForm = ({
           />
         )}
 
-        {errors && <p className={styles.error}>{errors.message}</p>}
+        {errors && <p className="error">{errors.message}</p>}
       </div>
     </div>
   );

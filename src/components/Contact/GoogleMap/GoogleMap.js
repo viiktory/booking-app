@@ -15,12 +15,7 @@ const GoogleMap = () => {
         <Button
           text="Find out where our office is"
           className={styles.mapBtn}
-          onClick={() =>
-            window.open(
-              'https://www.google.com/maps/place/123+Main+Street,+New+York,+USA',
-              '_blank'
-            )
-          }
+          onClick={() => window.open('https://www.google.com/maps', '_blank')}
         />
       </div>
     </AnimatedSection>

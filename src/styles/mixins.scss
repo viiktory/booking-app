@@ -103,3 +103,25 @@
     }
   }
 }
+
+@mixin errorStyles($bottom: -1.1rem) {
+  color: var(--color-error);
+  font-size: 0.85rem;
+  position: absolute;
+  bottom: $bottom;
+}
+
+.error {
+  @include errorStyles();
+}
+
+.errorInput {
+  border: 1px solid var(--color-error);
+}
+
+.formInput.errorInput:focus,
+.formTextarea.errorInput:focus,
+select.errorInput:focus {
+  box-shadow: none;
+  border-color: var(--color-error);
+}

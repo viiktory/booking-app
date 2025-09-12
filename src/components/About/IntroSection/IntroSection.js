@@ -1,6 +1,7 @@
 import resortHouse from '../../../assets/images/resortHouse.jpg';
 import apartment from '../../../assets/images/apartment.jpg';
 import { FaArrowRight } from 'react-icons/fa6';
+import { PATHS } from '../../../paths';
 import restaurant from '../../../assets/images/restaurant.jpg';
 import { Button, Field, AnimatedSection } from '../../../components';
 import styles from './Intro.module.scss';
@@ -24,7 +25,7 @@ const IntroSection = () => {
               text="read more"
               className="homeBtn"
               icon={FaArrowRight}
-              to="/errors"
+              to={PATHS.ERROR}
             />
           </div>
 

@@ -45,7 +45,7 @@ const Footer = () => {
             />
             <NavItemExternal
               icon={<FaTelegram className={styles.footerSocialIcons} />}
-              to="https://web.telegram.org/k/"
+              to="https://web.telegram.org"
               label=""
             />
           </div>
@@ -64,17 +64,17 @@ const Footer = () => {
             />
             <NavItemLink
               className={styles.footerLink}
-              to={PATHS.FAQ}
+              to="/how-it-works"
               label="How it works"
             />
-            <NavItemExternal
+            <NavItemLink
               className={styles.footerLink}
-              to="https://www.icertis.com/contracting-basics/what-are-terms-and-conditions/"
+              to="/terms"
               label="Terms & Conditions"
             />
-            <NavItemExternal
+            <NavItemLink
               className={styles.footerLink}
-              to="https://en.wikipedia.org/wiki/Support_and_resistance"
+              to="/support"
               label="Support"
             />
           </AccordionItem>
@@ -91,14 +91,14 @@ const Footer = () => {
               to={PATHS.ABOUT_PAGE}
               label="About us"
             />
-            <NavItemExternal
+            <NavItemLink
               className={styles.footerLink}
-              to="https://en.wikipedia.org/wiki/Privacy_policy"
+              to="/privacy"
               label="Privacy Policy"
             />
-            <NavItemExternal
+            <NavItemLink
               className={styles.footerLink}
-              to="https://en.wikipedia.org/wiki/HTTP_cookie"
+              to="/cookies"
               label="Cookie Policy"
             />
             <NavItemLink
@@ -131,7 +131,7 @@ const Footer = () => {
             />
             <ContactItem
               icon={<FaMapMarkerAlt className={styles.footerIcons} />}
-              to="https://www.google.com/maps/place/123+Main+Street,+New+York,+USA"
+              to="https://www.google.com/maps"
               label=""
               placeholder="123 Main Street, New York, USA"
               className={styles.footerLink}

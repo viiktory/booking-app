@@ -12,5 +12,7 @@ export const PATHS = {
     details: '/blog/:id'
   },
   CONTACTS: '/contacts',
-  FAQ: '/faq'
+  FAQ: '/faq',
+  ERROR: '/404',
+  LEGAL: '/:page'
 };
