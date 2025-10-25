@@ -25,7 +25,7 @@ const FieldForm = ({
           <select
             id={name}
             {...register(name, rules)}
-            className={`${styles.formInput} ${errors ? styles.errorInput : ''}`}
+            className={`${styles.formSelect} ${errors ? styles.errorInput : ''}`}
           >
             {option.map((opt) => (
               <option key={opt.value} value={opt.value}>
